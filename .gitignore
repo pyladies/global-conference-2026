@@ -1,0 +1,37 @@
+# build output
+dist/
+dev-dist/
+.output/
+.astro
+
+# dependencies
+node_modules/
+package-lock.json
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+.env.local
+
+# macOS-specific files
+.DS_Store
+
+# Temporary chapters file
+scripts/chapters.yml
+
+src/data/speakers.json
+src/data/sessions.json
+src/data/schedule.json
+
+# Generated translations
+src/i18n/translations.json
+
+# Compiled po files
+locales/**/messages.mo

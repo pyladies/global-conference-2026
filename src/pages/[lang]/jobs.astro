@@ -1,0 +1,173 @@
+---
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import Logos from "@components/logos.astro";
+import JobsBoard from "@components/jobsboard.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { getLocaleStaticPaths } from "../../i18n/locales";
+
+export function getStaticPaths() {
+  return getLocaleStaticPaths();
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { align = "center" } = Astro.props;
+
+const jobs = [
+//  {
+//    title: "Super Software Engineer",
+//    company: "The Tech Company",
+//    companyurl: "https://pyladies.com",
+//    description: `Something cool <a href="https://pyladies.com">website</a> Lorem ipsum is a placeholder text commonly used`,
+//    salary: "50000-100000 EUR",
+//    joburl: "https://pyladies.com",
+//    email: "pyladiescon@pyladies.com",
+//    keywords: ["Python", "PyTorch", "CSS"],
+//  },
+//  {
+//    title: "",
+//    company: "",
+//    companyurl: "",
+//    description: ``,
+//    salary: "",
+//    joburl: "",
+//    email: "",
+//    keywords: [],
+//  },
+  {
+    title: "Service Delivery Lead (Project Manager/Business Analyst)",
+    company: "Six Feet Up",
+    companyurl: "https://sixfeetup.com",
+    description: "Six Feet Up is looking for a full-time Senior Python Developer/DevOps Engineer to create beautiful back-end code that powers sophisticated Python-based web projects. The role also includes deploying, managing, and maintaining our infrastructure and applications.100% remote (USA only)",
+    salary: "Not provided",
+    joburl: "https://sixfeetup.com/company/project-manager",
+    email: "laura@sixfeetup.com",
+    keywords: [],
+  },
+  {
+    title: "Senior Python Developer/DevOps Engineer",
+    company: "Six Feet Up",
+    companyurl: "https://sixfeetup.com",
+    description: "Six Feet Up is looking for a full-time Senior Python Developer/DevOps Engineer to create beautiful back-end code that powers sophisticated Python-based web projects. The role also includes deploying, managing, and maintaining our infrastructure and applications. 100% remote (USA only)",
+    salary: "Not provided",
+    joburl: "https://sixfeetup.com/company/senior-python-developer-devops-engineer-us-only",
+    email: "laura@sixfeetup.com",
+    keywords: [],
+  },
+  {
+    title: "Working Student (m/f/x) at Consumer Intelligence Product Team",
+    company: "Henkel",
+    companyurl: "https://www.henkel.com/",
+    description: "We are looking for a motivated Working Student (m/f/d) to support our Product Owners in building a Composable Customer Data Platform (CDP) that enables personalization, and data intelligence across our global brands. In this role, you will help refine requirements, coordinate delivery, and gain hands-on experience in agile, digital product management within an international data and tech environment.",
+    salary: "Not provided",
+    joburl: "/files/henkel_working_student_position.pdf",
+    email: "raquel.pinho@henkel.com",
+    keywords: ["Hybrid"],
+  },
+  {
+    title: "Quantitative Developer - Amsterdam",
+    company: "Optiver",
+    companyurl: "https://www.optiver.com/",
+    description: "Join our Trading Technology team in Amsterdam, where you’ll build real-time data systems that directly support Optiver’s trading strategies and market insights. As a Senior Software Engineer, you’ll focus on creating scalable, high-performance platforms for real-time analytics, enabling traders to make precise, data-driven decisions across various products. At Optiver, technology drives our approach to market-making—whether optimizing for low latency response times or processing massive data volumes with efficiency, even in extreme market conditions. This role offers the chance to tackle complex technical challenges in a dynamic environment, collaborating closely with traders and researchers to advance smarter, more effective trading practices that keep Optiver at the forefront of the industry.",
+    salary: "€100-250k+",
+    joburl: "https://optiver.com/working-at-optiver/career-opportunities/7887332002/",
+    email: "",
+    keywords: ["Real-time", "Analytics", "C++", "Scalability", "Resilience", "Python", "Data-pipelines"],
+  },
+  {
+    title: "Senior Software Engineer – Python - Amsterdam",
+    company: "Optiver",
+    companyurl: "https://www.optiver.com/",
+    description: "This Senior Python Software Engineer role sits in Optiver’s Infrastructure department, building the systems that model, provision, configure and monitor the firm’s global, low-latency infrastructure. You’ll design and implement internal tooling (primarily in Python), contribute to open source, and work across areas like observability, image-based deployment, declarative infra management and automated network/server provisioning—while spending about 80% of your time on development and the remainder on operational work and daytime on-call. We’re looking for someone with ~8+ years’ experience, strong automation instincts, solid Python and Linux/infra understanding, and a proactive, problem-solving mindset, to help evolve the bespoke platform that underpins Optiver’s trading systems.",
+    salary: "€200k+",
+    joburl: "https://optiver.com/working-at-optiver/career-opportunities/7790490002/",
+    email: "",
+    keywords: ["Python", "IaC", "Automation", "Infrastructure", "Systems"],
+  },
+  {
+    title: "Software Engineer – Platform - Amsterdam",
+    company: "Optiver",
+    companyurl: "https://www.optiver.com/",
+    description: "This role is for an Infrastructure Software Engineer building the software and automation that manage Optiver’s global fleet of low-latency servers and network devices. You’ll work mostly in Python on provisioning, configuration management, observability, and declarative infrastructure tools, while collaborating with experts in Linux and networking. The job is primarily development with some operational work and daytime on-call, contributing to systems that enable fast, reliable, large-scale infrastructure. We’re looking for someone who loves automation, understands real-world infra, and can move comfortably between coding and systems work, within a highly collaborative, high-performance environment.",
+    salary: "€100-250k+",
+    joburl: "https://optiver.com/working-at-optiver/career-opportunities/7790486002/",
+    email: "",
+    keywords: ["IaC", "Python", "Observability", "Networking", "Linux", "Declarative", "Infrastructure"],
+  },
+  {
+    title: "AI Engineer - Amsterdam",
+    company: "Optiver",
+    companyurl: "https://www.optiver.com/",
+    description: "We are seeking a highly skilled and experienced AI Engineer to join our dynamic team. In this hands-on role, you’ll design, build, and deploy sophisticated agents that orchestrate data, workflows, and decisions across the firm. You’ll own the full lifecycle—from rapid prototyping through production rollout—while always tying technical choices back to clear business outcomes. If you can translate strategy into code, measure impact in dollars (or hours saved), and thrive in a fast-moving environment, we want to meet you.",
+    salary: "€100-250k+",
+    joburl: "https://optiver.com/working-at-optiver/career-opportunities/8179369002/",
+    email: "",
+    keywords: ["AI", "Python", "Automation", "Agents"],
+  },
+  {
+    title: "Linux Systems Engineer - Amsterdam",
+    company: "Optiver",
+    companyurl: "https://www.optiver.com/",
+    description: "The Optiver Linux Systems Engineering Team ensures our trading servers work so we can trade. You will work in a highly-customized bare metal environment where proprietary tools and technology run at breakneck speed. You will be expected to help build the pioneering tools to keep our systems best-in-class while enabling our technology evolution in a controlled way.",
+    salary: "€100-250k+",
+    joburl: "https://optiver.com/working-at-optiver/career-opportunities/7684971002/",
+    email: "",
+    keywords: ["Linux", "Python", "Infrastructure", "Automation"],
+  },
+  {
+    title: "Head of Quantitative Research and statistics",
+    company: "Henkel",
+    companyurl: "https://www.henkel.com",
+    description: "What you´ll do: Lead and develop a team of data scientists and take pride to solve the toughest business challenges and deliver high quality data products. Determine business goals and derive analytics objectives as well as translate objectives into a plan for your team, covering data collection, data preparation, statistical analysis, modelling, and algorithm development Plan and execute transition from proof of concept to product together within cross-functional product teams. Lead product teams in the execution of our data & analytics strategy and use agile methods and establish an environment of constant learning, integrity, and mutual responsibility. Be passionate about exploring emerging technologies and leveraging their full potential as well as establish yourself as a data science ambassador across business units and functions. Be a technical mentor and people’s manager for your team and advance your group’s specialization and deepen your knowledge to claim thought leadership in data science",
+    salary: "Not provided.",
+    joburl: "https://www.henkel.com/careers/jobs-and-application/2085472-2085472",
+    email: "",
+    keywords: ["Python",  "AI"],
+  },
+  {
+    title: "Data Scientist",
+    company: "Henkel",
+    companyurl: "https://www.henkel.com/",
+    description: "Solve complex business problems with data; using data scientific tools to find solutions for challenges in the realm of both big and small data: developing custom data models and algorithms to apply to data sets. Delivers data science products from idea to deployment. Actively participate in cross-functional project teams in the execution of our analytics strategy, exploring emerging technologies and leveraging their full potential. Develop processes and tools to monitor and analyze model performance and data accuracy. Acts as data science ambassador across business units and functions",
+    salary: "Not provided",
+    joburl: "https://www.henkel.com/careers/jobs-and-application/2075294-2075294",
+    email: "",
+    keywords: ["Python", "Azure"],
+  },
+  {
+  title: "Azure AI/GenAI Architect",
+    company: "Henkel",
+    companyurl: "https://www.henkel.com/",
+    description: "Design and own cloud architectures for GenAI platforms, intelligent agents, and automation solutions on Azure. Translate business requirements into scalable technical blueprints, reference architectures, and implementation guidelines. Work closely with developers, AI engineers, and product teams to align solution components end-to-end. Drive Azure best practices across identity, networking, security, monitoring, and API integrations. Contribute to smooth delivery by supporting CI/CD workflows, reviewing IaC implementation, and ensuring consistent deployment patterns. Help shape stable and well-structured platform environments through thoughtful resource planning, environment setup support, and ongoing architecture-assisted optimization. Ensure governance, documentation, and operational readiness across solutions. Act as a sparring partner and trusted technical advisor for the GenAI engineering team",
+    salary: "Not Provided",
+    joburl: "https://www.henkel.com/careers/jobs-and-application/2103698-2103698",
+    email: "",
+    keywords: ["Azure", "CI/CD", "Gen AI"],
+  },
+];
+
+---
+
+<Layout title="Job Board">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="subtitle">{t("Find opportunities from our sponsors")}</Fragment>
+      <Fragment slot="title">{t("Job Board")}</Fragment>
+      <Fragment slot="description">
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-5xl mt-5">
+      {jobs.length === 0 && <div class="my-10 text-center dark:text-white"><h3>{t("-- No Jobs were added so far --")}</h3></div>}
+      {
+        jobs.map((job) => <JobsBoard details={job} />)
+      }
+    </div>
+
+  </Container>
+</Layout>

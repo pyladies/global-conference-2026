@@ -1,0 +1,90 @@
+---
+import { ClientRouter } from "astro:transitions";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter";
+import "../styles/global.css";
+import { SEO } from "astro-seo";
+import { defaultLang } from "i18n/locales";
+import { getLangFromUrl } from "i18n/utils";
+
+export interface Props {
+	title?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+	"/meta/opengraph.png",
+	Astro.site,
+).toString();
+
+const { title = null } = Astro.props;
+const lang = getLangFromUrl(Astro.url) || defaultLang;
+
+const makeTitle = title
+	? `${title} | PyLadiesCon 2025`
+	: "PyLadiesCon 2025 - The global online PyLadies Conference";
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#ffffff" />
+		<!--<HeadHrefLangs />-->
+
+		<ClientRouter />
+
+		<!-- Global CSS -->
+		<link rel="stylesheet" href="/index.css" />
+		<!-- Conference font -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+		<SEO
+			title={makeTitle}
+			description="PyLadiesCon 2025 - The global online PyLadies Conference",
+			canonical={canonicalURL}
+			openGraph={{
+				basic: {
+					url: canonicalURL,
+					type: "website",
+					title: `PyLadiesCon 2025 - The global online PyLadies Conference`,
+					image: resolvedImageWithDomain,
+				},
+				image: {
+					alt: "PyLadiesCon logo",
+				},
+			}}
+		/>
+
+		<script is:inline>
+			function handleThemeChange() {
+				if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+					document.documentElement.classList.add("dark");
+				} else {
+					document.documentElement.classList.remove("dark");
+				}
+			}
+			handleThemeChange();
+			document.removeEventListener("astro:after-swap", handleThemeChange);
+			document.addEventListener("astro:after-swap", handleThemeChange);
+		</script>
+
+	</head>
+	<body class="dark:bg-stone-950">
+		<Navbar />
+		<slot />
+		<Footer />
+		<style is:global>
+			/* Improve Page speed */
+			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>
