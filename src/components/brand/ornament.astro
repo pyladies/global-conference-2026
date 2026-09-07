@@ -1,0 +1,38 @@
+---
+import dims from "@assets/brand/manifest.json";
+
+/*
+ * Renders one of the celestial SVGs extracted from the 2026 design kit.
+ *
+ * The file is applied as a CSS mask and painted with `background-color:
+ * currentColor`, so the artwork still recolours from the surrounding text
+ * colour — `.ornament` defaults that to the theme's ornament token — but each
+ * file is fetched and cached once instead of being inlined into every page.
+ * That matters here: the laurel wreath alone is ~290KB of path data.
+ *
+ * Intrinsic sizes come from `manifest.json` (written by the extraction script)
+ * so callers can size on one axis, e.g. `h-28 w-auto` or `w-[41%]`.
+ */
+interface Props {
+	name: keyof typeof dims;
+	class?: string;
+	/** Mirror horizontally — the kit reuses one flourish for both corners. */
+	flip?: boolean;
+}
+
+const { name, class: className, flip = false } = Astro.props;
+
+const size: number[] | undefined = (dims as Record<string, number[]>)[name];
+if (!size) {
+	throw new Error(
+		`Unknown ornament "${name}". Available: ${Object.keys(dims).join(", ")}`,
+	);
+}
+const [w, h] = size;
+---
+
+<span
+	aria-hidden="true"
+	class:list={["ornament", flip && "-scale-x-100", className]}
+	style={`--ornament-src:url("/images/brand/${name}.svg");aspect-ratio:${w}/${h}`}
+></span>

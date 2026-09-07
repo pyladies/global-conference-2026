@@ -8,16 +8,16 @@ const { speakerInfo } = Astro.props;
 
 ---
 
-<div class="speaker-item flex py-4 flex-col hover:bg-gray-100 dark:hover:bg-gray-900 hover:rounded-xl cursor-pointer transition-all duration-300"
+<div class="speaker-item flex py-4 flex-col hover:bg-accent/10 hover:rounded-xl cursor-pointer transition-all duration-300"
 onclick={`window.location.href='/speaker/${speakerInfo.slug}'`}>
   <dt
-      class="block mx-auto items-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white"
+      class="block mx-auto items-center gap-x-3 text-base font-semibold leading-7 text-ink-strong"
     >
       <div
         class="w-52 h-52 mx-auto rounded-full p-1 hover:p-2 transition-all duration-300"
       >
         <div
-          class="w-full h-full rounded-full border-4 border-transparent hover:border-pinkpyladies overflow-hidden"
+          class="w-full h-full rounded-full border-4 border-transparent hover:border-accent overflow-hidden"
         >
           <img
               class="w-full h-full object-cover"
@@ -30,13 +30,13 @@ onclick={`window.location.href='/speaker/${speakerInfo.slug}'`}>
 
     </dt>
     <!-- Speaker Links -->
-      <div class="font-medium items-center block text-black dark:text-white">
+      <div class="font-medium items-center block text-ink-strong">
         <div class="text-center text-l">{speakerInfo.name}</div>
         <div class="text-center font-light italic text-sm">
           {speakerInfo.affiliation}
         </div>
         <div class="flex justify-center mt-4">
-          <div class="flex text-black dark:text-white content-center">
+          <div class="flex text-ink-strong content-center">
             {
               speakerInfo.mastodon_url && (
                 <SocialsComponent

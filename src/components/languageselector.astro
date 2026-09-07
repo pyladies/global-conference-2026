@@ -3,6 +3,17 @@ import { Icon } from "astro-icon/components";
 import { languages } from "../i18n/locales.ts";
 import { getLangFromUrl, localizePath } from '../i18n/utils';
 
+/*
+ * Rendered twice per page (navbar and footer), so the id has to be per
+ * instance — the label's `for` needs something real to point at, and duplicate
+ * ids make browsers give up on autofill.
+ */
+interface Props {
+  id?: string;
+}
+
+const { id = "language-selector" } = Astro.props;
+
 const currentLanguage = getLangFromUrl(Astro.url);
 const supportedLanguages = new Map(Object.entries(languages));
 const arrayLangs = Array.from(supportedLanguages);
@@ -10,12 +21,16 @@ const { pathname } = Astro.url;
 ---
 
 <div
-  class="flex items-center pl-2 rounded-md text-sm font-semibold text-center transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 border outline-2 outline-offset-2 border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 dark:active:bg-stone-950"
+  class="flex min-h-11 items-center pl-2 rounded-lg text-sm font-semibold text-center transition border-2 border-hairline-strong bg-surface text-ink hover:bg-accent/10"
   aria-label="Language selection">
-  <Icon name="ion:language" class="w-5 dark:text-white" />
-  <label for="language-selector" class="sr-only">Choose a language</label>
+  <Icon name="ion:language" class="w-5 text-ornament" />
+  <label for={id} class="sr-only">Choose a language</label>
 
-  <select onchange="localStorage.setItem('preferredLang', this.value.split('/')[1]); location = this.value;" class="appearance-none cursor-pointer pl-2 pr-2 py-1.5 rounded-md dark:bg-stone-950 dark:text-white focus-visible:outline-none">
+  <select
+    name={id}
+    id={id}
+    onchange="localStorage.setItem('preferredLang', this.value.split('/')[1]); location = this.value;"
+    class="appearance-none cursor-pointer pl-2 pr-2 py-1.5 rounded-lg bg-transparent text-ink focus-visible:outline-none dark:text-ink-strong">
     {
       arrayLangs.map((lang) => {
         let value = localizePath(pathname, lang[0]);

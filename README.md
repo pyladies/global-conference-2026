@@ -1,4 +1,4 @@
-# PyLadiesCon 2025
+# PyLadiesCon 2026
 
 This website uses [Astro](https://astro.build) as a framework,
 and the theme is a fork from the [Astros](https://github.com/majesticooss/astros)

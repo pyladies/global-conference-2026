@@ -2,9 +2,11 @@
 
 This Code of Conduct applies to the following people at PyLadiesCon:
 
-* speakers
+* presenters
 * panelists
 * tutorial or workshop leaders
+* sprint leaders
+* open space hosts
 * sponsors
 * organizers
 * volunteers
@@ -23,6 +25,7 @@ Event organizers will enforce this code throughout the event.
 This Code of Conduct applies to the following online spaces:
 
 * Code repositories, issue trackers, and pull requests made against any PyLadiesCon repository
+* The PyLadiesCon Discord server and any activities held there
 * Any other online space administered by PyLadiesCon
 
 This Code of Conduct applies to the following people in official PyLadiesCon online spaces:

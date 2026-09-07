@@ -1,0 +1,27 @@
+---
+import Ornament from "@components/brand/ornament.astro";
+
+/*
+ * The mirrored scroll ornaments that bracket a section in the comps: one facing
+ * in from each edge, the same artwork flipped. Purely decorative, and hidden
+ * below `lg` where the page has no room for them.
+ */
+interface Props {
+	/** "top" tucks them against the section start, "bottom" against its end. */
+	position?: "top" | "bottom";
+	class?: string;
+}
+
+const { position = "top", class: className } = Astro.props;
+---
+
+<div
+	aria-hidden="true"
+	class:list={[
+		"pointer-events-none absolute inset-x-0 hidden select-none lg:flex lg:justify-between",
+		position === "top" ? "top-0" : "bottom-0",
+		className,
+	]}>
+	<Ornament name="flourish" class="ornament-soft h-20 w-auto xl:h-24" />
+	<Ornament name="flourish" class="ornament-soft h-20 w-auto xl:h-24" flip />
+</div>

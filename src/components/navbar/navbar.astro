@@ -1,10 +1,9 @@
 ---
 import Button from "@components/ui/button.astro";
 import Link from "@components/ui/link.astro";
-import TicketButton from "@components/ui/ticketbutton.astro";
 import ThemeSelector from "@components/themeselector.astro";
 import LanguageSelector from "@components/languageselector.astro";
-import { Icon } from "astro-icon/components";
+import Ornament from "@components/brand/ornament.astro";
 
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
 import { getMenuItems } from '../../data/menuItems';
@@ -17,16 +16,16 @@ const menuitems = getMenuItems(t);
 ---
 
 <div
-  x-data="{open: window.innerWidth < 768 ? false : true}"
-  class="flex flex-col max-w-screen-2xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 z-10 md:pt-2 relative">
+  x-data="{open: window.innerWidth < 1024 ? false : true}"
+  class="flex flex-col max-w-screen-2xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row md:px-6 lg:px-8 z-10 lg:pt-2 relative">
   <div class="p-4 flex flex-row items-center justify-between">
     <a
       href={translatePath("/")}
-      class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
-      <Icon name="logo" width="30" alt="Logo" />
-      <span class="hidden lg:block">PYLADIESCON</span>
+      class="flex gap-3 items-center text-lg font-semibold tracking-widest text-ink-strong rounded-lg focus:outline-none">
+      <Ornament name="logo-mark" class="h-7 w-7 text-ornament" />
+      <span class="hidden xl:block text-ornament">PYLADIESCON</span>
     </a>
-    <button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
+    <button class="lg:hidden text-ink w-10 h-10 relative focus:outline-none" @click="open = !open">
       <span class="sr-only">Open main menu</span>
       <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <span
@@ -37,7 +36,7 @@ const menuitems = getMenuItems(t);
         <span
           aria-hidden="true"
           class="block absolute h-0.5 w-5 bg-current transform transition duration-200 ease-in-out"
-          :class="{'opacity-0': open } ">
+          :class="{'opacity-0': open }">
         </span>
         <span
           aria-hidden="true"
@@ -56,19 +55,23 @@ const menuitems = getMenuItems(t);
     x-transition:leave="transition ease-in duration-200"
     x-transition:leave-start="opacity-100 transform scale-100"
     x-transition:leave-end="opacity-0 transform scale-90"
-    class="md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:justify-center md:flex-row hidden">
-    <div class="flex flex-col flex-grow text-center gap-2 md:justify-center md:items-center md:flex md:flex-row md:mx-auto">
+    class="lg:mt-0 lg:pl-8 lg:items-center flex-grow pb-4 lg:pb-0 flex-col gap-2 transition-all ease-out lg:transition-none lg:justify-center lg:flex-row hidden">
+    <div class="flex flex-col flex-grow text-center gap-2 lg:justify-center lg:items-center lg:flex lg:flex-row lg:mx-auto">
       {
         menuitems.map((item) =>
           item.children && item.children.length ? (
             <div x-on:click.away="open = false" class="relative" x-data="{ open: false }">
-              <Button x-on:click="open = !open" style="link" size="sm" class="mt-[2px]">
+              <Button
+                x-on:click="open = !open"
+                style="link"
+                size="sm"
+                class="inline-flex items-center gap-1 whitespace-nowrap">
                 {item.title}
                 <svg
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   x-bind:class="{'rotate-180': open, 'rotate-0': !open}"
-                  class="inline w-4 h-4 mb-[2px] transition-transform duration-200 transform">
+                  class="h-4 w-4 shrink-0 transform transition-transform duration-200">
                   <path
                     fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -84,8 +87,8 @@ const menuitems = getMenuItems(t);
                 x-transition:leave="transition ease-in duration-75"
                 x-transition:leave-start="transform opacity-100 scale-100"
                 x-transition:leave-end="transform opacity-0 scale-95"
-                class="md:absolute mt-2 bg-white right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border shadow border-gray-300">
-                <div class="px-2 py-2 rounded-md dark:bg-gray-800">
+                class="lg:absolute mt-2 right-0 w-full origin-top-right rounded-lg lg:w-48 border-2 border-hairline bg-surface shadow-lg">
+                <div class="px-2 py-2 rounded-lg">
                   {item.children.map((subitem) => (
                     <Link
                       href={subitem.url || translatePath(subitem.path)}
@@ -104,7 +107,7 @@ const menuitems = getMenuItems(t);
                         document.removeEventListener('astro:page-load', checkSubPath);
                         document.addEventListener('astro:page-load', checkSubPath);
                       }`}
-                      x-bind:class="{ 'bg-gray-200 dark:bg-gray-600': isActive }">
+                      x-bind:class="{ 'bg-accent/10 text-ink-strong': isActive }">
                       {subitem.title}
                     </Link>
                   ))}
@@ -116,6 +119,7 @@ const menuitems = getMenuItems(t);
               href={item.url || translatePath(item.path)}
               style="hover"
               size="sm"
+              class="inline-flex items-center justify-center whitespace-nowrap"
               x-data="{ isActive: false }"
               x-init={`() => {
                 const path = $el.getAttribute('data-path');
@@ -128,7 +132,7 @@ const menuitems = getMenuItems(t);
                 document.removeEventListener('astro:page-load', checkPath);
                 document.addEventListener('astro:page-load', checkPath);
               }`}
-              x-bind:class="{ 'bg-gray-200 dark:bg-gray-600': isActive }"
+              x-bind:class="{ 'bg-accent/10 text-ink-strong': isActive }"
               data-path={translatePath(item.path)}>
               {item.title}
             </Link>
@@ -136,10 +140,7 @@ const menuitems = getMenuItems(t);
         )
       }
     </div>
-	<LanguageSelector />
-	<ThemeSelector />
-    <!--
-    <TicketButton class="mt-4 md:mt-0 hidden md:block" />
-    -->
+	<LanguageSelector id="language-selector-navbar" />
+	<ThemeSelector id="theme-selector-navbar" />
   </nav>
 </div>

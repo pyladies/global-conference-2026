@@ -111,7 +111,7 @@ Visit `http://localhost:4321/fr` or switch the language to see your translations
 
 ### Step 5: Submit Your Translations
 
-Once you have completed your translations, submit a pull request to the [main repository](https://github.com/pyladies/global-conference-2025). Aaaand that's it! Your translations will be reviewed and merged for everyone to enjoy. 🎉🎉🎉
+Once you have completed your translations, submit a pull request to the [main repository](https://github.com/pyladies/global-conference-2026). Aaaand that's it! Your translations will be reviewed and merged for everyone to enjoy. 🎉🎉🎉
 
 ## Translation Tips
 

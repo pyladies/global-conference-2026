@@ -38,7 +38,7 @@ const getLanguageName = (code: string): string => {
   {
     sessions.map(([key, session]: [string, Session]) => (
       <li
-        class="session-item p-6 rounded-lg border-2 border-gray-200 dark:border-gray-700 hover:border-pinkpyladies dark:hover:border-pinkpyladies transition-all duration-200 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
+        class="session-item p-6 rounded-lg border-2 border-hairline hover:border-accent transition-all duration-200 bg-surface shadow-sm hover:shadow-md"
         data-track={session.track || ""}
         data-type={session.session_type || ""}
         data-level={session.level || ""}
@@ -48,14 +48,14 @@ const getLanguageName = (code: string): string => {
           <h3 class="text-2xl font-bold mb-3">
             <a 
               href={`/${currentLang}/session/${session.slug}`} 
-              class="text-black dark:text-white hover:text-black dark:hover:text-white transition-colors duration-200 hover:underline decoration-2 underline-offset-4"
+              class="text-ink-strong hover:text-accent transition-colors duration-200 hover:underline decoration-2 underline-offset-4"
             >
               {session.title}
             </a>
           </h3>
           {session.speakers && session.speakers.length > 0 && (
-            <div class="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-              <svg class="w-5 h-5 text-pinkpyladies" fill="currentColor" viewBox="0 0 20 20">
+            <div class="flex items-center gap-2 text-ink">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
               </svg>
               <span class="sr-only">{t('Speakers:')}</span>
@@ -64,11 +64,11 @@ const getLanguageName = (code: string): string => {
                   <>
                     <a 
                       href={`/${currentLang}/speaker/${speakersData[speakerId]?.slug || speakerId}`} 
-                      class="font-medium hover:text-pinkpyladies transition-colors duration-200 hover:underline"
+                      class="font-medium hover:text-accent transition-colors duration-200 hover:underline"
                     >
                       {speakerNames[speakerId] || speakerId}
                     </a>
-                    {index < session.speakers.length - 1 && <span class="text-gray-400">,</span>}
+                    {index < session.speakers.length - 1 && <span class="text-ink-muted">,</span>}
                   </>
                 ))}
               </div>
@@ -78,7 +78,7 @@ const getLanguageName = (code: string): string => {
 
         <div class="flex flex-wrap gap-2">
           {session.session_type && (
-            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-pinkpyladies text-white capitalize">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-accent text-white capitalize">
               <span class="sr-only">Type:</span>
               {session.session_type}
             </span>
@@ -90,7 +90,7 @@ const getLanguageName = (code: string): string => {
             </span>
           )}
           {session.level && (
-            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 capitalize">
+            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-blue-100 text-accent dark:bg-blue-900 capitalize">
               <span class="sr-only">Level:</span>
               {session.level}
             </span>

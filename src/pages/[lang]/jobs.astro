@@ -1,8 +1,9 @@
 ---
+import ComingSoon from "@components/brand/comingsoon.astro";
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
-import Logos from "@components/logos.astro";
-import JobsBoard from "@components/jobsboard.astro";
+// Used by the parked listing grid below.
+// import JobsBoard from "@components/jobsboard.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
@@ -13,11 +14,24 @@ export function getStaticPaths() {
   return getLocaleStaticPaths();
 }
 
+/*
+ * To publish the listings, replace the <ComingSoon /> panel in the template
+ * with, and restore the JobsBoard import:
+ *
+ *   <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-5xl mt-5">
+ *     {jobs.map((job) => <JobsBoard details={job} />)}
+ *   </div>
+ */
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const { align = "center" } = Astro.props;
 
+/*
+ * Job listings are parked until sponsors submit postings for this edition. The
+ * list below is last edition's and stays in the frontmatter — server-side only,
+ * so none of it reaches the built page while the grid is not rendered.
+ */
 const jobs = [
 //  {
 //    title: "Super Software Engineer",
@@ -162,12 +176,11 @@ const jobs = [
       </Fragment>
     </Sectionhead>
 
-    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-5xl mt-5">
-      {jobs.length === 0 && <div class="my-10 text-center dark:text-white"><h3>{t("-- No Jobs were added so far --")}</h3></div>}
-      {
-        jobs.map((job) => <JobsBoard details={job} />)
-      }
-    </div>
+    <ComingSoon
+      class="mt-10"
+      title={t("Job board coming soon")}
+      message={t("Our sponsors' openings will be listed here closer to the conference. If you would like to post a role, get in touch with us.")}
+    />
 
   </Container>
 </Layout>

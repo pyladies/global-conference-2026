@@ -1,0 +1,63 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+/*
+ * One of the attendee demographics tables on the sponsorship page. Percentages
+ * are share of tickets sold, not share of answers, so they are comparable
+ * across questions even though not everybody answered each one.
+ */
+interface Props {
+	/** Column header for the answer column, e.g. "Current Position". */
+	heading: string;
+	rows: { position: string; count: string; percentage: string }[];
+	/** Optional caption, e.g. what an aggregated "Other" row covers. */
+	note?: string;
+}
+
+const { heading, rows, note } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+{/*
+	A table cannot shrink below its min-content width, and the longest position
+	labels push that past a phone viewport — which widened the whole grid track
+	and gave the page a horizontal scrollbar. Scrolling the table inside its own
+	box keeps the min-content out of the layout.
+*/}
+<div class="mt-10 overflow-x-auto">
+	<table class="w-full text-left text-sm rtl:text-right text-ink-muted">
+	<thead class="bg-surface-raised text-xs uppercase text-ink dark:bg-nearwhite">
+		<tr>
+			<th scope="col" class="px-4 py-3 text-ornament sm:px-6">{heading}</th>
+			<th scope="col" class="px-3 py-3 text-end text-ornament sm:px-6">{t("Count")}</th>
+			<th scope="col" class="px-3 py-3 text-end text-ornament sm:px-6">
+				{t("% of tickets")}
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		{
+			rows.map((item) => (
+				<tr class="border-b border-hairline bg-surface">
+					<th
+						scope="row"
+						class="px-4 py-4 text-start font-medium text-ink-strong sm:px-6">
+						{item.position}
+					</th>
+					<td class="px-3 py-4 text-end whitespace-nowrap sm:px-6">{item.count}</td>
+					<td class="px-3 py-4 text-end whitespace-nowrap sm:px-6">{item.percentage}</td>
+				</tr>
+			))
+		}
+	</tbody>
+	{
+		note && (
+			<caption class="caption-bottom px-4 pt-3 text-start text-xs text-ink-muted sm:px-6">
+				{note}
+			</caption>
+		)
+	}
+	</table>
+</div>

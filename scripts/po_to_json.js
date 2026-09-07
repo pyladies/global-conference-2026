@@ -33,14 +33,25 @@ for (const lang of langDirs) {
     const entries = po.translations[''] || {};
     
     const translations = {};
+    let skippedFuzzy = 0;
     for (const [msgid, entry] of Object.entries(entries)) {
-      if (msgid && entry.msgstr && entry.msgstr[0]) {
-        translations[msgid] = entry.msgstr[0];
+      if (!msgid || !entry.msgstr || !entry.msgstr[0]) continue;
+
+      // Fuzzy entries are msgmerge's guesses, not verified translations, and
+      // some are plainly wrong ("PyLadies Chapter Sponsor" -> "Conférence
+      // PyLadies"). Leave them in the PO for translators to finish, but fall
+      // back to the English source rather than shipping them.
+      if ((entry.comments?.flag ?? '').includes('fuzzy')) {
+        skippedFuzzy++;
+        continue;
       }
+
+      translations[msgid] = entry.msgstr[0];
     }
-    
+
     allTranslations[lang] = translations;
-    console.log(`✅ Converted ${lang}: ${Object.keys(translations).length} strings`);
+    const fuzzyNote = skippedFuzzy ? ` (skipped ${skippedFuzzy} fuzzy)` : '';
+    console.log(`✅ Converted ${lang}: ${Object.keys(translations).length} strings${fuzzyNote}`);
   } catch (error) {
     console.error(`❌ Error processing ${lang}:`, error.message);
   }
