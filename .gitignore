@@ -35,3 +35,11 @@ src/i18n/translations.json
 
 # Compiled po files
 locales/**/messages.mo
+
+# Figma design exports (source for scripts/extract_brand_assets.py).
+# Not committed — grab them from the design hand-off when re-extracting.
+design/
+
+# Python bytecode from scripts/
+__pycache__/
+*.pyc

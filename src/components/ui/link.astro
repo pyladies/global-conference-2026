@@ -18,21 +18,28 @@ const {
 	...rest
 } = Astro.props;
 
+// Minimum control height is 44px in the 2026 kit, hence the min-h on md/lg.
 const sizes = {
 	xs: "",
 	sm: "px-3 py-1.5",
-	md: "px-4 py-2.5",
-	lg: "px-5 py-2.5",
+	md: "min-h-11 px-4 py-2.5",
+	lg: "min-h-11 px-6 py-3",
 };
 
+/*
+ * Only the button-shaped styles set a display. Keeping `inline-flex` out of the
+ * shared base matters: Tailwind emits display utilities in its own canonical
+ * order, not source order, so a base `inline-flex` would beat a `block` passed
+ * in by a caller — which is how the navbar dropdown items ended up on one row.
+ */
 const styles = {
 	outline:
-		"text-center border outline-2 transition-colors border-gray-300 text-gray-700 dark:text-gray-100 hover:border-gray-400 dark:text-white active:outline dark:hover:bg-dark dark:hover:border-white dark:hover:text-white",
+		"inline-flex items-center justify-center text-center border-2 border-hairline-strong bg-surface text-ink transition-colors hover:bg-orchid hover:text-nearwhite",
 	primary:
-		"text-center bg-pinkpyladies outline-2 dark:bg-gray-100 hover:bg-stone-800 dark:hover:bg-white focus-visible:bg-stone-500 dark:focus-visible:bg-gray-100 text-white dark:text-black border-transparent active:outline shadow-sm",
-	muted: "text-sm font-semibold leading-6 text-gray-800 dark:text-gray-100",
+		"inline-flex items-center justify-center text-center border-2 border-lavender bg-accent text-on-accent shadow-sm transition-colors hover:bg-orchid hover:text-nearwhite",
+	muted: "text-sm font-semibold leading-6 text-ink",
 	hover:
-		"text-center text-stone-950 hover:text-gray-900 focus:text-gray-900 focus:bg-gray-200 focus:outline-none focus:shadow-outline hover:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200",
+		"text-center text-ink transition-colors hover:bg-accent/10 hover:text-ink-strong focus:bg-accent/10 focus:text-ink-strong focus:outline-none",
 };
 ---
 
@@ -40,7 +47,9 @@ const styles = {
 	href={href} //localizePath(href)}
 	{...rest}
 	class:list={[
-		"rounded-md text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+		// plc-btn opts out of the prose link underline/hover in global.css
+		style !== "muted" && "plc-btn",
+		"rounded-lg text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
 		block && "w-full",
 		sizes[size],
 		styles[style],

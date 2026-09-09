@@ -34,17 +34,17 @@ const faqs = [
 ];
 ---
 
-<div class="mx-auto max-w-5xl px-6 py-24 sm:py-36 lg:px-8 lg:py-52 dark:bg-stone-950" id="faq">
-  <div class="mx-auto divide-y divide-gray-900/10 dark:divide-gray-100/10">
-    <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{t("Sponsorship Frequently Asked Questions")}</h2>
-    <dl class="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
+<div class="mx-auto max-w-5xl px-6 py-24 sm:py-36 lg:px-8 lg:py-52" id="faq">
+  <div class="mx-auto divide-y divide-hairline/30">
+    <h2 class="text-2xl font-bold leading-10 tracking-tight text-ink-strong">{t("Sponsorship Frequently Asked Questions")}</h2>
+    <dl class="mt-10 space-y-6 divide-y divide-hairline/30">
       {
         faqs.map((faq) => (
           <div class="pt-6" x-data="{ open: false }" id={ faq.id }>
             <dt>
               <button
                 type="button"
-                class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+                class="flex w-full items-start justify-between text-left text-ink-strong"
                 @click="open = !open"
                 :x-bind:aria-expanded="open.toString()">
                 <span class="text-base font-semibold leading-7">{faq.title}</span>
@@ -82,7 +82,7 @@ const faqs = [
               class="mt-2 pr-12"
               id="faq-0"
               x-show="open">
-              <span class="text-base leading-7 text-gray-600 dark:text-gray-100">
+              <span class="text-base leading-7 text-ink">
                 <span set:html={faq.description}></span>
               </span>
             </dd>

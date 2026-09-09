@@ -1,0 +1,27 @@
+---
+import Ornament from "@components/brand/ornament.astro";
+
+/*
+ * Placeholder panel for content that is not ready to announce yet. Used by the
+ * schedule, sprints, job board and sponsorship pages so they all say "not yet"
+ * the same way instead of each inventing its own empty state.
+ */
+interface Props {
+	title: string;
+	message?: string;
+	class?: string;
+}
+
+const { title, message, class: className } = Astro.props;
+---
+
+<div
+	class:list={[
+		"mx-auto max-w-3xl rounded-xl border-2 border-hairline bg-surface-raised p-8 text-center",
+		className,
+	]}>
+	<Ornament name="card-sparkle" class="mx-auto h-5 w-5" />
+	<h2 class="mt-4 text-2xl font-bold text-title">{title}</h2>
+	{message && <p class="mt-4 text-ink">{message}</p>}
+	<slot />
+</div>

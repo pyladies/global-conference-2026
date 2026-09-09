@@ -1,0 +1,45 @@
+---
+import Ornament from "@components/brand/ornament.astro";
+
+/*
+ * The 2026 section header: a celestial mark, a quiet eyebrow, then the title
+ * flanked by the ✦ sparkle. Used by The Event, the FAQ, The Organizers and
+ * Our Sponsors so the rhythm stays identical down the page.
+ */
+interface Props {
+	/** Ornament rendered above the eyebrow, e.g. "palm-hand" or "laurel". */
+	mark?: string;
+	eyebrow?: string;
+	title: string;
+	id?: string;
+	class?: string;
+}
+
+const { mark, eyebrow, title, id, class: className } = Astro.props;
+---
+
+<div class:list={["mx-auto max-w-3xl text-center", className]}>
+	{
+		mark && (
+			<Ornament
+				name={mark}
+				class="mx-auto mb-8 h-28 w-auto opacity-90 sm:h-32"
+			/>
+		)
+	}
+	{
+		eyebrow && (
+			<p class="text-sm font-semibold leading-7 tracking-wide text-eyebrow">
+				{eyebrow}
+			</p>
+		)
+	}
+	<h2
+		id={id}
+		class="mt-2 flex items-center justify-center gap-x-4 text-3xl font-bold tracking-tight text-title sm:text-4xl">
+		<Ornament name="card-sparkle" class="h-4 w-4 text-ornament sm:h-5 sm:w-5" />
+		<span>{title}</span>
+		<Ornament name="card-sparkle" class="h-4 w-4 text-ornament sm:h-5 sm:w-5" />
+	</h2>
+	<slot />
+</div>

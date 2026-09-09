@@ -49,62 +49,62 @@ export async function getStaticPaths() {
             </div>
 
             <div class="text-center md:text-left max-w-2xl">
-              <h1 class="text-4xl font-bold mb-4 text-pinkpyladies">{value.name}</h1>
+              <h1 class="text-4xl font-bold mb-4 text-accent">{value.name}</h1>
               {value.affiliation && (
-                <h2 class="text-xl font-thin italic text-black dark:text-white mb-4">{value.affiliation}</h2>
+                <h2 class="text-xl font-thin italic text-ink-strong mb-4">{value.affiliation}</h2>
               )}
-              <p class="text-lg leading-relaxed dark:text-white">
+              <p class="text-lg leading-relaxed">
                 {value.biography}
               </p>
             </div>
           </div>
           
             <div class="mt-16">
-              <h2 class="text-3xl font-bold text-black dark:text-white">{t("More About The Speaker")}</h2>
+              <h2 class="text-3xl font-bold text-ink-strong">{t("More About The Speaker")}</h2>
               <div class="max-w-md">
-                <div class="grid grid-cols-1 md:grid-cols-2 mt-6 ">
+                <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
                 { value.homepage &&
                 ( 
-                <p class="text-black dark:text-white font-bold">Homepage</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.homepage.startsWith('http') ? value.homepage : `https://${value.homepage}`}>{value.homepage}</a>)
+                <p class="text-ink-strong font-bold">Homepage</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.homepage.startsWith('http') ? value.homepage : `https://${value.homepage}`}>{value.homepage}</a>)
 
               }
               { value.linkedin_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold ">LinkedIn</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.linkedin_url}>{value.linkedin_url}</a>)
+                <p class="text-ink-strong font-bold">LinkedIn</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.linkedin_url}>{value.linkedin_url}</a>)
               
               }
               { value.mastodon_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold">Mastodon</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.mastodon_url}>{value.mastodon_url}</a>)
+                <p class="text-ink-strong font-bold">Mastodon</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.mastodon_url}>{value.mastodon_url}</a>)
               
               }
                 { value.bluesky_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold">Bluesky</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.bluesky_url}>{value.bluesky_url}</a>)
+                <p class="text-ink-strong font-bold">Bluesky</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.bluesky_url}>{value.bluesky_url}</a>)
               
               }
               
                 { value.instagram_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold">Instagram</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.instagram_url}>{value.instagram_url}</a>)
+                <p class="text-ink-strong font-bold">Instagram</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.instagram_url}>{value.instagram_url}</a>)
               
               }
               
                 { value.gitx_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold">Git</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.gitx_url}>{value.gitx_url}</a>)
+                <p class="text-ink-strong font-bold">Git</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.gitx_url}>{value.gitx_url}</a>)
               
               }
                 { value.twitter_url &&
                 ( 
-                <p class="text-black dark:text-white font-bold">X (Twitter)</p>
-                <a class="text-black dark:text-white underline break-all whitespace-pre-wrap" href={value.twitter_url}>{value.twitter_url}</a>)
+                <p class="text-ink-strong font-bold">X (Twitter)</p>
+                <a class="text-ink-strong underline break-all whitespace-pre-wrap" href={value.twitter_url}>{value.twitter_url}</a>)
               
               }
               </div>
@@ -114,12 +114,12 @@ export async function getStaticPaths() {
             </div>
             
             <div class="mt-16">
-              <h2 class="text-3xl font-bold text-black dark:text-white">{t("Sessions by {name}").replace("{name}", value.name)}</h2>
+              <h2 class="text-3xl font-bold text-ink-strong">{t("Sessions by {name}").replace("{name}", value.name)}</h2>
               <ol class="list-decimal list-inside">
                 {
                   value.submissions.map((submissionId) => (
                     submissions.filter(([subKey, subValue]) => subKey === submissionId).map(([subKey, subValue]) => (
-                      <li class="mt-4 text-black dark:text-white">
+                      <li class="mt-4 text-ink-strong">
                         <a class="text-xl font-semibold" href={`/session/${subValue.slug}`}>{subValue.title}</a>
                       </li>)
                   )))

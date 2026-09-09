@@ -10,23 +10,23 @@ const t = useTranslations(lang);
 const { plan } = Astro.props;
 ---
 
-<div class="rounded-md p-5 xl:p-8 ring-1 ring-gray-200 dark:bg-stone-950 dark:ring-gray-700">
+<div class="rounded-md p-5 xl:p-8 ring-1 ring-hairline">
   <div class="flex items-center justify-between gap-x-4">
-    <h3 id="tier-enterprise" class="text-xl font-semibold leading-8 text-gray-900 dark:text-white" class:list={[{"line-through": plan.soldout}]}>
+    <h3 id="tier-enterprise" class="text-xl font-semibold leading-8 text-ink-strong" class:list={[{"line-through": plan.soldout}]}>
       {plan.name}
      </h3>
-    {plan.soldout && <h3 class="text-xl font-semibold leading-8 text-gray-900 dark:text-red-800">{t("Sold out")}</h3>}
-    {plan.popular && <h3 class="flex align-center text-pinkpyladies"><slot name="icon">
+    {plan.soldout && <h3 class="text-xl font-semibold leading-8 text-ink-strong dark:text-red-400">{t("Sold out")}</h3>}
+    {plan.popular && <h3 class="flex align-center text-accent"><slot name="icon">
                 <Icon name="bx:bxs-star" class="inline-icon mt-1"/>{t("Popular")}
     </slot></h3>}
   </div>
   <p class="mt-6 flex items-baseline gap-x-1">
-    <span class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <span class="text-4xl font-bold tracking-tight text-ink-strong">
       {plan.price && typeof plan.price === "object" ? plan.price.monthly : plan.price}
     </span>
   </p>
   <Link href={plan.button.link} aria-describedby="tier-enterprise" style="outline" class="block w-full mt-6">{plan.button.text || t("Get Started")}</Link>
-  <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 dark:text-gray-300 xl:mt-10">
+  <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-ink xl:mt-10">
     {
       plan.features.map((item) => (
         <li class="flex gap-x-3">

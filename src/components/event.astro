@@ -1,103 +1,110 @@
 ---
+import Flourishes from "@components/brand/flourishes.astro";
+import Ornament from "@components/brand/ornament.astro";
+import SectionTitle from "@components/brand/sectiontitle.astro";
 import Link from "@components/ui/link.astro";
-// @ts-ignore
-import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+/*
+ * The 2026 edition is built around participation rather than a talk track:
+ * tutorials/workshops, sprints, open spaces, PyJam and panels. Keep the copy
+ * free of "talks", "keynotes" and "speakers" so it matches the programme.
+ */
 const features = [
   {
     title: t("Experience"),
-    description: t("At PyLadiesCon, we’re bringing the Python world right to your screen. Make sure to mark your calendars for the first weekend of December as we embark on a two-day journey that promises to be unforgettable."),
-    icon: "bx:bxs-chart",
+    description: t("At PyLadiesCon, we’re bringing the Python world right to your screen. Mark your calendars for the first weekend of December and join us for three days of learning and community."),
     url: "#",
   },
   {
     title: t("The Goal"),
-    description: t("This conference is designed to promote diversity, learning, and empowerment within the Python community. We enthusiastically welcome presenters from members and supporters of the PyLadies Community. Prior experience is not required. Everyone is welcome to share your insights and expertise."),
-    icon: "bx:bxs-rocket",
+    description: t("This conference is designed to promote diversity, learning, and empowerment within the Python community. We enthusiastically welcome contributions from members and supporters of the PyLadies Community. Prior experience is not required. Everyone is welcome to share your insights and expertise."),
     url: "#",
   },
   {
     title: t("The Languages"),
-    description: t("Given that we are a global community, we warmly invite talks in the following languages: English, Español, Português, Deutsch, 日本語 and 中文."),
-    icon: "bx:bx-body",
+    description: t("Given that we are a global community, our sessions run in the following languages: English, Español, Português, Deutsch, 日本語 and 中文."),
     url: "#",
   },
   {
-    title: t("Insightful Talks"),
-    description: t("Dive deep into Python's latest trends, best practices, and cutting-edge technologies with our inspiring speakers."),
-    icon: "bx:bxs-edit-alt",
+    title: t("Tutorials and Workshops"),
+    description: t("Hands-on sessions where you follow along and build something yourself. Bring your laptop and leave with a new skill you have actually practised."),
     url: "#",
   },
   {
-    title: t("Engaging Panels"),
-    description: t("Join thought-provoking discussions on topics ranging from Python development to career growth and beyond."),
-    icon: "bx:bxs-chat",
-    url: "#",
-  },
-  {
-    title: t("Sprints and Workshop"),
-    description: t("Learning hands-on or contributing to a project, you decide! Join the sprints and workshops."),
-    icon: "bx:bxs-cog",
+    title: t("Sprints"),
+    description: t("Contribute to an open source project alongside the people who maintain it. First-time contributors are especially welcome, and there will be someone to help you get set up."),
     url: "#",
   },
   {
     title: t("Open Spaces"),
     description: t("Motivated during the event? Organize an open space for people to gather and discuss any topic!"),
-    icon: "bx:bxs-book-reader",
+    url: "#",
+  },
+  {
+    title: t("PyJam"),
+    description: t("A showcase where community members share a performance. The line-up is curated and still being put together, so it is not open sign-up this edition, but it will be one to watch."),
+    url: "#",
+  },
+  {
+    title: t("Engaging Panels"),
+    description: t("Join thought-provoking discussions on topics ranging from Python development to career growth and beyond."),
     url: "#",
   },
   {
     title: t("Collaborative Networking"),
     description: t("Connect with fellow Python enthusiasts, expand your professional network, and forge new friendships."),
-    icon: "bx:bxs-network-chart",
     url: "#",
   },
   {
     title: t("Volunteer"),
     description: t("We would not be able to run this conference without help from our volunteers. Please check the Volunteer guide for more details on how to volunteer!"),
-    icon: "bx:bxs-heart",
     url: "#",
   },
 ];
 ---
 
-<div class="relative mx-auto max-w-5xl px-6 lg:px-8" id="event">
-  <div class="mx-auto max-w-2xl lg:text-center">
-    <h2 class="text-base font-semibold leading-7 text-pink">{t("Conference Details")}</h2>
-    <p class="mt-2 text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">{t("The Event")}</p>
-    <p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">
-      {t("PyLadies Conference (PyLadiesCon) is the third PyLadies conference held– an exciting online and FREE event dedicated to empowerment, learning, and diversity within the Python community! 🎉")}
-    </p>
-  </div>
-  <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+<section class="relative py-24 sm:py-32" id="event">
+  <Flourishes position="top" />
+  <Flourishes position="bottom" />
+
+  <div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+    <SectionTitle
+      mark="palm-hand"
+      eyebrow={t("Conference Details")}
+      title={t("The Event")}>
+      <p class="mt-6 text-lg leading-8 text-ink">
+        {t("PyLadies Conference (PyLadiesCon) is the fourth PyLadies conference held– an exciting online and FREE event dedicated to empowerment, learning, and diversity within the Python community! 🎉")}
+      </p>
+    </SectionTitle>
+
+    <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:max-w-none lg:grid-cols-2">
       {
         features.map((item) => (
-          <div class="flex flex-col">
-            <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <div class="h-5 w-5 flex-none text-black dark:text-white">
-                <Icon name={item.icon} />
-              </div>
+          <div class="flex flex-col rounded-xl border-2 border-hairline bg-surface-raised p-6">
+            <Ornament name="card-sparkle" class="h-5 w-5 text-ornament" />
+            <dt class="mt-4 text-base font-semibold leading-7 text-ink-strong">
               {item.title}
             </dt>
-            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-900 dark:text-gray-100">
+            <dd class="mt-2 flex flex-auto flex-col text-sm leading-6 text-ink">
               <p class="flex-auto">{item.description}</p>
-              <p class="mt-6">
-                {item.url != "#" && <Link href={item.url} style="muted" size="xs" class="leading-6 text-left text-black dark:text-white">
-                  {t("Learn more")}{" "}
-                  <span class="pl-1 text-black dark:text-white" aria-hidden="true">
-                    →
-                  </span>
-                </Link>}
-              </p>
+              {item.url !== "#" && (
+                <p class="mt-4">
+                  <Link href={item.url} style="muted" size="xs" class="text-left">
+                    {t("Learn more")}{" "}
+                    <span class="pl-1" aria-hidden="true">
+                      →
+                    </span>
+                  </Link>
+                </p>
+              )}
             </dd>
           </div>
         ))
       }
     </dl>
   </div>
-</div>
+</section>

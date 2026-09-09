@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PyLadiesCon 2025\n"
+"Project-Id-Version: PyLadiesCon 2026\n"
 "Report-Msgid-Bugs-To: Open a PR 🤗\n"
-"POT-Creation-Date: 2025-12-07T09:29:50.697Z\n"
+"POT-Creation-Date: 2026-09-09T20:24:59.437Z\n"
 "PO-Revision-Date: 2025-12-06 13:09+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -14,91 +14,139 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/components/event.astro:12
+#: src/components/_sponsorship_plans.astro:173
+msgid "Download Sponsorship Prospectus"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:186
+#, fuzzy
+msgid "Other Sponsorship Options"
+msgstr "Poziomy sponsoringu"
+
+#: src/components/_sponsorship_plans.astro:190
+#, fuzzy
+msgid "PyLadies Chapter Sponsor"
+msgstr "Konferencja PyLadies"
+
+#: src/components/_sponsorship_plans.astro:191
+msgid "$600 | Unlimited"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:193
+msgid ""
+"Every year we have special short videos featuring different PyLadies "
+"Chapters around the world. The PyLadies Chapter Sponsor get to have the "
+"exclusive branding visibility on these videos during the intro and outro "
+"videocard. These videos will also remain on our official Youtube channel "
+"which means you will enjoy an evergreen branding visibility."
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:200
+#: src/components/_sponsorship_plans.astro:229
+msgid "Prominent placement of logo and link on the website (all year round)"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:205
+#: src/components/_sponsorship_plans.astro:234
+msgid "Social media mentions"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:210
+msgid "Logo visibility on opening and closing of every PyLadies Chapter"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:215
+#: src/components/_sponsorship_plans.astro:244
+msgid "Custom Discord Role"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:219
+msgid "PyLadies Discussion Sponsor"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:220
+msgid "$600 | 6 slots"
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:222
+msgid ""
+"PyLadiesCon has 6 different panel discussions each year streaming live from "
+"different regions around the world. These panels are usually one of the most "
+"popular talks."
+msgstr ""
+
+#: src/components/_sponsorship_plans.astro:239
+msgid ""
+"Logo visibility on opening and closing of every PyLadies Panel Discussions"
+msgstr ""
+
+#: src/components/attendeestable.astro:27
+msgid "Count"
+msgstr ""
+
+#: src/components/attendeestable.astro:29
+msgid "% of tickets"
+msgstr ""
+
+#: src/components/event.astro:18
 msgid "Experience"
 msgstr "Doświadczenie"
 
-#: src/components/event.astro:13
+#: src/components/event.astro:19
 msgid ""
-"At PyLadiesCon, we’re bringing the Python world right to your screen. Make "
-"sure to mark your calendars for the first weekend of December as we embark "
-"on a two-day journey that promises to be unforgettable."
+"At PyLadiesCon, we’re bringing the Python world right to your screen. Mark "
+"your calendars for the first weekend of December and join us for three days "
+"of learning and community."
 msgstr ""
-"PyLadiesCon przynosi świat Pythona prosto przed twój ekran. Zapisz w "
-"kalendarzu pierwszy weekend grudnia, kiedy wybierzemy się razem na "
-"niezapomnianą dwudniową wyprawę."
 
-#: src/components/event.astro:18
+#: src/components/event.astro:23
 msgid "The Goal"
 msgstr "Cel"
 
-#: src/components/event.astro:19
+#: src/components/event.astro:24
 msgid ""
 "This conference is designed to promote diversity, learning, and empowerment "
-"within the Python community. We enthusiastically welcome presenters from "
+"within the Python community. We enthusiastically welcome contributions from "
 "members and supporters of the PyLadies Community. Prior experience is not "
 "required. Everyone is welcome to share your insights and expertise."
 msgstr ""
-"Konferencja promuje różnorodność, rozwój i upodmiotowienie w społeczności "
-"Pythona. Z entuzjazmem witamy prelegentów i prelegentki z grona członkiń i "
-"wspierających społeczność PyLadies. Nie musisz mieć żadnego doświadczenia "
-"zawodowego. Zachęcamy każdą i każdego do dzielenia się swoimi "
-"spostrzeżeniami i doświadczeniem."
 
-#: src/components/event.astro:24
+#: src/components/event.astro:28
 msgid "The Languages"
 msgstr "Języki"
 
-#: src/components/event.astro:25
+#: src/components/event.astro:29
 msgid ""
-"Given that we are a global community, we warmly invite talks in the "
-"following languages: English, Español, Português, Deutsch, 日本語 and 中文."
+"Given that we are a global community, our sessions run in the following "
+"languages: English, Español, Português, Deutsch, 日本語 and 中文."
 msgstr ""
-"Ponieważ jesteśmy społecznością globalną, zachęcamy do złożenia propozycji "
-"prelekcji w następujących językach: English, Español, Português, Deutsch, 日"
-"本語 i 中文."
 
-#: src/components/event.astro:30
-msgid "Insightful Talks"
-msgstr "Wnikliwe prelekcje"
+#: src/components/event.astro:33
+msgid "Tutorials and Workshops"
+msgstr ""
 
-#: src/components/event.astro:31
+#: src/components/event.astro:34
 msgid ""
-"Dive deep into Python's latest trends, best practices, and cutting-edge "
-"technologies with our inspiring speakers."
+"Hands-on sessions where you follow along and build something yourself. Bring "
+"your laptop and leave with a new skill you have actually practised."
 msgstr ""
-"Zanurz się w najnowszych trendach wokół Pythona, najlepszych praktykach i "
-"najgorętszych technologiach dzięki naszym mówcom."
 
-#: src/components/event.astro:36
-msgid "Engaging Panels"
-msgstr "Angażujące panele"
+#: src/components/event.astro:38 src/data/menuItems.ts:28
+msgid "Sprints"
+msgstr "Sprinty"
 
-#: src/components/event.astro:37
+#: src/components/event.astro:39
 msgid ""
-"Join thought-provoking discussions on topics ranging from Python development "
-"to career growth and beyond."
+"Contribute to an open source project alongside the people who maintain it. "
+"First-time contributors are especially welcome, and there will be someone to "
+"help you get set up."
 msgstr ""
-"Dołącz do interesujących dyskusji na rozmaite tematy: od programowania "
-"Pythona po rozwój kariery i wiele innych."
-
-#: src/components/event.astro:42
-msgid "Sprints and Workshop"
-msgstr "Sprinty i warsztaty"
 
 #: src/components/event.astro:43
-msgid ""
-"Learning hands-on or contributing to a project, you decide! Join the sprints "
-"and workshops."
-msgstr ""
-"Praktyczna nauka czy współtworzenie projektu? Ty decydujesz! Przyjdź na "
-"sprinty i warsztaty."
-
-#: src/components/event.astro:48
 msgid "Open Spaces"
 msgstr "Open Spaces"
 
-#: src/components/event.astro:49
+#: src/components/event.astro:44
 msgid ""
 "Motivated during the event? Organize an open space for people to gather and "
 "discuss any topic!"
@@ -106,11 +154,34 @@ msgstr ""
 "Nagły przypływ motywacji podczas konferencji? Zorganizuj open space i "
 "dyskutuj z grupą zainteresowanych twoim tematem!"
 
+#: src/components/event.astro:48
+msgid "PyJam"
+msgstr ""
+
+#: src/components/event.astro:49
+msgid ""
+"A showcase where community members share a performance. The line-up is "
+"curated and still being put together, so it is not open sign-up this "
+"edition, but it will be one to watch."
+msgstr ""
+
+#: src/components/event.astro:53
+msgid "Engaging Panels"
+msgstr "Angażujące panele"
+
 #: src/components/event.astro:54
+msgid ""
+"Join thought-provoking discussions on topics ranging from Python development "
+"to career growth and beyond."
+msgstr ""
+"Dołącz do interesujących dyskusji na rozmaite tematy: od programowania "
+"Pythona po rozwój kariery i wiele innych."
+
+#: src/components/event.astro:58
 msgid "Collaborative Networking"
 msgstr "Współpraca i networking"
 
-#: src/components/event.astro:55
+#: src/components/event.astro:59
 msgid ""
 "Connect with fellow Python enthusiasts, expand your professional network, "
 "and forge new friendships."
@@ -118,11 +189,11 @@ msgstr ""
 "Poznaj entuzjastki i entuzjastów Pythona, rozszerz swoją sieć znajomych, "
 "zawieraj nowe przyjaźnie."
 
-#: src/components/event.astro:60
+#: src/components/event.astro:63
 msgid "Volunteer"
 msgstr "Wolontariuszki i wolontariusze"
 
-#: src/components/event.astro:61
+#: src/components/event.astro:64
 msgid ""
 "We would not be able to run this conference without help from our "
 "volunteers. Please check the Volunteer guide for more details on how to "
@@ -131,25 +202,22 @@ msgstr ""
 "Ta konferencja nie odbyłaby się bez pomocy naszych wolontariuszek i "
 "wolontariuszy. Sprawdź, jak możesz dołączyć w Przewodniku wolontariusza!"
 
-#: src/components/event.astro:70
+#: src/components/event.astro:77
 msgid "Conference Details"
 msgstr "Szczegóły konferencji"
 
-#: src/components/event.astro:71
+#: src/components/event.astro:78
 msgid "The Event"
 msgstr "Wydarzenie"
 
-#: src/components/event.astro:73
+#: src/components/event.astro:80
 msgid ""
-"PyLadies Conference (PyLadiesCon) is the third PyLadies conference held– an "
+"PyLadies Conference (PyLadiesCon) is the fourth PyLadies conference held– an "
 "exciting online and FREE event dedicated to empowerment, learning, and "
 "diversity within the Python community! 🎉"
 msgstr ""
-"Konferencja PyLadies (PyLadiesCon) jest już trzecią zorganizowaną edycją - "
-"wydarzeniem celebrującym upodmiotowienie, rozwój i różnorodność w "
-"społeczności Pythona - online i całkowicie ZA DARMO! 🎉"
 
-#: src/components/event.astro:91 src/components/organization.astro:102
+#: src/components/event.astro:97 src/components/organization.astro:98
 msgid "Learn more"
 msgstr "Dowiedz się więcej"
 
@@ -199,13 +267,9 @@ msgstr "Mój język nie jest jednym z języków konferencji, jak mogę go doda�
 #: src/components/faq.astro:23
 msgid ""
 "We would be happy to include your language, as long as there is a group of "
-"volunteers that can take care of reviewing proposals, generating and "
-"verifying subtitles, host talks, and translate the content in our platforms."
+"volunteers that can take care of generating and verifying subtitles, hosting "
+"sessions, and translating the content in our platforms."
 msgstr ""
-"Chętnie dodamy twój język, jeśli znajdzie się grupa wolontariuszy i "
-"wolontariuszek, którzy zajmą się oceną przysłanych propozycji, stworzeniem i "
-"weryfikacją napisów, moderacją prelekcji i tłumaczeniem zawartości naszych "
-"platform."
 
 #: src/components/faq.astro:26
 msgid "I don't know Python, but I'm interested into learning, should I join?"
@@ -213,13 +277,10 @@ msgstr "Nie umiem Pythona, ale chcę się nauczyć, czy mogę dołączyć?"
 
 #: src/components/faq.astro:27
 msgid ""
-"Some topics might be difficult to understand, but we aim to have talks from "
-"many levels, including beginner topics, and also some activities for people "
-"to learn."
+"Some topics might be difficult to understand, but we aim to have sessions "
+"for many levels, including beginner topics, and also some activities for "
+"people to learn."
 msgstr ""
-"Niektóre tematy mogą być trudne do zrozumienia, ale docelowo będziemy mieć "
-"prelekcje na wielu poziomach, również początkującym, oraz aktywności, gdzie "
-"możesz nauczyć się czegoś nowego."
 
 #: src/components/faq.astro:30
 msgid "Do you need help with the conference?"
@@ -228,54 +289,45 @@ msgstr "Czy potrzebujecie pomocy przy konferencji?"
 #: src/components/faq.astro:31
 msgid ""
 "Yes!, we are usually looking for volunteers that can help us in tasks like "
-"reviewing proposals, generate and check subtitles, moderate sprints/"
-"workshops/panels, moderate discord, help us with the website, and many other "
-"things."
+"generating and checking subtitles, moderating sprints, workshops, open "
+"spaces and panels, moderating Discord, helping us with the website, and many "
+"other things."
 msgstr ""
-"Tak! Zazwyczaj szukamy wolontariuszek i wolontariuszy do zadań takich jak: "
-"ocena propozycji prelekcji, tworzenie i weryfikacja napisów, moderowanie "
-"sprintów/warsztatów/paneli, moderowanie Discorda, pomoc ze stroną www i "
-"wiele innych."
 
-#: src/components/faq.astro:38
+#: src/components/faq.astro:43
 msgid "Frequently Asked Questions"
 msgstr "Często zadawane pytania (FAQ)"
 
-#: src/components/footer.astro:66
+#: src/components/footer.astro:65
 msgid "Home"
 msgstr ""
 
-#: src/components/footer.astro:106
-msgid "Copyright © PyLadiesCon 2025 - Present. All rights reserved"
+#: src/components/footer.astro:105
+msgid "Copyright © PyLadiesCon 2026 - Present. All rights reserved"
 msgstr ""
 
-#: src/components/hero.astro:42
-msgid "PyLadiesCon 2025"
-msgstr "PyLadiesCon 2025"
+#: src/components/hero.astro:49
+msgid "PyLadiesCon 2026"
+msgstr "PyLadiesCon 2026"
 
-#: src/components/hero.astro:44
-msgid "5th-7th December | Multi-language | Multi-timezone"
-msgstr "5-7 grudnia | Wiele języków | Wiele stref czasowych"
+#: src/components/hero.astro:53
+msgid "The global online PyLadies conference"
+msgstr ""
 
-#: src/components/hero.astro:65 src/data/menuItems.ts:21
-#: src/pages/[lang]/schedule.astro:23
-msgid "Schedule"
-msgstr "Harmonogram"
+#: src/components/hero.astro:57
+msgid "5–7 December 2026 · Online · Multi-language · Multi-timezone"
+msgstr ""
 
-#: src/components/hero.astro:73
-msgid "Register"
-msgstr "Zarejestruj się"
+#: src/components/hero.astro:62 src/pages/[lang]/attending.astro:39
+#: src/pages/[lang]/attending.astro:110
+msgid "Get your ticket"
+msgstr "Zdobądź bilet"
 
-#: src/components/hero.astro:77 src/data/menuItems.ts:44
-#: src/pages/[lang]/donate.astro:16
-msgid "Donate"
-msgstr "Zasponsoruj nas"
+#: src/components/hero.astro:69
+msgid "View schedule"
+msgstr ""
 
-#: src/components/hero.astro:80
-msgid "Visit our meta website"
-msgstr "Sprawdź naszą stronę organizacyjną"
-
-#: src/components/hero.astro:93
+#: src/components/hero.astro:82
 msgid "The online conference of the PyLadies communities around the globe."
 msgstr ""
 "Konferencja online zorganizowana przez społeczności PyLadies z całego świata."
@@ -297,33 +349,20 @@ msgstr ""
 msgid "Meet Our Keynotes"
 msgstr "Poznaj nasze główne prelegentki"
 
-#: src/components/keynotes_index.astro:22 src/data/menuItems.ts:6
+#: src/components/keynotes_index.astro:21
 msgid "Keynotes"
 msgstr "Główne prelekcje"
 
 #: src/components/organization.astro:14
 msgid ""
-"Mariatta is a Python core developer where she focuses on improving the "
-"workflow and documentation. She is active in the Python community as an "
-"advisor for the Global PyLadies, and PyCon US Chair."
+"Mother of 2 adults | Director @PSF | Fellow Member | 2020 PSF community "
+"service award | PSF D&I Workgroup Chair | PyCon US Design Lead since 2022"
 msgstr ""
-"Mariatta jest core programistką Pythona, gdzie zajmuje się głównie "
-"usprawnianiem workflow i dokumentacji. Jest aktywną członkinią społeczności "
-"Pythona jako doradczyni globalnych PyLadies i przewodnicząca PyCon US."
+"Matka 2 dorosłych dzieci | Director @PSF | Fellow Member | 2020 PSF "
+"community service award | PSF D&I Workgroup Chair | PyCon US Design Lead od "
+"2022"
 
 #: src/components/organization.astro:21
-msgid ""
-"I am a passionate biotechnologist, working as a Sr. Data Scientist in "
-"Berlin. In my spare time, I love to develop projects that can help people "
-"around our own planet, help to organize workshops and give talks in many "
-"python communities."
-msgstr ""
-"Jestem zaangażowaną biotechnolożką, pracującą jako Sr. Data Scientist w "
-"Berlinie. W wolnym czasie rozwijam projekty, które pomagają ludziom na całej "
-"planecie, organizuję warsztaty i tworzę prelekcje na konferencjach "
-"społeczności Pythona."
-
-#: src/components/organization.astro:28
 msgid ""
 "Software QA Analyst. Python community manager. Python Software Foundation "
 "(PSF) Fellow & Director. Advocates diversity and inclusion within tech "
@@ -333,36 +372,7 @@ msgstr ""
 "Foundation (PSF) Fellow & Director. Zwolenniczka różnorodności i integracji "
 "w społecznościach technologicznych. Organizatorka grupy PyLadies."
 
-#: src/components/organization.astro:35
-msgid ""
-"Mother of 2 adults | Director @PSF | Fellow Member | 2020 PSF community "
-"service award | PSF D&I Workgroup Chair | PyCon US Design Lead since 2022"
-msgstr ""
-"Matka 2 dorosłych dzieci | Director @PSF | Fellow Member | 2020 PSF "
-"community service award | PSF D&I Workgroup Chair | PyCon US Design Lead od "
-"2022"
-
-#: src/components/organization.astro:42
-msgid ""
-"Contributor and community member in the African Python Software Community "
-"and has served as an organizer for local and international community events. "
-"She is a Fellow and a Community Service award winner at the PSF."
-msgstr ""
-"Współtwórczyni i członkini afrykańskiej społeczności języka Python, która "
-"organizowała wiele lokalnych i międzynarodowych wydarzeń. Jest PSF Fellow i "
-"laureatką Community Service award udzielaną przez PSF."
-
-#: src/components/organization.astro:49
-msgid ""
-"Python community and conference serial organizer, contributing to many Open "
-"Source initiatives. He is a PSF Board Director and Fellow. He is currently "
-"working at The Qt Company."
-msgstr ""
-"Seryjny organizator społeczności i konferencji wokół Pythona, współpracujący "
-"z wieloma inicjatywami Open Source. Jest PSF Board Director i Fellow. "
-"Aktualnie pracuje w The Qt Company."
-
-#: src/components/organization.astro:56
+#: src/components/organization.astro:28
 msgid ""
 "An Irish Pythonista advocating diversity in tech, and runs regular PyLadies "
 "Dublin events. It was through Python that she got involved with the Irish "
@@ -374,7 +384,39 @@ msgstr ""
 "r. poznała społeczność technologiczną w Irlandii. Jest EuroPython Society "
 "Fellow, PSF Fellow i laureatką PSF Community Service award."
 
-#: src/components/organization.astro:63
+#: src/components/organization.astro:35
+msgid ""
+"I am a passionate biotechnologist, working as a Sr. Data Scientist in "
+"Berlin. In my spare time, I love to develop projects that can help people "
+"around our own planet, help to organize workshops and give talks in many "
+"python communities."
+msgstr ""
+"Jestem zaangażowaną biotechnolożką, pracującą jako Sr. Data Scientist w "
+"Berlinie. W wolnym czasie rozwijam projekty, które pomagają ludziom na całej "
+"planecie, organizuję warsztaty i tworzę prelekcje na konferencjach "
+"społeczności Pythona."
+
+#: src/components/organization.astro:42
+msgid ""
+"Mariatta is a Python core developer where she focuses on improving the "
+"workflow and documentation. She is active in the Python community as an "
+"advisor for the Global PyLadies, and PyCon US Chair."
+msgstr ""
+"Mariatta jest core programistką Pythona, gdzie zajmuje się głównie "
+"usprawnianiem workflow i dokumentacji. Jest aktywną członkinią społeczności "
+"Pythona jako doradczyni globalnych PyLadies i przewodnicząca PyCon US."
+
+#: src/components/organization.astro:49
+msgid ""
+"Contributor and community member in the African Python Software Community "
+"and has served as an organizer for local and international community events. "
+"She is a Fellow and a Community Service award winner at the PSF."
+msgstr ""
+"Współtwórczyni i członkini afrykańskiej społeczności języka Python, która "
+"organizowała wiele lokalnych i międzynarodowych wydarzeń. Jest PSF Fellow i "
+"laureatką Community Service award udzielaną przez PSF."
+
+#: src/components/organization.astro:56
 msgid ""
 "Naa Ashiorkor Nortey is a data scientist and tech community builder. Naa is "
 "deeply involved in the Python community, serving in organizing at "
@@ -386,15 +428,25 @@ msgstr ""
 "Pythona, organizując konferencje jak np. EuroPython. Aktualnie jest jedną z "
 "organizatorek PyLadies Tampere."
 
-#: src/components/organization.astro:72
+#: src/components/organization.astro:63
+msgid ""
+"Python community and conference serial organizer, contributing to many Open "
+"Source initiatives. He is a PSF Board Director and Fellow. He is currently "
+"working at The Qt Company."
+msgstr ""
+"Seryjny organizator społeczności i konferencji wokół Pythona, współpracujący "
+"z wieloma inicjatywami Open Source. Jest PSF Board Director i Fellow. "
+"Aktualnie pracuje w The Qt Company."
+
+#: src/components/organization.astro:74
 msgid "PyLadies Conference"
 msgstr "Konferencja PyLadies"
 
-#: src/components/organization.astro:73
+#: src/components/organization.astro:75
 msgid "The Organizers"
 msgstr "Organizatorki i organizatorzy"
 
-#: src/components/organization.astro:75
+#: src/components/organization.astro:77
 msgid ""
 "PyLadies is an international mentorship group with a focus on helping more "
 "women become active participants and leaders in the Python open-source "
@@ -408,7 +460,7 @@ msgstr ""
 "zróżnicowanej społeczności Pythona poprzez wydarzenia edukacyjne, "
 "konferencje i spotkania towarzyskie."
 
-#: src/components/organization.astro:79
+#: src/components/organization.astro:81
 msgid "To learn more, visit the PyLadies website"
 msgstr "Aby dowiedzieć się więcej, odwiedź stronę PyLadies"
 
@@ -484,13 +536,40 @@ msgstr ""
 msgid "Get Started"
 msgstr "Początek"
 
-#: src/components/sponsors_gallery.astro:183
+#: src/components/sponsors_gallery.astro:53
+msgid "Champion"
+msgstr ""
+
+#: src/components/sponsors_gallery.astro:54
+msgid "Supporters"
+msgstr ""
+
+#: src/components/sponsors_gallery.astro:55
+msgid "Connectors"
+msgstr ""
+
+#: src/components/sponsors_gallery.astro:63
 msgid "Meet the sponsors of our conference."
 msgstr "Poznaj sponsorów naszej konferencji."
 
-#: src/components/sponsors_gallery.astro:184 src/data/menuItems.ts:10
+#: src/components/sponsors_gallery.astro:64 src/data/menuItems.ts:11
 msgid "Our Sponsors"
 msgstr "Nasi sponsorzy"
+
+#: src/components/sponsors_gallery.astro:69
+msgid "Our sponsors coming soon"
+msgstr ""
+
+#: src/components/sponsors_gallery.astro:70
+msgid ""
+"Sponsorship for this edition is still open, so there is nobody to thank here "
+"just yet. Take a look at the sponsorship page to find out how your "
+"organization can support the conference."
+msgstr ""
+
+#: src/components/sponsors_gallery.astro:78
+msgid "See sponsorship options"
+msgstr ""
 
 #: src/components/sponsorship_faq.astro:10
 msgid "What is the «Keynote Intro»?"
@@ -569,10 +648,6 @@ msgstr ""
 msgid "Sponsorship Frequently Asked Questions"
 msgstr "Często zadawane pytania dot. sponsoringu"
 
-#: src/components/ui/ticketbutton.astro:22
-msgid "Get Your Ticket"
-msgstr "Zdobądź bilet"
-
 #: src/data/menuItems.ts:3
 msgid "About"
 msgstr "O nas"
@@ -581,73 +656,78 @@ msgstr "O nas"
 msgid "The event"
 msgstr "Wydarzenie"
 
-#: src/data/menuItems.ts:7
+#: src/data/menuItems.ts:8
 msgid "FAQ"
 msgstr "FAQ"
 
-#: src/data/menuItems.ts:8
+#: src/data/menuItems.ts:9
 msgid "The organizers"
 msgstr "Organizatorki i organizatorzy"
 
-#: src/data/menuItems.ts:9
+#: src/data/menuItems.ts:10
 msgid "Volunteers"
 msgstr "Wolontariuszki i wolontariusze"
 
-#: src/data/menuItems.ts:14
+#: src/data/menuItems.ts:15
 msgid "Blog"
 msgstr "Blog"
 
-#: src/data/menuItems.ts:19
+#: src/data/menuItems.ts:20
 msgid "Conference"
 msgstr "Konferencja"
 
-#: src/data/menuItems.ts:22 src/pages/[lang]/sessions.astro:70
+#: src/data/menuItems.ts:25 src/pages/[lang]/_schedule.astro:23
+#: src/pages/[lang]/schedule.astro:34 src/pages/[lang]/schedule.astro:37
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: src/data/menuItems.ts:26 src/pages/[lang]/_sessions.astro:70
 msgid "Sessions"
 msgstr "Sesje"
 
-#: src/data/menuItems.ts:23 src/pages/[lang]/session/[...session].astro:120
-#: src/pages/[lang]/speakers.astro:23
+#: src/data/menuItems.ts:27 src/pages/[lang]/_speakers.astro:23
+#: src/pages/[lang]/session/[...session].astro:120
 msgid "Speakers"
 msgstr "Prelegentki i prelegenci"
 
-#: src/data/menuItems.ts:24
-msgid "Sprints"
-msgstr "Sprinty"
-
-#: src/data/menuItems.ts:25
+#: src/data/menuItems.ts:29
 msgid "How to Join"
 msgstr "Jak dołączyć"
 
-#: src/data/menuItems.ts:29 src/pages/[lang]/sponsors.astro:213
-#: src/pages/[lang]/sponsors.astro:217
+#: src/data/menuItems.ts:33 src/pages/[lang]/sponsors.astro:199
+#: src/pages/[lang]/sponsors.astro:203
 msgid "Sponsors"
 msgstr "Sponsorzy"
 
-#: src/data/menuItems.ts:31
+#: src/data/menuItems.ts:35
 msgid "Sponsorship Plans"
 msgstr "Poziomy sponsoringu"
 
-#: src/data/menuItems.ts:32
+#: src/data/menuItems.ts:36
 msgid "Jobs Board"
 msgstr "Ogłoszenia o pracę"
 
-#: src/data/menuItems.ts:36 src/pages/[lang]/coc-enforcing.astro:23
+#: src/data/menuItems.ts:40 src/pages/[lang]/coc-enforcing.astro:23
 #: src/pages/[lang]/coc-reporting.astro:23 src/pages/[lang]/coc.astro:28
 #: src/pages/[lang]/coc.astro:31
 msgid "Code of Conduct"
 msgstr "Kodeks postępowania"
 
-#: src/data/menuItems.ts:38
+#: src/data/menuItems.ts:42
 msgid "Read the CoC"
 msgstr "Przeczytaj Kodeks postępowania"
 
-#: src/data/menuItems.ts:39
+#: src/data/menuItems.ts:43
 msgid "Reporting process"
 msgstr "Proces zgłaszania"
 
-#: src/data/menuItems.ts:40
+#: src/data/menuItems.ts:44
 msgid "Enforcement process"
 msgstr "Sposób postępowania"
+
+#: src/data/menuItems.ts:48 src/pages/[lang]/donate.astro:16
+msgid "Donate"
+msgstr "Zasponsoruj nas"
 
 #: src/pages/404.astro:14
 msgid "Error 404"
@@ -665,91 +745,185 @@ msgstr "Bez obaw, mnóstwo innych rzeczy znajdziesz na naszej stronie głównej.
 msgid "Back to homepage"
 msgstr "Z powrotem do strony głównej"
 
-#: src/pages/[lang]/attending.astro:22 src/pages/[lang]/attending.astro:93
-msgid "Get your ticket"
-msgstr "Zdobądź bilet"
+#: src/pages/[lang]/_schedule.astro:22
+msgid "What Awaits You at PyLadiesCon"
+msgstr "Co cię czeka na PyLadiesCon"
 
-#: src/pages/[lang]/attending.astro:23
+#: src/pages/[lang]/_schedule.astro:25
+msgid ""
+"This year's edition of PyLadiesCon is packed with exciting opportunities for "
+"learning and community engagement. By registering, you'll gain access to: "
+"Keynotes, Talks, Interactive Sessions & Panels, Networking, and more!"
+msgstr ""
+"Tegoroczna edycja PyLadiesCon jest pełna możliwości edukacyjnych i "
+"towarzyskich. Dzięki rejestracji uzyskasz dostęp do głównych prelekcji, "
+"prelekcji, paneli, networkingu i wielu innych!"
+
+#: src/pages/[lang]/_schedule.astro:48
+msgid "Local Time"
+msgstr "Czas lokalny"
+
+#: src/pages/[lang]/_schedule.astro:63
+msgid "Session Types"
+msgstr "Rodzaje sesji"
+
+#: src/pages/[lang]/_schedule.astro:67
+msgid "Keynote"
+msgstr "Główna prelekcja"
+
+#: src/pages/[lang]/_schedule.astro:70
+msgid "Talk"
+msgstr "Prelekcja"
+
+#: src/pages/[lang]/_schedule.astro:73
+msgid "Panel"
+msgstr "Panel"
+
+#: src/pages/[lang]/_schedule.astro:76
+msgid "Workshop"
+msgstr "Warsztat"
+
+#: src/pages/[lang]/_schedule.astro:79
+msgid "Sponsor Talk"
+msgstr "Prelekcja sponsora"
+
+#: src/pages/[lang]/_schedule.astro:85
+msgid "Difficulty Levels"
+msgstr "Poziomy trudności"
+
+#: src/pages/[lang]/_schedule.astro:89
+msgid "Beginner"
+msgstr "Początkujący"
+
+#: src/pages/[lang]/_schedule.astro:92
+msgid "Intermediate"
+msgstr "Średnio-zaawansowany"
+
+#: src/pages/[lang]/_schedule.astro:95
+msgid "Advanced"
+msgstr "Zaawansowany"
+
+#: src/pages/[lang]/_sessions.astro:73
+msgid "List of Sessions"
+msgstr "Lista sesji"
+
+#: src/pages/[lang]/_sessions.astro:76
+msgid ""
+"Here you can find a list of all the sessions at the conference. You can "
+"filter the sessions by track, type, and level."
+msgstr ""
+"Tutaj znajdziesz listę wszystkich sesji na konferencji. Możesz je filtrować "
+"wg scieżki tematycznej, rodzaju i poziomu."
+
+#: src/pages/[lang]/_sessions.astro:81
+msgid "Filters"
+msgstr "Filtry"
+
+#: src/pages/[lang]/_sessions.astro:85
+msgid "Search results"
+msgstr "Wyniki wyszukiwania"
+
+#: src/pages/[lang]/_sessions.astro:89
+msgid "No sessions available yet. Please check back later!"
+msgstr "Sesje nie są teraz dostępne. Sprawdź później!"
+
+#: src/pages/[lang]/_speakers.astro:26
+msgid ""
+"We are excited to have an amazing lineup of speakers from around the world."
+msgstr "Mamy świetną grupę prelegentek i prelegentów z całego świata."
+
+#: src/pages/[lang]/_speakers.astro:27 src/pages/[lang]/_speakers.astro:65
+msgid "Our Speakers"
+msgstr "Nasze prelegentki i prelegenci"
+
+#: src/pages/[lang]/_speakers.astro:33
+msgid "Our Keynotes"
+msgstr "Główne prelekcje"
+
+#: src/pages/[lang]/_speakers.astro:34
+msgid "Meet our Keynote speakers"
+msgstr "Spotkaj nasze główne prelegentki"
+
+#: src/pages/[lang]/_speakers.astro:60
+msgid "Meet our Speakers"
+msgstr "Spotkaj nasze prelegentki i prelegentów"
+
+#: src/pages/[lang]/attending.astro:40
 msgid "Visit pretix to get one."
 msgstr "Odwiedź pretix."
 
-#: src/pages/[lang]/attending.astro:28 src/pages/[lang]/attending.astro:106
-#: src/pages/[lang]/attending.astro:121
+#: src/pages/[lang]/attending.astro:45 src/pages/[lang]/attending.astro:123
 msgid "Join Discord"
 msgstr "Przyjdź na Discord"
 
-#: src/pages/[lang]/attending.astro:29
+#: src/pages/[lang]/attending.astro:46
 msgid "Using the invite link"
 msgstr "Korzystając z linka z zaproszeniem"
 
-#: src/pages/[lang]/attending.astro:34 src/pages/[lang]/attending.astro:127
+#: src/pages/[lang]/attending.astro:51 src/pages/[lang]/attending.astro:140
 msgid "Register in Discord"
 msgstr "Zarejestruj się na Discordzie"
 
-#: src/pages/[lang]/attending.astro:35
+#: src/pages/[lang]/attending.astro:52
 msgid "With your <b>Name</b> and <b>Order number</b>"
 msgstr "Ze swoim <b>Imieniem i nazwiskiem</b> i <b>Numerem zamówienia</b>"
 
-#: src/pages/[lang]/attending.astro:40
+#: src/pages/[lang]/attending.astro:57
 msgid "Enjoy the conference!"
 msgstr "Życzymy przyjemnej konferencji!"
 
-#: src/pages/[lang]/attending.astro:41
+#: src/pages/[lang]/attending.astro:58
 msgid "Check the server structure"
 msgstr "Rozejrzyj się po strukturze serwera"
 
-#: src/pages/[lang]/attending.astro:49
+#: src/pages/[lang]/attending.astro:66
 msgid "The online venue of the conference"
 msgstr "Online miejsce konferencji"
 
-#: src/pages/[lang]/attending.astro:50
+#: src/pages/[lang]/attending.astro:67
 msgid "Attending PyLadiesCon"
 msgstr "Udział w PyLadiesCon"
 
-#: src/pages/[lang]/attending.astro:52
+#: src/pages/[lang]/attending.astro:69
 msgid ""
 "Join the conference Discord server to meet every participant, including "
-"Speakers, Sponsors, Keynotes, Volunteers and Organizers. Enjoy talks, "
-"workshops, open spaces, get stream links, and many more activities!"
+"presenters, volunteers and organizers. Enjoy workshops, sprints, open "
+"spaces, get stream links, and many more activities!"
 msgstr ""
-"Dołącz do nas na Discordzie, spotkasz tam wszystkich uczestniczących: "
-"prelegentki, sponsorów, głównych prelegentów, wolontariuszki i "
-"organizatorów. Weź udział w prelekcjach, warsztatach, open spaces, zyskaj "
-"linki do streamu i wiele wiele innych!"
 
-#: src/pages/[lang]/attending.astro:53
+#: src/pages/[lang]/attending.astro:70
 msgid "Follow the next steps to enjoy the conference:"
 msgstr "Jeszcze kilka kroków i możesz korzystać z konferencji:"
 
-#: src/pages/[lang]/attending.astro:64
+#: src/pages/[lang]/attending.astro:81
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: src/pages/[lang]/attending.astro:64
+#: src/pages/[lang]/attending.astro:81
 msgid "The discord server is available!"
 msgstr "Serwer Discorda jest dostępny!"
 
-#: src/pages/[lang]/attending.astro:101
+#: src/pages/[lang]/attending.astro:118
 msgid ""
 "<span class=\"font-bold\">Important:</span> every participant needs a <a "
-"class=\"underline\" href=\"https://pretix.eu/pyladiescon/2025\">conference "
+"class=\"underline\" href=\"https://pretix.eu/pyladiescon/2026\">conference "
 "ticket</a> in order to access the right channels in the Discord server; "
 "including Participants, Volunteers, and Sponsors."
 msgstr ""
 "<span class=\"font-bold\">Ważne:</span> każda uczestniczka i uczestnik "
 "potrzebuje <a class=\"underline\" href=\"https://pretix.eu/pyladiescon/"
-"2025\">biletu na konferencję</a>, aby uzyskali dostęp do wszystkich kanałów "
+"2026\">biletu na konferencję</a>, aby uzyskali dostęp do wszystkich kanałów "
 "na Discordzie, włączając w to Uczestników, Wolontariuszy i Sponsorów."
 
-#: src/pages/[lang]/attending.astro:103
+#: src/pages/[lang]/attending.astro:120
 msgid ""
 "You can get a conference ticket on <a href=\"https://pretix.eu/pyladiescon/"
-"2025\">our pretix page</a>."
+"2026\">our pretix page</a>."
 msgstr ""
 "Bilet na konferencję zdobędziesz na <a href=\"https://pretix.eu/pyladiescon/"
-"2025\">naszym pretixie</a>."
+"2026\">naszym pretixie</a>."
 
-#: src/pages/[lang]/attending.astro:114
+#: src/pages/[lang]/attending.astro:131
 msgid ""
 "<span class=\"font-medium\"><b>Note:</b></span> In case you already have a "
 "Discord account, you don't need to create a new one."
@@ -757,48 +931,40 @@ msgstr ""
 "<span class=\"font-medium\"><b>Uwaga:</b></span> Jeśli już masz konto na "
 "Discordzie, nie musisz zakładać nowego."
 
-#: src/pages/[lang]/attending.astro:116
-msgid ""
-"You will receive an invite link before the conference, but in case you want "
-"to join before, use this one:"
+#: src/pages/[lang]/attending.astro:135
+msgid "More information soon"
 msgstr ""
-"Otrzymasz link z zaproszeniem przed konferencją, ale jeśli chcesz dołączyć "
-"wcześniej, skorzystaj z tego:"
 
-#: src/pages/[lang]/attending.astro:130
+#: src/pages/[lang]/attending.astro:136
+msgid ""
+"We will share the invite link closer to the conference. Every participant "
+"also receives it by email before the event."
+msgstr ""
+
+#: src/pages/[lang]/attending.astro:143
 msgid ""
 "Once inside the server, head to the <code class=\"text-"
-"blue-400\">#registration-form</code> channel, click on the <button "
+"accent\">#registration-form</code> channel, click on the <button "
 "type=\"button\" class=\"focus:outline-none text-white bg-green-700 hover:bg-"
 "green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm "
 "px-3 py-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-"
 "green-800\">Register here 👈</button> button and a modal window will open, "
 "where you will need to enter your <b>Name</b> and <b>Ticket number</b>."
 msgstr ""
-"Po wejściu na server, przejdź do kanału <code class=\"text-"
-"blue-400\">#registration-form</code>, kliknij na <button type=\"button\" "
-"class=\"focus:outline-none text-white bg-green-700 hover:bg-green-800 "
-"focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 "
-"dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-"
-"green-800\">Register here 👈</button>, co otworzy okno, w którym wpisz swoje "
-"<b>Imię i nazwisko</b> oraz <b>Numer zamówienia</b>."
 
-#: src/pages/[lang]/attending.astro:131
+#: src/pages/[lang]/attending.astro:144
 msgid ""
 "You need to enter <b>the exact</b> information from your conference ticket, "
-"that you received via email with a subject:<br><code class=\"text-"
-"gray-300\">[PyLadiesCon 2025] Your order: XXXXX</code>, when you acquired "
-"the ticket."
+"that you received via email with a subject:<br><code class=\"text-ink-"
+"muted\">[PyLadiesCon 2026] Your order: XXXXX</code>, when you acquired the "
+"ticket."
 msgstr ""
-"Wpisz informację <b>dokładnie</b> tak, jak jest na bilecie, który otrzymałaś "
-"w mailu z tematem:<br><code class=\"text-gray-300\">[PyLadiesCon 2025] Your "
-"order: XXXXX</code> po zarejestrowaniu się."
 
-#: src/pages/[lang]/attending.astro:133
+#: src/pages/[lang]/attending.astro:146
 msgid "Joining as an Participant"
 msgstr "Jestem uczestniczką / uczestnikiem"
 
-#: src/pages/[lang]/attending.astro:135
+#: src/pages/[lang]/attending.astro:148
 msgid ""
 "If this is your first PyLadiesCon, you should join Discord with the link "
 "that it will be sent to you a week before the conference."
@@ -806,7 +972,7 @@ msgstr ""
 "Jeśli to twój pierwszy PyLadiesCon, zarejestruj się na Discordzie za pomocą "
 "linku, który wyślemy na tydzień przed konferencją."
 
-#: src/pages/[lang]/attending.astro:136
+#: src/pages/[lang]/attending.astro:149
 msgid ""
 "Once you register successfully, you will get assigned the <code class=\"text-"
 "yellow-400\">Participant</code> role."
@@ -814,11 +980,11 @@ msgstr ""
 "Po rejestracji otrzymasz rolę <code class=\"text-yellow-400\">Participant</"
 "code>."
 
-#: src/pages/[lang]/attending.astro:138
+#: src/pages/[lang]/attending.astro:151
 msgid "Joining as a Sponsor"
 msgstr "Jestem sponsorem"
 
-#: src/pages/[lang]/attending.astro:140
+#: src/pages/[lang]/attending.astro:153
 msgid ""
 "If you are from a company that is <b>sponsoring the conference</b>, and you "
 "will participate in the many activities like Panel Discussion, Speed "
@@ -832,7 +998,7 @@ msgstr ""
 "pomocą <b>Vouchera</b> , który wyślemy przez osobę kontaktową w twojej "
 "firmie."
 
-#: src/pages/[lang]/attending.astro:141
+#: src/pages/[lang]/attending.astro:154
 msgid ""
 "This is very important for you to get the <code class=\"text-"
 "yellow-400\">Sponsor</code> role."
@@ -840,26 +1006,22 @@ msgstr ""
 "Tylko w ten sposób otrzymasz rolę <code class=\"text-yellow-400\">Sponsor</"
 "code>."
 
-#: src/pages/[lang]/attending.astro:143
-msgid "Joining as a Speaker"
-msgstr "Jestem prelegentką / prelegentem"
-
-#: src/pages/[lang]/attending.astro:145
-msgid ""
-"If you have a confirmed Talk, Panel, or Keynote you should get a ticket "
-"using the Voucher that we will send you via email. The reason behind this is "
-"to automatically assign you the <code class=\"text-yellow-400\">Speaker</"
-"code> role."
+#: src/pages/[lang]/attending.astro:156
+msgid "Joining as a Presenter"
 msgstr ""
-"Jeśli tworzysz prelekcję, panel lub główną prelekcję, powinnaś otrzymać "
-"bilet korzystając z vouchera, który ci wyślemy na e-mail. Dzięki temu "
-"automatycznie otrzymasz rolę <code class=\"text-yellow-400\">Speaker</code> ."
 
-#: src/pages/[lang]/attending.astro:147
+#: src/pages/[lang]/attending.astro:158
+msgid ""
+"If you have a session, you will get a ticket using the Voucher that we will "
+"send you via email. The reason behind this is to automatically assign you "
+"the <code class=\"text-yellow-400\">Presenter</code> role."
+msgstr ""
+
+#: src/pages/[lang]/attending.astro:160
 msgid "Joining as a Volunteer"
 msgstr "Jestem wolontariuszką / wolontariuszem"
 
-#: src/pages/[lang]/attending.astro:149
+#: src/pages/[lang]/attending.astro:162
 msgid ""
 "If you are a conference Volunteer, it's highly probable you are already "
 "inside the server, but you <span class=\"text-red-500\">will not</span> have "
@@ -871,21 +1033,18 @@ msgstr ""
 "konferencji dopóki nie uzyskasz biletu wstępu na konferencję i nie "
 "zarejestrujesz się w sposób opisany wyżej na stronie."
 
-#: src/pages/[lang]/attending.astro:150
+#: src/pages/[lang]/attending.astro:163
 msgid ""
 "If by some reason you haven't been assigned the <code class=\"text-"
 "yellow-400\">Volunteer</code> contact the organization in the <code "
-"class=\"text-blue-400\">#volunteers-general</code> channel."
+"class=\"text-accent\">#volunteers-general</code> channel."
 msgstr ""
-"Jeśli jeszcze nie masz roli <code class=\"text-yellow-400\">Volunteer</"
-"code>, odezwij się zespołowi organizatorów w kanale <code class=\"text-"
-"blue-400\">#volunteers-general</code>."
 
-#: src/pages/[lang]/attending.astro:153
+#: src/pages/[lang]/attending.astro:166
 msgid "The server structure"
 msgstr "Struktura serwera"
 
-#: src/pages/[lang]/attending.astro:156
+#: src/pages/[lang]/attending.astro:169
 msgid ""
 "Once you join the server, you will see two categories, one called "
 "<b>Conference Information</b> with two channels:"
@@ -893,108 +1052,87 @@ msgstr ""
 "Po dołączenia do serwera zobaczysz dwie kategorie: jedna nazwana "
 "<b>Conference Information</b> z dwoma kanałami:"
 
-#: src/pages/[lang]/attending.astro:158
+#: src/pages/[lang]/attending.astro:171
 msgid ""
-"a text channel called <code class=\"text-blue-400\">#rules</code>, with the "
+"a text channel called <code class=\"text-accent\">#rules</code>, with the "
 "rules of the server, and"
 msgstr ""
-"kanał tekstowy nazwany <code class=\"text-blue-400\">#rules</code>, z "
-"zasadami serwera, i"
 
-#: src/pages/[lang]/attending.astro:159
+#: src/pages/[lang]/attending.astro:172
 msgid ""
-"a text channel called <code class=\"text-blue-400\">#code-of-conduct</code>, "
+"a text channel called <code class=\"text-accent\">#code-of-conduct</code>, "
 "with the guidelines to participate in the event"
 msgstr ""
-"kanał tekstowy nazwany <code class=\"text-blue-400\">#code-of-conduct</"
-"code>, ze wskazówkami, jak wziąć udział w wydarzeniu"
 
-#: src/pages/[lang]/attending.astro:162
+#: src/pages/[lang]/attending.astro:174
 msgid "Another category called <b>Registration</b> with two channels:"
 msgstr "Kolejna kategoria nazwana <b>Registration</b> z dwoma kanałami:"
 
-#: src/pages/[lang]/attending.astro:164
+#: src/pages/[lang]/attending.astro:176
 msgid ""
-"a text channel called <code class=\"text-blue-400\">#registration-form</"
-"code> where you can see the button to register, and"
+"a text channel called <code class=\"text-accent\">#registration-form</code> "
+"where you can see the button to register, and"
 msgstr ""
-"kanał tekstowy nazwany <code class=\"text-blue-400\">#registration-form</"
-"code> gdzie możesz znaleźć formularz rejestracji, i"
 
-#: src/pages/[lang]/attending.astro:165
+#: src/pages/[lang]/attending.astro:177
 msgid ""
-"a forum channel called <code class=\"text-blue-400\">💬registration-help</"
+"a forum channel called <code class=\"text-accent\">💬registration-help</"
 "code>, where you can ask any question regarding the registration process."
 msgstr ""
-"kanał forum nazwany <code class=\"text-blue-400\">💬registration-help</"
-"code>, gdzie możesz zapytać o cokolwiek związanego z procesem rejestracji."
 
-#: src/pages/[lang]/attending.astro:167
+#: src/pages/[lang]/attending.astro:179
 msgid ""
 "If you have any question after you registered, you can leave your question "
-"in the <code class=\"text-blue-400\">💬help</code> forum."
+"in the <code class=\"text-accent\">💬help</code> forum."
 msgstr ""
-"Jeśli masz pytania po rejestracji, możesz je zadać na forum <code "
-"class=\"text-blue-400\">💬help</code>."
 
-#: src/pages/[lang]/attending.astro:169
+#: src/pages/[lang]/attending.astro:181
 msgid "Get the latest updates"
 msgstr "Otrzymaj najnowsze aktualizacje"
 
-#: src/pages/[lang]/attending.astro:171
+#: src/pages/[lang]/attending.astro:183
 msgid ""
 "Once registered, the <b>Conference Information</b> will contains more "
 "channels:"
 msgstr ""
 "Po rejestracji <b>Conference Information</b> będzie zawierać więcej kanałów:"
 
-#: src/pages/[lang]/attending.astro:173
+#: src/pages/[lang]/attending.astro:185
 msgid ""
-"<code class=\"text-blue-400\">#announcements</code>, to get the general "
+"<code class=\"text-accent\">#announcements</code>, to get the general "
 "conference announcements,"
 msgstr ""
-"<code class=\"text-blue-400\">#announcements</code>, gdzie pojawią się "
-"ogłoszenia konferencyjne,"
 
-#: src/pages/[lang]/attending.astro:174
+#: src/pages/[lang]/attending.astro:186
 msgid ""
-"<code class=\"text-blue-400\">#outreach-social-media</code>, to get the "
+"<code class=\"text-accent\">#outreach-social-media</code>, to get the "
 "conference posts on social media, so you can share them,"
 msgstr ""
-"<code class=\"text-blue-400\">#outreach-social-media</code>, gdzie pojawią "
-"się posty na social media, które możesz udostępniać,"
 
-#: src/pages/[lang]/attending.astro:175
+#: src/pages/[lang]/attending.astro:187
 msgid ""
-"<code class=\"text-blue-400\">#donations</code>, to track the donations "
-"through <a href=\"https://pretix.eu/pyladiescon/2025\">Pretix</a> during the "
+"<code class=\"text-accent\">#donations</code>, to track the donations "
+"through <a href=\"https://pretix.eu/pyladiescon/2026\">Pretix</a> during the "
 "conference,"
 msgstr ""
-"<code class=\"text-blue-400\">#donations</code>, gdzie śledzimy dotacje "
-"otrzymane przez <a href=\"https://pretix.eu/pyladiescon/2025\">Pretix</a> "
-"podczas konferencji,"
 
-#: src/pages/[lang]/attending.astro:176
+#: src/pages/[lang]/attending.astro:188
 msgid ""
-"<code class=\"text-blue-400\">#session-notifications</code>, to know the "
+"<code class=\"text-accent\">#session-notifications</code>, to know the "
 "upcoming talks and events,"
 msgstr ""
-"<code class=\"text-blue-400\">#session-notifications</code>, gdzie pojawią "
-"się informacje o następnych punktach programu,"
 
-#: src/pages/[lang]/attending.astro:177
+#: src/pages/[lang]/attending.astro:189
 msgid ""
-"<code class=\"text-blue-400\">#global-events</code>, to discover events "
+"<code class=\"text-accent\">#global-events</code>, to discover events "
 "happening in the rest of the world."
 msgstr ""
-"<code class=\"text-blue-400\">#global-events</code>, gdzie pojawią się "
-"wydarzenia odbywające się na całym świecie."
 
-#: src/pages/[lang]/attending.astro:180
+#: src/pages/[lang]/attending.astro:192
 msgid "Interact with others"
 msgstr "Rozmawiaj z innymi"
 
-#: src/pages/[lang]/attending.astro:182
+#: src/pages/[lang]/attending.astro:194
 msgid ""
 "The <b>Conference</b> category will be visible once you register, and will "
 "contain the following channels:"
@@ -1002,92 +1140,73 @@ msgstr ""
 "Kategoria <b>Conference</b> pojawi się po rejestracji i będzie zawierać "
 "następujące kanały:"
 
-#: src/pages/[lang]/attending.astro:184
+#: src/pages/[lang]/attending.astro:196
 msgid ""
-"<code class=\"text-blue-400\">#introductions</code>, for you to introduce "
+"<code class=\"text-accent\">#introductions</code>, for you to introduce "
 "yourself and say hi to others,"
 msgstr ""
-"<code class=\"text-blue-400\">#welcome</code>, gdzie możesz się przedstawić "
-"i przywitać się z innymi,"
 
-#: src/pages/[lang]/attending.astro:185
+#: src/pages/[lang]/attending.astro:197
 msgid ""
-"<code class=\"text-blue-400\">#general</code>, for a general conference "
+"<code class=\"text-accent\">#general</code>, for a general conference "
 "discussion,"
 msgstr ""
-"<code class=\"text-blue-400\">#general</code>, gdzie odbędzie się główna "
-"dyskusja podczas konferencji,"
 
-#: src/pages/[lang]/attending.astro:186
+#: src/pages/[lang]/attending.astro:198
 msgid ""
-"<code class=\"text-blue-400\">#networking</code>, so you can share your "
-"social media to connect with others,"
+"<code class=\"text-accent\">#networking</code>, so you can share your social "
+"media to connect with others,"
 msgstr ""
-"<code class=\"text-blue-400\">#networking</code>, gdzie możesz udostępnić "
-"swoje media społecznościowe i nawiązać kontakt z innymi,"
 
-#: src/pages/[lang]/attending.astro:187
+#: src/pages/[lang]/attending.astro:199
 msgid ""
-"<code class=\"text-blue-400\">#random</code>, for any discussion not related "
+"<code class=\"text-accent\">#random</code>, for any discussion not related "
 "to the conference,"
 msgstr ""
-"<code class=\"text-blue-400\">#random</code>, gdzie możesz dyskutować o "
-"czymkolwiek,"
 
-#: src/pages/[lang]/attending.astro:188
+#: src/pages/[lang]/attending.astro:200
 msgid ""
-"<code class=\"text-blue-400\">#job-board</code>, in case you are looking for "
+"<code class=\"text-accent\">#job-board</code>, in case you are looking for "
 "job offers,"
-msgstr "<code class=\"text-blue-400\">#job-board</code>, jeśli szukasz pracy,"
+msgstr ""
 
-#: src/pages/[lang]/attending.astro:189
+#: src/pages/[lang]/attending.astro:201
 msgid ""
-"<code class=\"text-blue-400\">#resources</code>, for sharing python-related "
+"<code class=\"text-accent\">#resources</code>, for sharing python-related "
 "resources,"
 msgstr ""
-"<code class=\"text-blue-400\">#resources</code> do udostępniania materiałów "
-"dotyczących Pythonu,"
 
-#: src/pages/[lang]/attending.astro:190
+#: src/pages/[lang]/attending.astro:202
 msgid ""
-"<code class=\"text-blue-400\">#news-discussion</code>, to interact with the "
+"<code class=\"text-accent\">#news-discussion</code>, to interact with the "
 "latest Python/PyLadies blog posts,"
 msgstr ""
-"<code class=\"text-blue-400\">#news-discussion</code>, gdzie możesz reagować "
-"na najnowsze posty o Pythonie/PyLadies,"
 
-#: src/pages/[lang]/attending.astro:191
+#: src/pages/[lang]/attending.astro:203
 msgid ""
-"<code class=\"text-blue-400\">#help</code>, in case you need help with "
+"<code class=\"text-accent\">#help</code>, in case you need help with "
 "something,"
 msgstr ""
-"<code class=\"text-blue-400\">#help</code>, jeśli potrzebujesz z czymś pomóc,"
 
-#: src/pages/[lang]/attending.astro:192
+#: src/pages/[lang]/attending.astro:204
 msgid ""
-"<code class=\"text-blue-400\">#ask-core-devs</code>, for you to meet and ask "
+"<code class=\"text-accent\">#ask-core-devs</code>, for you to meet and ask "
 "the many Python Core developers that will be around,"
 msgstr ""
-"<code class=\"text-blue-400\">#ask-core-devs</code>, gdzie możesz spotkać i "
-"porozmawiać z głównymi programistami Pythona,"
 
-#: src/pages/[lang]/attending.astro:193
+#: src/pages/[lang]/attending.astro:205
 msgid ""
-"<code class=\"text-blue-400\">#game</code>, for a little game we have "
-"prepared for you,"
+"<code class=\"text-accent\">#game</code>, for a little game we have prepared "
+"for you,"
 msgstr ""
-"<code class=\"text-blue-400\">#game</code>, gdzie znajdziesz małą grę, którą "
-"dla ciebie przygotowałyśmy,"
 
-#: src/pages/[lang]/attending.astro:194
+#: src/pages/[lang]/attending.astro:206
 msgid ""
-"<code class=\"text-blue-400\">#game-ranking</code>, to see the ranking of "
-"the game!,"
+"<code class=\"text-accent\">#game-ranking</code>, to see the ranking of the "
+"game!,"
 msgstr ""
-"<code class=\"text-blue-400\">#game-ranking</code>, żeby zobaczyć ranking "
-"gry!,"
 
-#: src/pages/[lang]/attending.astro:196
+#: src/pages/[lang]/attending.astro:208
 msgid ""
 "And more importantly, you also will have channels related to the tracks of "
 "the conference:"
@@ -1095,21 +1214,17 @@ msgstr ""
 "I, co ważniejsze, dostaniesz dostęp do kanałów związanych ze ścieżkami "
 "tematycznymi konferencji:"
 
-#: src/pages/[lang]/attending.astro:198
+#: src/pages/[lang]/attending.astro:210
 msgid ""
-"<code class=\"text-blue-400\">#main-stream</code>, for the main conference "
+"<code class=\"text-accent\">#main-stream</code>, for the main conference "
 "track,"
 msgstr ""
-"<code class=\"text-blue-400\">#main-stream</code>, dla głównej ścieżki "
-"konferencji,"
 
-#: src/pages/[lang]/attending.astro:199
+#: src/pages/[lang]/attending.astro:211
 msgid ""
-"<code class=\"text-blue-400\">#activities-open-spaces</code>, for the track "
+"<code class=\"text-accent\">#activities-open-spaces</code>, for the track "
 "for Activities, Workshops, and Open Spaces,"
 msgstr ""
-"<code class=\"text-blue-400\">#activities-open-spaces</code>, dla innych "
-"aktywności, warsztatów, open spaces,"
 
 #: src/pages/[lang]/coc-enforcing.astro:24
 msgid "General Enforcing Procedure"
@@ -1186,21 +1301,21 @@ msgstr ""
 
 #: src/pages/[lang]/coc.astro:83
 msgid ""
-"<strong class=\"text-pink\">Being open.</strong> Members of the community "
+"<strong class=\"text-accent\">Being open.</strong> Members of the community "
 "are open to collaboration, whether it's on PEPs, patches, problems, or "
 "otherwise."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:86
 msgid ""
-"<strong class=\"text-pink\">Focusing on what is best for the community.</"
+"<strong class=\"text-accent\">Focusing on what is best for the community.</"
 "strong> We're respectful of the processes set forth in the community, and we "
 "work within them."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:89
 msgid ""
-"<strong class=\"text-pink\">Acknowledging time and effort.</strong> We're "
+"<strong class=\"text-accent\">Acknowledging time and effort.</strong> We're "
 "respectful of the volunteer efforts that permeate the Python community. "
 "We're thoughtful when addressing the efforts of others, keeping in mind that "
 "often times the labor was completed simply for the good of the community."
@@ -1208,7 +1323,7 @@ msgstr ""
 
 #: src/pages/[lang]/coc.astro:92
 msgid ""
-"<strong class=\"text-pink\">Being respectful of differing viewpoints and "
+"<strong class=\"text-accent\">Being respectful of differing viewpoints and "
 "experiences.</strong> We're receptive to constructive comments and "
 "criticism, experiences and skill sets of other members contribute to the "
 "whole of our efforts."
@@ -1216,34 +1331,35 @@ msgstr ""
 
 #: src/pages/[lang]/coc.astro:95
 msgid ""
-"<strong class=\"text-pink\">Showing empathy towards other community members."
-"</strong> We're attentive in our communications, whether in person or "
-"online, and we're tactful when approaching differing views."
+"<strong class=\"text-accent\">Showing empathy towards other community "
+"members.</strong> We're attentive in our communications, whether in person "
+"or online, and we're tactful when approaching differing views."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:98
 msgid ""
-"<strong class=\"text-pink\">Being considerate.</strong> Members of the "
+"<strong class=\"text-accent\">Being considerate.</strong> Members of the "
 "community are considerate of their peers – other Python users."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:101
 msgid ""
-"<strong class=\"text-pink\">Being respectful.</strong> We're respectful of "
+"<strong class=\"text-accent\">Being respectful.</strong> We're respectful of "
 "others, their positions, their skills, their commitments, and their efforts."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:104
 msgid ""
-"<strong class=\"text-pink\">Gracefully accepting constructive criticism.</"
+"<strong class=\"text-accent\">Gracefully accepting constructive criticism.</"
 "strong> When we disagree, we are courteous in raising our issues."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:107
 msgid ""
-"<strong class=\"text-pink\">Using welcoming and inclusive language.</strong> "
-"We're accepting of all who wish to take part in our activities, fostering an "
-"environment where anyone can participate and everyone can make a difference."
+"<strong class=\"text-accent\">Using welcoming and inclusive language.</"
+"strong> We're accepting of all who wish to take part in our activities, "
+"fostering an environment where anyone can participate and everyone can make "
+"a difference."
 msgstr ""
 
 #: src/pages/[lang]/coc.astro:126
@@ -1418,75 +1534,33 @@ msgstr ""
 "Twoja hojność pomaga społecznościom PyLadies z całego świata spotkać się i "
 "dzielić się swoją wiedzą."
 
-#: src/pages/[lang]/jobs.astro:159
+#: src/pages/[lang]/jobs.astro:173
 msgid "Find opportunities from our sponsors"
 msgstr "Zobacz, co oferują nasi sponsorzy"
 
-#: src/pages/[lang]/jobs.astro:160
+#: src/pages/[lang]/jobs.astro:174
 msgid "Job Board"
 msgstr "Ogłoszenia o pracę"
 
-#: src/pages/[lang]/jobs.astro:166
-msgid "-- No Jobs were added so far --"
-msgstr "-- Nie dodano na razie żadnych ogłoszeń --"
-
-#: src/pages/[lang]/schedule.astro:22
-msgid "What Awaits You at PyLadiesCon"
-msgstr "Co cię czeka na PyLadiesCon"
-
-#: src/pages/[lang]/schedule.astro:25
-msgid ""
-"This year's edition of PyLadiesCon is packed with exciting opportunities for "
-"learning and community engagement. By registering, you'll gain access to: "
-"Keynotes, Talks, Interactive Sessions & Panels, Networking, and more!"
+#: src/pages/[lang]/jobs.astro:181
+msgid "Job board coming soon"
 msgstr ""
-"Tegoroczna edycja PyLadiesCon jest pełna możliwości edukacyjnych i "
-"towarzyskich. Dzięki rejestracji uzyskasz dostęp do głównych prelekcji, "
-"prelekcji, paneli, networkingu i wielu innych!"
 
-#: src/pages/[lang]/schedule.astro:48
-msgid "Local Time"
-msgstr "Czas lokalny"
+#: src/pages/[lang]/jobs.astro:182
+msgid ""
+"Our sponsors' openings will be listed here closer to the conference. If you "
+"would like to post a role, get in touch with us."
+msgstr ""
 
-#: src/pages/[lang]/schedule.astro:63
-msgid "Session Types"
-msgstr "Rodzaje sesji"
+#: src/pages/[lang]/schedule.astro:44
+msgid "Programme coming soon"
+msgstr ""
 
-#: src/pages/[lang]/schedule.astro:67
-msgid "Keynote"
-msgstr "Główna prelekcja"
-
-#: src/pages/[lang]/schedule.astro:70
-msgid "Talk"
-msgstr "Prelekcja"
-
-#: src/pages/[lang]/schedule.astro:73
-msgid "Panel"
-msgstr "Panel"
-
-#: src/pages/[lang]/schedule.astro:76
-msgid "Workshop"
-msgstr "Warsztat"
-
-#: src/pages/[lang]/schedule.astro:79
-msgid "Sponsor Talk"
-msgstr "Prelekcja sponsora"
-
-#: src/pages/[lang]/schedule.astro:85
-msgid "Difficulty Levels"
-msgstr "Poziomy trudności"
-
-#: src/pages/[lang]/schedule.astro:89
-msgid "Beginner"
-msgstr "Początkujący"
-
-#: src/pages/[lang]/schedule.astro:92
-msgid "Intermediate"
-msgstr "Średnio-zaawansowany"
-
-#: src/pages/[lang]/schedule.astro:95
-msgid "Advanced"
-msgstr "Zaawansowany"
+#: src/pages/[lang]/schedule.astro:45
+msgid ""
+"We are still putting the programme together. Tutorials, workshops, sprints, "
+"open spaces, PyJam and panels will be announced here — check back soon!"
+msgstr ""
 
 #: src/pages/[lang]/session/[...session].astro:61
 msgid "Type"
@@ -1516,30 +1590,6 @@ msgstr "minut"
 msgid "Abstract"
 msgstr "Abstrakt"
 
-#: src/pages/[lang]/sessions.astro:73
-msgid "List of Sessions"
-msgstr "Lista sesji"
-
-#: src/pages/[lang]/sessions.astro:76
-msgid ""
-"Here you can find a list of all the sessions at the conference. You can "
-"filter the sessions by track, type, and level."
-msgstr ""
-"Tutaj znajdziesz listę wszystkich sesji na konferencji. Możesz je filtrować "
-"wg scieżki tematycznej, rodzaju i poziomu."
-
-#: src/pages/[lang]/sessions.astro:81
-msgid "Filters"
-msgstr "Filtry"
-
-#: src/pages/[lang]/sessions.astro:85
-msgid "Search results"
-msgstr "Wyniki wyszukiwania"
-
-#: src/pages/[lang]/sessions.astro:89
-msgid "No sessions available yet. Please check back later!"
-msgstr "Sesje nie są teraz dostępne. Sprawdź później!"
-
 #: src/pages/[lang]/speaker/[...slug].astro:63
 msgid "More About The Speaker"
 msgstr "Więcej o prelegentce/prelegencie"
@@ -1548,198 +1598,135 @@ msgstr "Więcej o prelegentce/prelegencie"
 msgid "Sessions by {name}"
 msgstr "Sesje prowadzone przez {name}"
 
-#: src/pages/[lang]/speakers.astro:26
-msgid ""
-"We are excited to have an amazing lineup of speakers from around the world."
-msgstr "Mamy świetną grupę prelegentek i prelegentów z całego świata."
-
-#: src/pages/[lang]/speakers.astro:27 src/pages/[lang]/speakers.astro:65
-msgid "Our Speakers"
-msgstr "Nasze prelegentki i prelegenci"
-
-#: src/pages/[lang]/speakers.astro:33
-msgid "Our Keynotes"
-msgstr "Główne prelekcje"
-
-#: src/pages/[lang]/speakers.astro:34
-msgid "Meet our Keynote speakers"
-msgstr "Spotkaj nasze główne prelegentki"
-
-#: src/pages/[lang]/speakers.astro:60
-msgid "Meet our Speakers"
-msgstr "Spotkaj nasze prelegentki i prelegentów"
-
-#: src/pages/[lang]/sponsors.astro:216
+#: src/pages/[lang]/sponsors.astro:202
 msgid "Prospectus for the global PyLadies Conference."
 msgstr "Ulotka globalnej konferencji PyLadies."
 
-#: src/pages/[lang]/sponsors.astro:219
+#: src/pages/[lang]/sponsors.astro:205
 msgid ""
 "Support PyLadies as we work to improve diversity by bringing fresh talent "
 "into the Python community and to support both seasoned and budding "
 "developers through workshops, community activities, and local advocacy."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:220
+#: src/pages/[lang]/sponsors.astro:206
 msgid ""
 "Your support will help PyLadies provide financial support to help more women "
 "around the world with training, mentorship, and aid to attend conferences "
 "and community events."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:221
+#: src/pages/[lang]/sponsors.astro:207
 msgid ""
 "To learn more and to join us as a sponsor, please contact us, and a member "
 "of our sponsorship team will get back to you soon. Please get in touch by "
 "writing to <a href=\"mailto:sponsors@pyladies.com\">sponsors@pyladies.com</a>"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:231
-msgid "Download Sponsorship Prospectus"
+#: src/pages/[lang]/sponsors.astro:217
+msgid "Sponsorship plans coming soon"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:241
+#: src/pages/[lang]/sponsors.astro:218
+msgid ""
+"We are finalising the tiers and benefits for this edition. In the meantime "
+"we would still love to hear from you — get in touch and we will share the "
+"details as soon as they are ready."
+msgstr ""
+
+#: src/pages/[lang]/sponsors.astro:220 src/pages/[lang]/sponsors.astro:233
+msgid "Contact us"
+msgstr ""
+
+#: src/pages/[lang]/sponsors.astro:226
 #, fuzzy
 msgid "Custom Sponsorship"
 msgstr "Nasi sponsorzy"
 
-#: src/pages/[lang]/sponsors.astro:242
+#: src/pages/[lang]/sponsors.astro:227
 msgid "Most requested"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:245
+#: src/pages/[lang]/sponsors.astro:230
 msgid ""
 "We are also happy to customize a sponsorship package to give you the freedom "
 "to choose what you think works best in order to meet your event "
 "participation goals."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:248
-msgid "Contact us"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:258
-#, fuzzy
-msgid "Other Sponsorship Options"
-msgstr "Poziomy sponsoringu"
-
-#: src/pages/[lang]/sponsors.astro:262
-#, fuzzy
-msgid "PyLadies Chapter Sponsor"
-msgstr "Konferencja PyLadies"
-
-#: src/pages/[lang]/sponsors.astro:263
-msgid "$600 | Unlimited"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:265
-msgid ""
-"Every year we have special short videos featuring different PyLadies "
-"Chapters around the world. The PyLadies Chapter Sponsor get to have the "
-"exclusive branding visibility on these videos during the intro and outro "
-"videocard. These videos will also remain on our official Youtube channel "
-"which means you will enjoy an evergreen branding visibility."
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:272 src/pages/[lang]/sponsors.astro:301
-msgid "Prominent placement of logo and link on the website (all year round)"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:277 src/pages/[lang]/sponsors.astro:306
-msgid "Social media mentions"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:282
-msgid "Logo visibility on opening and closing of every PyLadies Chapter"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:287 src/pages/[lang]/sponsors.astro:316
-msgid "Custom Discord Role"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:291
-msgid "PyLadies Discussion Sponsor"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:292
-msgid "$600 | 6 slots"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:294
-msgid ""
-"PyLadiesCon has 6 different panel discussions each year streaming live from "
-"different regions around the world. These panels are usually one of the most "
-"popular talks."
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:311
-msgid ""
-"Logo visibility on opening and closing of every PyLadies Panel Discussions"
-msgstr ""
-
-#: src/pages/[lang]/sponsors.astro:327
+#: src/pages/[lang]/sponsors.astro:244
 msgid "The Attendees"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:332
+#: src/pages/[lang]/sponsors.astro:249
 msgid ""
 "The attendees of last year's conference represented companies and "
-"organizations from all sectors, and held the types of position on the right "
-"table."
+"organizations from all sectors, across every experience level and more than "
+"70 countries. The tables below break down who was in the room."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:334
+#: src/pages/[lang]/sponsors.astro:251
 msgid "Quick stats"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:336
-msgid "In 2023, we had more than 600 attendees,"
+#: src/pages/[lang]/sponsors.astro:253
+msgid "In 2025, we had 906 attendees"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:337
+#: src/pages/[lang]/sponsors.astro:254
 msgid "In 2024, we had 732 attendees"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:339
+#: src/pages/[lang]/sponsors.astro:255
+msgid "In 2023, we had more than 600 attendees,"
+msgstr ""
+
+#: src/pages/[lang]/sponsors.astro:257
 msgid "Benefits of Sponsorship"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:342
+#: src/pages/[lang]/sponsors.astro:260
 msgid ""
 "<strong>Targeted Audience</strong>: Reach out to a targeted market with "
 "those who could potentially become your employees. Find passionate "
 "Pythonistas to hire."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:345
+#: src/pages/[lang]/sponsors.astro:263
 msgid ""
 "<strong>Branding</strong>: Increasing your brand exposure and elevating your "
 "corporate identity within the community."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:348
+#: src/pages/[lang]/sponsors.astro:266
 msgid ""
 "<strong>Community Contribution</strong>: Contribute, support and sustain the "
 "underrepresented Python community."
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:358
+#: src/pages/[lang]/sponsors.astro:273
 msgid "Current Position"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:361
-msgid "Count"
+#: src/pages/[lang]/sponsors.astro:282
+msgid "Experience Level"
 msgstr ""
 
-#: src/pages/[lang]/sponsors.astro:364
-msgid "Percentage"
+#: src/pages/[lang]/sponsors.astro:288
+msgid "Residence Country"
 msgstr ""
 
-#: src/pages/[lang]/sprints.astro:69
+#: src/pages/[lang]/sponsors.astro:290
+msgid ""
+"Attendees came from 72 countries in total; “Other” covers the 64 outside the "
+"top nine."
+msgstr ""
+
+#: src/pages/[lang]/sprints.astro:87
 msgid "Share, learn and contribute!"
 msgstr "Podziel się, naucz się, włącz się!"
 
-#: src/pages/[lang]/sprints.astro:72
+#: src/pages/[lang]/sprints.astro:90
 msgid ""
 "Sprints are informal coding sessions, and knowledge sharing where people "
 "gather together to work on Open-Source projects, suggest changes in existing "
@@ -1751,31 +1738,27 @@ msgstr ""
 "w istniejących bibliotekach i rozwiązują problemy. Sprint to świetna okazja "
 "do nauki i rozwoju przy okazji współpracy nad projektami Open Source."
 
-#: src/pages/[lang]/sprints.astro:74
+#: src/pages/[lang]/sprints.astro:92
 msgid ""
 "We encourage maintainers to submit their projects by checking out our <a "
 "href=\"https://conference.pyladies.com/docs/speakers/sprints_guide/\" "
-"class=\"text-pinkpyladies\" target=\"_blank\">sprints guide</a>."
+"class=\"text-accent\" target=\"_blank\">sprints guide</a>."
 msgstr ""
-"Zachęcamy autorów do zgłaszania swoich projektów pod adresem <a "
-"href=\"https://conference.pyladies.com/docs/speakers/sprints_guide/\" "
-"class=\"text-pinkpyladies\" target=\"_blank\">przewodnika sprintów</a>."
 
-#: src/pages/[lang]/sprints.astro:76
-msgid "Sprints will run on Sunday, December 7th, from 08:00 to 23:59 UTC."
-msgstr "Sprinty odbędą się w niedzielę 7 grudnia od 08:00 do 23:59 UTC."
+#: src/pages/[lang]/sprints.astro:94
+msgid "Sprint dates and times are still to be confirmed (TBD)."
+msgstr ""
 
-#: src/pages/[lang]/sprints.astro:81
-msgid "-- No sprints added yet --"
-msgstr "-- Nie dodano jeszcze żadnych sprintów --"
+#: src/pages/[lang]/sprints.astro:100
+msgid "Sprint projects coming soon"
+msgstr ""
 
-#: src/pages/[lang]/sprints.astro:156
-msgid "Level:"
-msgstr "Poziom:"
-
-#: src/pages/[lang]/sprints.astro:157
-msgid "Languages:"
-msgstr "Języki:"
+#: src/pages/[lang]/sprints.astro:101
+msgid ""
+"We are still gathering the projects for this edition. If you maintain an "
+"open source project and would like to host a sprint, check out our sprints "
+"guide and get in touch!"
+msgstr ""
 
 #: src/pages/[lang]/volunteers.astro:92
 msgid "Thanks to all the volunteers for making this possible"

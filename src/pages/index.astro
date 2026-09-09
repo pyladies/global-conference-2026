@@ -1,5 +1,35 @@
 ---
 import LocaleRedirect from "../components/ui/localeredirect.astro";
+import "../styles/global.css";
+
+/*
+ * `/` only picks a locale and forwards, but it is the first paint every visitor
+ * gets. Painting it in the theme's page colour avoids a white flash on the way
+ * to /<lang>/, and gives the noscript fallback something branded to sit on.
+ */
 ---
 
-<LocaleRedirect pathTemplate="/{lang}/" />
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="noindex" />
+		<title>PyLadiesCon 2026</title>
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3eaf7" />
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1d1449" />
+		<script is:inline>
+			if (
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			}
+		</script>
+	</head>
+	<body class="flex min-h-screen items-center justify-center bg-page text-ink">
+		<LocaleRedirect pathTemplate="/{lang}/" />
+	</body>
+</html>

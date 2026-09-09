@@ -1,340 +1,84 @@
 ---
+import ComingSoon from "@components/brand/comingsoon.astro";
+import SectionTitle from "@components/brand/sectiontitle.astro";
 import Link from "@components/ui/link.astro";
-// @ts-ignore
-import { Icon } from "astro-icon/components";
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
-const champions = [
-  {
-    name: "Meta",
-    logo: "/images/sponsors/meta.png",
-    url: "https://www.meta.com/",
-  },
-];
-const supporters = [
-  {
-    name: "Anaconda",
-    logo: "/images/sponsors/anaconda.png",
-    url: "https://www.anaconda.com/",
-  },
-  {
-    name: "Kraken Technologies",
-    logo: "/images/sponsors/kraken.png",
-    url: "https://kraken.tech/",
-  },
-  {
-    name: "Google Open Source",
-    logo: "/images/sponsors/googleopensource.png",
-    url: "https://opensource.google/",
-  },
-  {
-    name: "Microsoft",
-    logo: "/images/sponsors/microsoft.png",
-    url: "https://www.microsoft.com/",
-  },
-  {
-    name: "Optiver",
-    logo: "/images/sponsors/optiver.png",
-    url: "https://optiver.com/",
-  }
-];
-const connectors = [
-  {
-    name: "Gel Data",
-    logo: "/images/sponsors/geldata.svg",
-    url: "https://www.geldata.com/",
-  },
-  {
-    name: "Python Software Foundation",
-    logo: "/images/sponsors/psf.png",
-    url: "https://www.python.org/psf-landing/",
-  },
-];
-const boosters = [
-  {
-    name: "Numberly, Inc",
-    logo: "/images/sponsors/numberly.png",
-    url: "https://numberly.com/en/",
-  },
-  {
-    name: "Henkel",
-    logo: "/images/sponsors/henkel.png",
-    url: "https://www.henkel.com/",
-  },
-  {
-    name: "Europython Society",
-    logo: "/images/sponsors/eps.png",
-    url: "https://www.europython-society.org/",
-  },
-];
-const partners = [
-  {
-    name: "Caktus",
-    logo: "/images/sponsors/caktus.png",
-    url: "https://www.caktusgroup.com/",
-  },
-  {
-    name: "Lincoln Loop",
-    logo: "/images/sponsors/lincolnloop-logo.svg",
-    url: "https://lincolnloop.com/",
-  },
-  {
-    name: "Django Software Foundation",
-    logo: "/images/sponsors/dsf.png",
-    url: "https://www.djangoproject.com/",
-  },
-  {
-    name: "Quansight",
-    logo: "/images/sponsors/quansight-logo.png",
-    url: "",
-  },
-  {
-    name: "Willing Consulting",
-    logo: "/images/sponsors/willing_consulting.png",
-    url: "https://www.willingconsulting.com/",
-  },
-  {
-    name: "Black Python Devs",
-    logo: "/images/sponsors/blackpythondevs.png",
-    url: "https://blackpythondevs.com/index.html",
-  },
-  {
-    name: "Ataccama Software",
-    logo: "/images/sponsors/ataccama.png",
-    url: "https://www.ataccama.com/",
-  },
-  {
-    name: "SixFeetUp",
-    logo: "/images/sponsors/sixfeetup.jpeg",
-    url: "https://sixfeetup.com/",
-  },
-  {
-    name: "Probabl.",
-    logo: "/images/sponsors/probabl.png",
-    url: "https://probabl.ai",
-  },
-];
-const individuals = [
-  {
-    name: "Cheuk Ting Ho",
-    url: "https://www.linkedin.com/in/cheukting-ho/",
-  },
-  {
-    name: "Naomi Ceder",
-    url: "https://naomiceder.tech/",
-  },
-  {
-    name: "Vassiliki Dalakiari",
-    url: "https://pretalx.com/pyladiescon-2025/speaker/8T7CFD/"
-  },
-  {
-    name: "Jannis Leidel",
-  },
-  {
-    name: "Reshama Shaikh",
-  },
-  {
-    name: "Priyanka Gagneja",
-  },
-  {
-    name: "Christina Wofford",
-  },
-  {
-    name: "Jennifer Perret",
-  },
-  {
-    name: "Kassandra Keeton",
-  },
-  {
-    name: "Fay Shaw and Hudson",
-  }
-];
-const media_partners = [
-  {
-    name: "PyPodcats",
-    logo: "/images/sponsors/pypodcats.webp",
-    url: "https://pypodcats.live/",
-  },
-  {
-    name: "Data Umbrella",
-    logo: "/images/sponsors/dataumbrella.png",
-    url: "https://www.meetup.com/nyc-data-umbrella",
-  },
-  {
-    name: "Python en Español",
-    logo: "/images/sponsors/hablemospython.png",
-    url: "https://hablemospython.dev",
-  },
-];
-const non_financial = [
-  {
-    name: "JetBrains",
-    logo: "/images/sponsors/jetbrains.png",
-    url: "https://www.jetbrains.com",
-  },
+interface Props {
+	/** Link out to the sponsorship page. Off where that would self-reference. */
+	showLink?: boolean;
+}
+
+const { showLink = true } = Astro.props;
+
+/*
+ * Sponsorship for this edition is still open, so the tier tiles are parked and
+ * a ComingSoon panel stands in for them.
+ *
+ * The tiers below stay in the frontmatter — server-side only, so none of this
+ * reaches the built page. To publish, give a tier a `sponsors` array
+ * (name / logo / url) and put this back in place of the panel in the template:
+ *
+ *   <div class="mt-16 space-y-16 sm:mt-20">
+ *     {tiers.map((tier) => (
+ *       <div>
+ *         <h3 class="text-xl font-bold text-title sm:text-2xl" id={`${tier.name.toLowerCase()}-sponsors`}>
+ *           {tier.name}
+ *         </h3>
+ *         <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
+ *           {tier.sponsors.length > 0
+ *             ? tier.sponsors.map((s: any) => (
+ *                 <a href={s.url} class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite p-6 transition-opacity hover:opacity-80", tier.width]}>
+ *                   <img src={s.logo} alt={s.name} loading="lazy" class="max-h-full max-w-full object-contain" />
+ *                 </a>
+ *               ))
+ *             : Array.from({ length: tier.placeholders }).map(() => (
+ *                 <div class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite", tier.width]} aria-hidden="true">
+ *                   <span class="text-xs font-medium tracking-wide text-orchid">{t("LOGO")}</span>
+ *                 </div>
+ *               ))}
+ *         </div>
+ *       </div>
+ *     ))}
+ *   </div>
+ *
+ * Tile widths follow the comp: Champion 364px, Supporters 283px, Connectors
+ * 178px, all at a 2:1 ratio on a Near White tile.
+ */
+const tiers = [
+  { name: t("Champion"), width: "max-w-[364px]", placeholders: 1, sponsors: [] },
+  { name: t("Supporters"), width: "max-w-[283px]", placeholders: 2, sponsors: [] },
+  { name: t("Connectors"), width: "max-w-[178px]", placeholders: 2, sponsors: [] },
 ];
 ---
 
-<div class="relative mx-auto max-w-5xl px-6 lg:px-8 mt-10" id="sponsors">
-  <div class="mx-auto max-w-2xl lg:text-center">
-    <h2 class="text-base font-semibold leading-7 text-pink">{t("Meet the sponsors of our conference.")}</h2>
-    <p class="mt-2 mb-10 text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">{t("Our Sponsors")}</p>
-  </div>
+<section class="py-24 sm:py-32" id="sponsors">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    <SectionTitle
+      mark="crystal-ball"
+      eyebrow={t("Meet the sponsors of our conference.")}
+      title={t("Our Sponsors")}
+    />
 
-  <!-- Champion -->
-  { champions.length > 0 ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="champion-sponsors">Champion</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-1">
+    <ComingSoon
+      class="mt-16 sm:mt-20"
+      title={t("Our sponsors coming soon")}
+      message={t("Sponsorship for this edition is still open, so there is nobody to thank here just yet. Take a look at the sponsorship page to find out how your organization can support the conference.")}>
       {
-        champions.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64 h-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
+        showLink && (
+          <Link
+            href={translatePath("/sponsors")}
+            style="primary"
+            size="lg"
+            class="mt-8">
+            {t("See sponsorship options")}
+          </Link>
+        )
       }
-    </dl>
+    </ComingSoon>
   </div>
-  : null
-  }
-
-  <!-- Supporters -->
-  { supporters.length > 0 ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="supporters-sponsors">Supporters</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-      {
-        supporters.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-80 h-80" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Connectors -->
-  { connectors.length > 0 ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="connectors-sponsors">Connectors</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-      {
-        connectors.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64 h-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Boosters -->
-  { boosters.length > 0 ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="boosters-sponsors">Boosters</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
-      {
-        boosters.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Partners -->
-  { partners.length > 0 ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="partners-sponsors">Partners</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-5">
-      {
-        partners.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Individuals -->
-  { individuals.length ?
-  <h2 class="font-semibold dark:text-white text-2xl mt-20" id="individuals-sponsors">Individuals Sponsors (50 USD+)</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-      {
-        individuals.map((item) => (
-          <div class="flex flex-col hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-            <a href={item.url}>{item.name}</a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Media Partners -->
-  { media_partners.length ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="media-partners">Media Partners</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-5">
-      {
-        media_partners.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-  <!-- Non Financial -->
-  { media_partners.length ?
-  <h2 class="font-semibold dark:text-white text-3xl mt-20" id="media-partners">Non-Financial Contributors</h2>
-  <div class="mx-auto my-2 max-w-2xl sm:my-5 lg:my-8 lg:max-w-none">
-    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-5">
-      {
-        non_financial.map((item) => (
-          <div class="flex flex-col dark:bg-slate-300 hover:bg-gray-50 dark:hover:bg-red-50">
-            <dt class="flex items-center align-center justify-center gap-x-3 text-base font-semibold leading-7 text-black dark:text-white">
-              <a href={item.url}><img class="w-64" src={item.logo} /></a>
-            </dt>
-          </div>
-        ))
-      }
-    </dl>
-  </div>
-  : null
-  }
-
-
-</div>
+</section>

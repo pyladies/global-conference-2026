@@ -99,11 +99,11 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
         <!-- Grouping Switch -->
         <div class="flex justify-center mb-12">
             <div
-                class="inline-flex items-center bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-2"
+                class="inline-flex items-center bg-surface rounded-lg shadow-lg border border-hairline p-2"
             >
                 <button
                     id="all-btn"
-                    class="timezone-btn px-4 py-2 rounded-md font-semibold transition-all duration-300 bg-gradient-to-r from-purple-600 to-pink-600 text-white"
+                    class="timezone-btn px-4 py-2 rounded-md font-semibold transition-all duration-300 bg-gradient-to-r from-lavender to-orchid text-white"
                 >
                     <span class="flex items-center gap-2">
                         <Icon name="bx:bx-world" class="w-5 h-5" />
@@ -112,7 +112,7 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
                 </button>
                 <button
                     id="grouped-btn"
-                    class="timezone-btn px-4 py-2 rounded-md font-semibold transition-all duration-300 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    class="timezone-btn px-4 py-2 rounded-md font-semibold transition-all duration-300 text-ink hover:bg-accent/10"
                 >
                     <span class="flex items-center gap-2">
                         <Icon name="bx:bx-current-location" class="w-5 h-5" />
@@ -138,10 +138,10 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
                                         />
                                         </div>
                                         <div class="pl-2">
-                                            <p class="text-black dark:text-white text-md font-bold">
+                                            <p class="text-ink-strong text-md font-bold">
                                                 {volunteer.name}
                                             </p>
-                                            <p class="text-black dark:text-white capitalize text-sm font-light italic truncate max-w-[160px]">
+                                            <p class="text-ink-strong capitalize text-sm font-light italic truncate max-w-[160px]">
                                                 {
                                                     volunteerGroups[volunteer.name]
                                                         .map(g => t(g.replaceAll("_", " ")))
@@ -237,7 +237,7 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
                     ([groupName, groupVolunteers]) => (
                         <>
                         {groupVolunteers.length > 0 && (
-                            <h1 class="text-3xl lg:text-4xl text-center font-bold lg:tracking-tight capitalize dark:text-white pb-5">
+                            <h1 class="text-3xl lg:text-4xl text-center font-bold lg:tracking-tight capitalize pb-5">
                                 {t(formatTeamName(groupName))}
                             </h1>
 
@@ -253,7 +253,7 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
                                                     />
                                                     </div>
                                                     <div class="pl-2">
-                                                        <p class="text-black dark:text-white text-md font-bold">
+                                                        <p class="text-ink-strong text-md font-bold">
                                                             {volunteer.name}
                                                         </p>
                                                         <div class="grid grid-cols-4 pt-2">
@@ -356,53 +356,53 @@ const volunteerGroups = buildVolunteerGroupMap(volunteers);
                     if (groupedSelectedBtn) {
                         allBtn.classList.remove(
                             "bg-gradient-to-r",
-                            "from-purple-600",
-                            "to-pink-600",
+                            "from-lavender",
+                            "to-orchid",
                             "text-white",
                         );
                         allBtn.classList.add(
-                            "text-gray-700",
-                            "dark:text-gray-300",
-                            "hover:bg-gray-100",
-                            "dark:hover:bg-gray-700",
+                            "text-ink",
+                            "",
+                            "hover:bg-accent/10",
+                            "",
                         );
 
                         groupedBtn.classList.remove(
-                            "text-gray-700",
-                            "dark:text-gray-300",
-                            "hover:bg-gray-100",
-                            "dark:hover:bg-gray-700",
+                            "text-ink",
+                            "",
+                            "hover:bg-accent/10",
+                            "",
                         );
                         groupedBtn.classList.add(
                             "bg-gradient-to-r",
-                            "from-purple-600",
-                            "to-pink-600",
+                            "from-lavender",
+                            "to-orchid",
                             "text-white",
                         );
                     } else {
                         groupedBtn.classList.remove(
                             "bg-gradient-to-r",
-                            "from-purple-600",
-                            "to-pink-600",
+                            "from-lavender",
+                            "to-orchid",
                             "text-white",
                         );
                         groupedBtn.classList.add(
-                            "text-gray-700",
-                            "dark:text-gray-300",
-                            "hover:bg-gray-100",
-                            "dark:hover:bg-gray-700",
+                            "text-ink",
+                            "",
+                            "hover:bg-accent/10",
+                            "",
                         );
 
                         allBtn.classList.remove(
-                            "text-gray-700",
-                            "dark:text-gray-300",
-                            "hover:bg-gray-100",
-                            "dark:hover:bg-gray-700",
+                            "text-ink",
+                            "",
+                            "hover:bg-accent/10",
+                            "",
                         );
                         allBtn.classList.add(
                             "bg-gradient-to-r",
-                            "from-purple-600",
-                            "to-pink-600",
+                            "from-lavender",
+                            "to-orchid",
                             "text-white",
                         );
                     }

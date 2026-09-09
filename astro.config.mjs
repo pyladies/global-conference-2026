@@ -11,7 +11,7 @@ import { getSupportedLocales, defaultLang } from "./src/i18n/locales";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://2025.conference.pyladies.com",
+	site: "https://2026.conference.pyladies.com",
 	vite: {
 		plugins: [tailwindcss()],
 		define: {

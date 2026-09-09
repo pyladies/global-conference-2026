@@ -11,7 +11,8 @@ Examples of unacceptable behavior by participants include:
 * Creating additional online accounts in order to harass another person or
   circumvent a ban
 * Sexual language and imagery in online communities or in any conference venue,
-  including talks
+  including tutorials, workshops, open spaces, sprints, panels and Discord
+  activities
 * Insults, put downs, or jokes that are based upon stereotypes, that are
   exclusionary, or that hold others up for ridicule
 * Excessive swearing

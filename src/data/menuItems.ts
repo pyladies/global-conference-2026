@@ -3,7 +3,8 @@ export const getMenuItems = (t: (key: string) => string) => [
     title: t("About"),
     children: [
       { title: t("The event"), path: "/#event" },
-      { title: t("Keynotes"), path: "/#keynotes" },
+      // Keynotes: no keynote track this edition — re-add with /#keynotes when
+      // the homepage section comes back.
       { title: t("FAQ"), path: "/#faq" },
       { title: t("The organizers"), path: "/#organization" },
       { title: t("Volunteers"), path: "/volunteers" },
@@ -18,9 +19,12 @@ export const getMenuItems = (t: (key: string) => string) => [
   {
     title: t("Conference"),
     children: [
-      { title: t("Schedule"), path: "/schedule" },
-      { title: t("Sessions"), path: "/sessions" },
-      { title: t("Speakers"), path: "/speakers" },
+      // Schedule / Sessions / Speakers are hidden until there is a 2026
+      // programme. The pages still exist — uncomment these and the page bodies
+      // in src/pages/[lang]/{schedule,sessions,speakers}.astro to bring back.
+      // { title: t("Schedule"), path: "/schedule" },
+      // { title: t("Sessions"), path: "/sessions" },
+      // { title: t("Speakers"), path: "/speakers" },
       { title: t("Sprints"), path: "/sprints" },
       { title: t("How to Join"), path: "/attending" },
     ],

@@ -10,7 +10,18 @@ const __dirname = path.dirname(__filename);
 
 console.log('Extracting translatable strings from the codebase...\n');
 
-function findTCalls(content, filePath) {
+// Blank out /* ... */ and <!-- ... --> comments, keeping newlines so the line
+// numbers in the POT references stay correct. Without this, `t()` calls inside
+// commented-out or parked markup get extracted as if they were live strings.
+// Line comments are left alone on purpose: stripping `//` would eat URLs.
+function blankComments(content) {
+  return content.replace(/\/\*[\s\S]*?\*\/|<!--[\s\S]*?-->/g, (match) =>
+    match.replace(/[^\n]/g, ' '),
+  );
+}
+
+function findTCalls(rawContent, filePath) {
+  const content = blankComments(rawContent);
   const calls = [];
   let i = 0;
   let lineNumber = 1;
@@ -172,7 +183,7 @@ console.log(`Extracted ${msgidMap.size} unique strings\n`);
 const poData = {
   charset: 'UTF-8',
   headers: {
-    'Project-Id-Version': 'PyLadiesCon 2025',
+    'Project-Id-Version': 'PyLadiesCon 2026',
     'Report-Msgid-Bugs-To': 'Open a PR 🤗',
     'POT-Creation-Date': new Date().toISOString(),
     'PO-Revision-Date': 'YEAR-MO-DA HO:MI+ZONE',

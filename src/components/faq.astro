@@ -1,9 +1,9 @@
 ---
+import Ornament from "@components/brand/ornament.astro";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const { plan } = Astro.props;
 
 const faqs = [
   {
@@ -20,36 +20,47 @@ const faqs = [
   },
   {
     title: t("My language is not within the conference languages, how can I include it?"),
-    description: t("We would be happy to include your language, as long as there is a group of volunteers that can take care of reviewing proposals, generating and verifying subtitles, host talks, and translate the content in our platforms."),
+    description: t("We would be happy to include your language, as long as there is a group of volunteers that can take care of generating and verifying subtitles, hosting sessions, and translating the content in our platforms."),
   },
   {
     title: t("I don't know Python, but I'm interested into learning, should I join?"),
-    description: t("Some topics might be difficult to understand, but we aim to have talks from many levels, including beginner topics, and also some activities for people to learn."),
+    description: t("Some topics might be difficult to understand, but we aim to have sessions for many levels, including beginner topics, and also some activities for people to learn."),
   },
   {
     title: t("Do you need help with the conference?"),
-    description: t("Yes!, we are usually looking for volunteers that can help us in tasks like reviewing proposals, generate and check subtitles, moderate sprints/workshops/panels, moderate discord, help us with the website, and many other things."),
+    description: t("Yes!, we are usually looking for volunteers that can help us in tasks like generating and checking subtitles, moderating sprints, workshops, open spaces and panels, moderating Discord, helping us with the website, and many other things."),
   },
 ];
 ---
 
-<div class="mx-auto max-w-5xl px-6 py-24 sm:py-36 lg:px-8 lg:py-52 dark:bg-stone-950" id="faq">
-  <div class="mx-auto divide-y divide-gray-900/10 dark:divide-gray-100/10">
-    <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{t("Frequently Asked Questions")}</h2>
-    <dl class="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
+<section class="py-24 sm:py-32" id="faq">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    {/* The FAQ is a "quiet" surface in the kit: one sparkle either side of the
+        heading, no celestial mark above it. */}
+    <h2
+      class="flex items-center justify-center gap-x-4 text-center text-3xl font-bold tracking-tight text-title sm:text-4xl">
+      <Ornament name="card-sparkle" class="h-4 w-4 text-ornament sm:h-5 sm:w-5" />
+      <span>{t("Frequently Asked Questions")}</span>
+      <Ornament name="card-sparkle" class="h-4 w-4 text-ornament sm:h-5 sm:w-5" />
+    </h2>
+
+    <dl class="mt-12 space-y-3">
       {
-        faqs.map((faq) => (
-          <div class="pt-6" x-data="{ open: false }">
+        faqs.map((faq, i) => (
+          <div
+            class="rounded-lg border-2 border-hairline bg-surface-raised transition-colors"
+            x-data="{ open: false }">
             <dt>
               <button
                 type="button"
-                class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+                class="flex min-h-11 w-full items-center justify-between gap-x-6 px-5 py-3 text-left text-ink-strong"
                 @click="open = !open"
-                :x-bind:aria-expanded="open.toString()">
-                <span class="text-base font-semibold leading-7">{faq.title}</span>
-                <span class="ml-6 flex h-7 items-center">
+                :aria-expanded="open.toString()"
+                aria-controls={`faq-panel-${i}`}>
+                <span class="text-sm font-semibold leading-6">{faq.title}</span>
+                <span class="flex h-6 w-6 flex-none items-center justify-center text-ornament">
                   <svg
-                    class="h-6 w-6"
+                    class="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
@@ -59,13 +70,14 @@ const faqs = [
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
                   </svg>
                   <svg
-                    class="h-6 w-6"
+                    class="h-5 w-5"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
                     aria-hidden="true"
-                    x-show="open">
+                    x-show="open"
+                    x-cloak>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"></path>
                   </svg>
                 </span>
@@ -73,21 +85,20 @@ const faqs = [
             </dt>
             <dd
               x-transition:enter="transition ease-out duration-100"
-              x-transition:enter-start="opacity-0 transform scale-90"
-              x-transition:enter-end="opacity-100 transform scale-100"
-              x-transition:leave="transition ease-in duration-100"
-              x-transition:leave-start="opacity-100 transform scale-100"
-              x-transition:leave-end="opacity-0 transform scale-90"
-              class="mt-2 pr-12"
-              id="faq-0"
-              x-show="open">
-              <span class="text-base leading-7 text-gray-600 dark:text-gray-100">
-                <span set:html={faq.description}></span>
-              </span>
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease-in duration-75"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              class="px-5 pb-4 text-sm leading-6 text-ink"
+              id={`faq-panel-${i}`}
+              x-show="open"
+              x-cloak>
+              <span set:html={faq.description}></span>
             </dd>
           </div>
         ))
       }
     </dl>
   </div>
-</div>
+</section>

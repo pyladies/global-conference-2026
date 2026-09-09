@@ -2,9 +2,265 @@
 @plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+ * PyLadiesCon 2026 — theme
+ *
+ * Primitives come straight from "FOUNDATIONS — PyLadiesCon 2026" plus the two
+ * support tones the homepage comps actually paint with (Iris and Mauve).
+ * Components should use the *semantic* tokens below, never the primitives:
+ * the semantics are what swap between light and dark.
+ */
 @theme {
+	/* --- primitives ------------------------------------------------------ */
+	--color-midnight: #1d1449;
+	--color-lavender: #c276d3;
+	--color-orchid: #945bae;
+	--color-lilac: #f3eaf7;
+	--color-nearwhite: #fafafb;
+	--color-iris: #4e3172; /* light-mode ink + ornament */
+	--color-mauve: #d3c2dd; /* light card surface, dark hairline */
+
+	/* legacy PyLadies pink, still used by a few non-homepage pages */
 	--color-pinkpyladies: #ee264d;
+
+	/* --- semantic tokens (resolved per theme further down) --------------- */
+	--color-page: var(--plc-page);
+	--color-surface: var(--plc-surface);
+	--color-surface-raised: var(--plc-surface-raised);
+	--color-ink: var(--plc-ink);
+	--color-ink-strong: var(--plc-ink-strong);
+	--color-ink-muted: var(--plc-ink-muted);
+	--color-eyebrow: var(--plc-eyebrow);
+	--color-title: var(--plc-title);
+	--color-accent: var(--plc-accent);
+	--color-on-accent: var(--plc-on-accent);
+	--color-ornament: var(--plc-ornament);
+	--color-ornament-soft: var(--plc-ornament-soft);
+	--color-hairline: var(--plc-hairline);
+	--color-hairline-strong: var(--plc-hairline-strong);
+	--color-band: var(--plc-band);
+	--color-warning: var(--plc-warning);
+	--color-on-band: var(--plc-on-band);
+
 	--font-sans:
 		"Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	/* Orbitron carries the 2026 identity; Inter carries everything readable. */
+	--font-display: "Orbitron", "Inter Variable", ui-sans-serif, sans-serif;
+}
+
+/* Light — Page: Soft Lilac · Surface: Near White · Text: Iris/Midnight */
+:root {
+	color-scheme: light;
+
+	--plc-page: #f3eaf7;
+	--plc-surface: #fafafb;
+	--plc-surface-raised: #d3c2dd;
+	--plc-ink: #4e3172;
+	--plc-ink-strong: #1d1449;
+	--plc-ink-muted: #6b5188;
+	/*
+	 * The comp paints the light eyebrow in Lavender, which lands at 2.6:1 on
+	 * Soft Lilac. This is Orchid nudged 15% toward Iris: same family, reads the
+	 * same at a glance, and clears AA at 4.6:1. The foundations doc asks for
+	 * exactly this ("Lavender is an accent, never long-form body text").
+	 */
+	--plc-eyebrow: #8a55a5;
+	--plc-title: #4e3172;
+	--plc-accent: #4e3172;
+	--plc-on-accent: #fafafb;
+	--plc-ornament: #4e3172;
+	--plc-ornament-soft: #c276d3;
+	--plc-hairline: #4e3172;
+	--plc-hairline-strong: #4e3172;
+	--plc-band: #4e3172;
+	--plc-on-band: #fafafb;
+
+	--plc-warning: #8a5300;
+}
+
+/* Dark — Page + Surface: Midnight · Text: Near White · Accent/border: Lavender */
+.dark {
+	color-scheme: dark;
+
+	--plc-page: #1d1449;
+	--plc-surface: #1d1449;
+	--plc-surface-raised: #1d1449;
+	--plc-ink: #f3eaf7;
+	--plc-ink-strong: #fafafb;
+	--plc-ink-muted: #d3c2dd;
+	--plc-eyebrow: #fafafb;
+	--plc-title: #c276d3;
+	--plc-accent: #c276d3;
+	--plc-on-accent: #1d1449;
+	--plc-ornament: #c276d3;
+	--plc-ornament-soft: #c276d3;
+	--plc-hairline: #945bae;
+	--plc-hairline-strong: #c276d3;
+	--plc-band: #945bae;
+	--plc-on-band: #fafafb;
+
+	--plc-warning: #f0b840;
+}
+
+@layer base {
+	html {
+		background-color: var(--color-page);
+	}
+
+	body {
+		background-color: var(--color-page);
+		color: var(--color-ink);
+	}
+
+	::selection {
+		background: var(--color-accent);
+		color: var(--color-on-accent);
+	}
+
+	/* Minimum control height 44px; focus must stay visible in both themes. */
+	:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 2px;
+	}
+
+	/* Keep Alpine-collapsed panels hidden until Alpine boots. */
+	[x-cloak] {
+		display: none !important;
+	}
+}
+
+@layer components {
+	/*
+	 * Ornaments are monochrome SVGs applied as a mask and painted with the
+	 * current text colour, so a size + colour class is all a caller ever needs
+	 * and the artwork themes itself. `--ornament-src` is set per instance by
+	 * components/brand/ornament.astro.
+	 */
+	.ornament {
+		display: block;
+		flex: none;
+		color: var(--color-ornament);
+		background-color: currentColor;
+		-webkit-mask: var(--ornament-src) no-repeat center / contain;
+		mask: var(--ornament-src) no-repeat center / contain;
+	}
+
+	.ornament-soft {
+		color: var(--color-ornament-soft);
+	}
+}
+
+/*
+ * Compatibility shim.
+ *
+ * These utility classes are baked into translated content (the Code of Conduct
+ * bullets, the attending-page callouts) and so live inside every locale's .po
+ * data, where rewriting them would churn the translation files for a purely
+ * cosmetic change. Remap them onto the 2026 tokens instead.
+ *
+ * Deliberately unlayered: unlayered rules beat anything in @layer, so these win
+ * over Tailwind's generated utilities of the same name without !important.
+ */
+.text-pink,
+.text-pinkpyladies,
+.text-blue-400 {
+	color: var(--color-accent);
+}
+
+.text-yellow-400 {
+	color: var(--color-warning);
+}
+
+.text-gray-300 {
+	color: var(--color-ink-muted);
+}
+
+/* "Join our Discord"-style CTAs authored inside translated strings */
+.bg-green-700,
+.bg-green-600,
+.dark .dark\:bg-green-600 {
+	background-color: var(--color-accent);
+}
+
+.hover\:bg-green-800:hover,
+.dark .dark\:hover\:bg-green-700:hover {
+	background-color: var(--color-orchid);
+	color: var(--color-nearwhite);
+}
+
+/*
+ * A <select>'s `color` styles the closed control but is also inherited by the
+ * native option list, so the near-white text the selectors use in dark mode
+ * would leave the open menu unreadable. Hand the options back to the platform's
+ * form-control colours, which already follow `color-scheme`.
+ */
+select option {
+	color: FieldText;
+	background-color: Field;
+}
+
+/* Anchor links injected into headings by plugins/rehype-autolink-config.ts */
+.heading-wrapper {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+}
+
+@media (min-width: 50em) {
+	.heading-wrapper {
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		margin-inline-start: -25px;
+	}
+
+	.heading-wrapper .anchor-link {
+		visibility: hidden;
+	}
+
+	.heading-wrapper:hover .anchor-link {
+		visibility: visible;
+	}
+}
+
+.inline-icon {
+	display: inline;
+}
+
+/* Underline links inside running text, but never buttons that happen to sit
+   in a paragraph. */
+dd a:not(.plc-btn),
+li a:not(.plc-btn),
+p a:not(.plc-btn) {
+	text-decoration: underline;
+}
+
+/*
+ * Hover recolour for prose links only. As a bare `a:hover` this outranked
+ * `text-white` on buttons and left unreadable orchid text on filled fills.
+ */
+dd a:not(.plc-btn):hover,
+li a:not(.plc-btn):hover,
+p a:not(.plc-btn):hover {
+	color: var(--color-orchid);
+}
+
+.dark dd a:not(.plc-btn):hover,
+.dark li a:not(.plc-btn):hover,
+.dark p a:not(.plc-btn):hover {
+	color: var(--color-lavender);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--color-page);
+}
+
+::-webkit-scrollbar-track {
+	border: none;
+	background-color: var(--color-page);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-ornament);
 }

@@ -1,25 +1,38 @@
 ---
-import Container from "@components/container.astro";
 import Faq from "@components/faq.astro";
 import EventDetails from "@components/event.astro";
 import Hero from "@components/hero.astro";
 import Organization from "@components/organization.astro";
 import Sponsors from "@components/sponsors_gallery.astro";
 import Layout from "@layouts/Layout.astro";
-import Keynotes from "@components/keynotes_index.astro";
 import { getLocaleStaticPaths } from "../../i18n/locales";
+
+/*
+ * There is no keynote track this edition, so the Keynotes section is off the
+ * homepage. components/keynotes_index.astro is kept as-is — it may return to
+ * showcase the people running special sessions. To bring it back, restore:
+ *
+ *   import Container from "@components/container.astro";
+ *   import Keynotes from "@components/keynotes_index.astro";
+ *   ...
+ *   <Container><Keynotes /></Container>
+ *
+ * between <EventDetails /> and <Faq /> below.
+ */
 
 export function getStaticPaths() {
   return getLocaleStaticPaths();
 }
 ---
+
 <Layout>
-  <Container>
-    <Hero />
-    <EventDetails />
-    <Keynotes />
-    <Faq />
-    <Organization />
-    <Sponsors />
-  </Container>
+  {/*
+    The hero frame and the Orchid promise band run edge to edge in the comp, so
+    they sit outside the Container; everything below keeps the measured column.
+  */}
+  <Hero />
+  <EventDetails />
+  <Faq />
+  <Organization />
+  <Sponsors />
 </Layout>
