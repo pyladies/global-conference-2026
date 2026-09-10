@@ -25,7 +25,7 @@ export const getMenuItems = (t: (key: string) => string) => [
       // { title: t("Schedule"), path: "/schedule" },
       // { title: t("Sessions"), path: "/sessions" },
       // { title: t("Speakers"), path: "/speakers" },
-      { title: t("Sprints"), path: "/sprints" },
+      //{ title: t("Sprints"), path: "/sprints" },
       { title: t("How to Join"), path: "/attending" },
     ],
   },
@@ -33,7 +33,7 @@ export const getMenuItems = (t: (key: string) => string) => [
     title: t("Sponsors"),
     children: [
       { title: t("Sponsorship Plans"), path: "/sponsors" },
-      { title: t("Jobs Board"), path: "/jobs" },
+      //{ title: t("Jobs Board"), path: "/jobs" },
     ],
   },
   {

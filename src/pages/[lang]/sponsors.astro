@@ -82,6 +82,16 @@ const attendeesExperience = [
 ];
 
 /*
+ * PROTOTYPE — headline attendance figures, rendered as stat cards above the
+ * tables. Three entries fill three of the four cells by design.
+ */
+const quickStats = [
+  { value: "906", label: t("2025 attendees") },
+  { value: "732", label: t("2024 attendees") },
+  { value: "600+", label: t("2023 attendees") },
+];
+
+/*
  * Residence country, same survey. The question was free text, so answers are
  * folded before ranking: "USA" / "US" / "United States of America" and typos
  * into United States, native spellings (日本, 台灣, 한국, México, Moçambique)
@@ -244,37 +254,56 @@ const attendeesPositions = [
         {t("The Attendees")}
       </h2>
       {/*
-        The prose runs full width and the three tables share one grid, so they
-        get identical treatment. Previously Current Position sat in a two-column
-        row beside this text while the other two had a grid of their own, which
-        made it look like a different kind of thing.
+        PROTOTYPE — attendee numbers as stat cards.
+
+        The prose sits in one column and the headline numbers in the other, as a
+        2x2 grid: the section title in the top-left cell and the three figures
+        as cards, with the count set large in the display face.
       */}
-      <div class="mx-auto mt-6 max-w-3xl text-start">
-        <p class="text-lg">
-          {t("The attendees of last year's conference represented companies and organizations from all sectors, across every experience level and more than 70 countries. The tables below break down who was in the room.")}
-        </p>
+      <div class="mt-8 grid gap-10 text-start lg:grid-cols-2 lg:gap-12">
+        <div>
+          <p class="text-lg">
+            {t("The attendees of last year's conference represented companies and organizations from all sectors, across every experience level and more than 70 countries. The tables below break down who was in the room.")}
+          </p>
 
-        <h3 class="mt-8 text-lg font-semibold text-ink-strong">{t("Quick stats")}</h3>
-        <ul class="mt-3 list-disc space-y-1 pl-5">
-          <li>{t("In 2025, we had 906 attendees")}</li>
-          <li>{t("In 2024, we had 732 attendees")}</li>
-          <li>{t("In 2023, we had more than 600 attendees,")}</li>
-        </ul>
+          <h3 class="mt-8 text-lg font-semibold text-ink-strong">
+            {t("Benefits of Sponsorship")}
+          </h3>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>
+              <span set:html={t("<strong>Targeted Audience</strong>: Reach out to a targeted market with those who could potentially become your employees. Find passionate Pythonistas to hire.")} />
+            </li>
+            <li>
+              <span set:html={t("<strong>Branding</strong>: Increasing your brand exposure and elevating your corporate identity within the community.")} />
+            </li>
+            <li>
+              <span set:html={t("<strong>Community Contribution</strong>: Contribute, support and sustain the underrepresented Python community.")} />
+            </li>
+          </ul>
+        </div>
 
-        <h3 class="mt-8 text-lg font-semibold text-ink-strong">
-          {t("Benefits of Sponsorship")}
-        </h3>
-        <ul class="mt-3 list-disc space-y-2 pl-5">
-          <li>
-            <span set:html={t("<strong>Targeted Audience</strong>: Reach out to a targeted market with those who could potentially become your employees. Find passionate Pythonistas to hire.")} />
-          </li>
-          <li>
-            <span set:html={t("<strong>Branding</strong>: Increasing your brand exposure and elevating your corporate identity within the community.")} />
-          </li>
-          <li>
-            <span set:html={t("<strong>Community Contribution</strong>: Contribute, support and sustain the underrepresented Python community.")} />
-          </li>
-        </ul>
+        <div>
+          {/*
+            The title takes the top-left cell so all four are in use. It stays
+            borderless so the three figures are what read as cards. Plain <p>s
+            rather than a <dl>, because a heading cannot sit inside one.
+          */}
+          <div class="grid grid-cols-2 gap-4">
+            <h3 class="flex items-center justify-center text-center text-2xl font-bold leading-tight text-ink-strong sm:text-3xl">
+              {t("Past participation")}
+            </h3>
+            {
+              quickStats.map((stat) => (
+                <div class="rounded-xl border-2 border-hairline bg-surface-raised p-6 text-center">
+                  <p class="font-display text-4xl font-black leading-none text-title sm:text-5xl">
+                    {stat.value}
+                  </p>
+                  <p class="mt-2 text-sm text-ink">{stat.label}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </div>
 
       <div class="mt-4 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
