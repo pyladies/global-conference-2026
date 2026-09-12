@@ -13,6 +13,7 @@ which is monitored by the Code of Conduct team
 
 In case of a conflict of interest, you can individually contact:
 
+* Vicky Twomey-Lee (vicky@codinggrace.com)
 * Mariatta Wijaya (mariatta@pyladies.com)
 
 # Report Data
