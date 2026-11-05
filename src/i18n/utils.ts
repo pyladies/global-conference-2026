@@ -53,10 +53,16 @@ export const localizePath = (
 /**
  * Rewrite root-relative links in a compiled HTML string so they point at the
  * given locale: `href="/coc-reporting"` becomes `href="/fr/coc-reporting"`.
- * Links that already carry a locale prefix are left alone, as are external and
- * protocol-relative URLs.
+ * A link that already carries a locale prefix is re-pointed to the given one,
+ * since the same compiled Markdown is shared by every language page.
+ *
+ * External and protocol-relative URLs are untouched, and so are links to
+ * static assets such as `/files/report.pdf`, which live outside the locale
+ * folders. An asset is recognised by a file extension on its last segment.
  */
 export const localizeLinks = (html: string, lang: string): string =>
-  html.replace(/href="\/(?!\/)([^"]*)"/g, (_match, path: string) => {
+  html.replace(/href="\/(?!\/)([^"]*)"/g, (match, path: string) => {
+    const lastSegment = path.split(/[?#]/)[0].split("/").pop() ?? "";
+    if (lastSegment.includes(".")) return match;
     return `href="${localizePath(`/${path}`, lang)}"`;
   });

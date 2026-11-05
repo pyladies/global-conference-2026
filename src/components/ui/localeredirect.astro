@@ -11,11 +11,12 @@ const supported = getSupportedLocales().join(",");
 const fallback = pathTemplate.replace("{lang}", defaultLang);
 ---
 
+<!-- a redirect stub is never worth indexing, with or without JS -->
+<meta name="robots" content="noindex" />
 <!-- script picks best supported lang, noscript falls back to default locale -->
 <script src="/js/locale-redirect.js" data-path-template={pathTemplate} data-supported={supported} data-default={defaultLang}></script>
 <noscript>
   <meta http-equiv="refresh" content={`0;url=${fallback}`}/>
   <link rel="canonical" href={fallback} />
-  <meta name="robots" content="noindex" />
   <p><a href={fallback}>Continue</a></p>
 </noscript>
