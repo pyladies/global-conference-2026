@@ -7,7 +7,7 @@ decide to take no action for the sake of creating a safer space.
 # General reporting procedure
 
 The best way to contact the Code of Conduct team is by email at
-[conference_conduct@pyladies.com](mailto:confernece_conduct@pyladies.com)
+[conference_conduct@pyladies.com](mailto:conference_conduct@pyladies.com)
 which is monitored by the Code of Conduct team
 (Cecilia, Debbie, Jessica, and Maaya).
 
