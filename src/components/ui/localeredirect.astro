@@ -1,6 +1,10 @@
 ---
 import { getSupportedLocales, defaultLang } from "../../i18n/locales";
 
+/*
+ * A redirect stub is never worth indexing, with or without JS, so it declares
+ * noindex itself unless the embedding page already does.
+ */
 export interface Props {
   // template path with a {lang} token "/{lang}/speakers"
   pathTemplate: string;
@@ -13,7 +17,6 @@ const supported = getSupportedLocales().join(",");
 const fallback = pathTemplate.replace("{lang}", defaultLang);
 ---
 
-<!-- a redirect stub is never worth indexing, with or without JS -->
 {noindex && <meta name="robots" content="noindex" />}
 <!-- script picks best supported lang, noscript falls back to default locale -->
 <script src="/js/locale-redirect.js" data-path-template={pathTemplate} data-supported={supported} data-default={defaultLang}></script>
