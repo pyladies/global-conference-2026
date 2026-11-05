@@ -50,6 +50,9 @@ export const localizePath = (
   return "/" + pathSegments.join("/");
 };
 
+/** Top-level folders of public/ that are served as-is, outside the locale folders. */
+const ASSET_FOLDERS = ["_astro", "files", "images", "js", "meta"];
+
 /**
  * Rewrite root-relative links in a compiled HTML string so they point at the
  * given locale: `href="/coc-reporting"` becomes `href="/fr/coc-reporting"`.
@@ -57,12 +60,14 @@ export const localizePath = (
  * since the same compiled Markdown is shared by every language page.
  *
  * External and protocol-relative URLs are untouched, and so are links to
- * static assets such as `/files/report.pdf`, which live outside the locale
- * folders. An asset is recognised by a file extension on its last segment.
+ * static assets: anything under one of the ASSET_FOLDERS, or a root file such
+ * as `/favicon.svg`. A page slug may contain a dot, so a dot alone does not
+ * make a link an asset.
  */
 export const localizeLinks = (html: string, lang: string): string =>
   html.replace(/href="\/(?!\/)([^"]*)"/g, (match, path: string) => {
-    const lastSegment = path.split(/[?#]/)[0].split("/").pop() ?? "";
-    if (lastSegment.includes(".")) return match;
+    const segments = path.split(/[?#]/)[0].split("/");
+    const isRootFile = segments.length === 1 && segments[0].includes(".");
+    if (ASSET_FOLDERS.includes(segments[0]) || isRootFile) return match;
     return `href="${localizePath(`/${path}`, lang)}"`;
   });
