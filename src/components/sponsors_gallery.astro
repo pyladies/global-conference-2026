@@ -2,6 +2,8 @@
 import ComingSoon from "@components/brand/comingsoon.astro";
 import SectionTitle from "@components/brand/sectiontitle.astro";
 import Link from "@components/ui/link.astro";
+import { Image } from "astro:assets";
+import sixFeetUp from "../assets/sponsors/six_feet_up.png";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -13,47 +15,36 @@ interface Props {
 	showLink?: boolean;
 }
 
+interface Sponsor {
+	name: string;
+	logo: ImageMetadata;
+	url: string;
+}
+
 const { showLink = true } = Astro.props;
 
 /*
- * Sponsorship for this edition is still open, so the tier tiles are parked and
- * a ComingSoon panel stands in for them.
+ * Add a sponsor by pushing { name, logo, url } onto the `sponsors` array of its
+ * tier. Tiers without sponsors are not rendered at all (not even their title).
+ * While no tier has any sponsor, a ComingSoon panel is shown instead.
  *
- * The tiers below stay in the frontmatter — server-side only, so none of this
- * reaches the built page. To publish, give a tier a `sponsors` array
- * (name / logo / url) and put this back in place of the panel in the template:
- *
- *   <div class="mt-16 space-y-16 sm:mt-20">
- *     {tiers.map((tier) => (
- *       <div>
- *         <h3 class="text-xl font-bold text-title sm:text-2xl" id={`${tier.name.toLowerCase()}-sponsors`}>
- *           {tier.name}
- *         </h3>
- *         <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
- *           {tier.sponsors.length > 0
- *             ? tier.sponsors.map((s: any) => (
- *                 <a href={s.url} class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite p-6 transition-opacity hover:opacity-80", tier.width]}>
- *                   <img src={s.logo} alt={s.name} loading="lazy" class="max-h-full max-w-full object-contain" />
- *                 </a>
- *               ))
- *             : Array.from({ length: tier.placeholders }).map(() => (
- *                 <div class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite", tier.width]} aria-hidden="true">
- *                   <span class="text-xs font-medium tracking-wide text-orchid">{t("LOGO")}</span>
- *                 </div>
- *               ))}
- *         </div>
- *       </div>
- *     ))}
- *   </div>
- *
- * Tile widths follow the comp: Champion 364px, Supporters 283px, Connectors
- * 178px, all at a 2:1 ratio on a Near White tile.
+ * Tile widths follow the comp: Champion 364px, Partner 320px, Supporters 283px,
+ * Connectors 178px, all at a 2:1 ratio on a Near White tile.
  */
 const tiers = [
-  { name: t("Champion"), width: "max-w-[364px]", placeholders: 1, sponsors: [] },
-  { name: t("Supporters"), width: "max-w-[283px]", placeholders: 2, sponsors: [] },
-  { name: t("Connectors"), width: "max-w-[178px]", placeholders: 2, sponsors: [] },
+  { name: t("Champion"), width: "max-w-[364px]", sponsors: [] as Sponsor[] },
+  {
+    name: t("Partner"),
+    width: "max-w-[320px]",
+    sponsors: [
+      { name: "Six Feet Up", logo: sixFeetUp, url: "https://sixfeetup.com" },
+    ] as Sponsor[],
+  },
+  { name: t("Supporters"), width: "max-w-[283px]", sponsors: [] as Sponsor[] },
+  { name: t("Connectors"), width: "max-w-[178px]", sponsors: [] as Sponsor[] },
 ];
+
+const activeTiers = tiers.filter((tier) => tier.sponsors.length > 0);
 ---
 
 <section class="py-24 sm:py-32" id="sponsors">
@@ -64,21 +55,67 @@ const tiers = [
       title={t("Our Sponsors")}
     />
 
-    <ComingSoon
-      class="mt-16 sm:mt-20"
-      title={t("Our sponsors coming soon")}
-      message={t("Sponsorship for this edition is still open, so there is nobody to thank here just yet. Take a look at the sponsorship page to find out how your organization can support the conference.")}>
-      {
-        showLink && (
+    {
+      activeTiers.length > 0 ? (
+        <div class="mt-16 space-y-16 sm:mt-20">
+          {activeTiers.map((tier) => (
+            <div>
+              <h3 class="text-xl font-bold text-title sm:text-2xl" id={`${tier.name.toLowerCase()}-sponsors`}>
+                {tier.name}
+              </h3>
+              <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
+                {tier.sponsors.map((s) => (
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.name}
+                    class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite p-6 transition-opacity hover:opacity-80", tier.width]}>
+                    <Image src={s.logo} alt={s.name} width={400} class="max-h-full max-w-full object-contain" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+      <ComingSoon
+        class="mt-16 sm:mt-20"
+        title={t("Our sponsors coming soon")}
+        message={t("Sponsorship for this edition is still open, so there is nobody to thank here just yet. Take a look at the sponsorship page to find out how your organization can support the conference.")}>
+        {
+          showLink && (
+            <Link
+              href={translatePath("/sponsors")}
+              style="primary"
+              size="lg"
+              class="mt-8">
+              {t("See sponsorship options")}
+            </Link>
+          )
+        }
+      </ComingSoon>
+      )
+    }
+
+    {
+      activeTiers.length > 0 && showLink && (
+        <div class="mt-16 text-center sm:mt-20">
+          <h3 class="text-xl font-bold text-title sm:text-2xl">
+            {t("Want to see your logo here?")}
+          </h3>
+          <p class="mx-auto mt-4 max-w-2xl text-base text-ink">
+            {t("Sponsorship for this edition is still open. Take a look at the sponsorship page to find out how your organization can support the conference.")}
+          </p>
           <Link
             href={translatePath("/sponsors")}
-            style="primary"
+            style="outline"
             size="lg"
             class="mt-8">
             {t("See sponsorship options")}
           </Link>
-        )
-      }
-    </ComingSoon>
+        </div>
+      )
+    }
   </div>
 </section>
