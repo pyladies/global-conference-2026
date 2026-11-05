@@ -1,0 +1,23 @@
+---
+/**
+ * Render an imported Markdown module with its root-relative links rewritten to
+ * the current locale (`/coc-reporting` -> `/fr/coc-reporting`).
+ *
+ * Markdown is compiled once and shared by every `[lang]` page, so its
+ * `<Content />` component cannot know which language it is rendered under.
+ * Use this instead of `<Content />` whenever the Markdown links to other pages
+ * of the site.
+ */
+import type { MarkdownInstance } from "astro";
+import { localizeLinks } from "../i18n/utils";
+
+interface Props {
+  entry: MarkdownInstance<Record<string, any>>;
+  lang: string;
+}
+
+const { entry, lang } = Astro.props;
+const html = localizeLinks(await entry.compiledContent(), lang);
+---
+
+<Fragment set:html={html} />

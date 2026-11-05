@@ -2,10 +2,18 @@
 import LocaleRedirect from "../components/ui/localeredirect.astro";
 
 export async function getStaticPaths() {
-  const pages = import.meta.glob('./[lang]/**/*.astro', { eager: true });
+  // Build a redirect page for every top-level page under src/pages/[lang]/, so
+  // /coc-reporting sends the visitor to /<lang>/coc-reporting.
+  //
+  // The folder name must not be written inside the glob pattern: square
+  // brackets form a character class there, so './[lang]/*.astro' matches
+  // nothing and no redirect pages get built. Glob one level wide and filter
+  // on the path instead.
+  const pages = import.meta.glob("./*/*.astro");
   const topLevel = Object.keys(pages)
-    .map(path => path.split('/').pop()?.replace('.astro', ''))
-    .filter(Boolean);
+    .filter((path) => path.startsWith("./[lang]/"))
+    .map((path) => path.split("/").pop()!.replace(".astro", ""))
+    .filter((name) => name !== "index" && !name.startsWith("_"));
   return topLevel.map((p) => ({ params: { redirect: p } }));
 }
 

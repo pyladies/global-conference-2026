@@ -49,3 +49,14 @@ export const localizePath = (
 
   return "/" + pathSegments.join("/");
 };
+
+/**
+ * Rewrite root-relative links in a compiled HTML string so they point at the
+ * given locale: `href="/coc-reporting"` becomes `href="/fr/coc-reporting"`.
+ * Links that already carry a locale prefix are left alone, as are external and
+ * protocol-relative URLs.
+ */
+export const localizeLinks = (html: string, lang: string): string =>
+  html.replace(/href="\/(?!\/)([^"]*)"/g, (_match, path: string) => {
+    return `href="${localizePath(`/${path}`, lang)}"`;
+  });
