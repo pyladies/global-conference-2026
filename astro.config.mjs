@@ -19,7 +19,15 @@ export default defineConfig({
 		},
 	},
 	integrations: [
-		sitemap(),
+		sitemap({
+			// Only the /<lang>/ pages carry content. The root and the locale-less
+			// pages (/coc-reporting, /speaker/..., ...) are redirect stubs marked
+			// noindex, so keep them out of the sitemap.
+			filter: (page) => {
+				const [, first] = new URL(page).pathname.split("/");
+				return getSupportedLocales().includes(first);
+			},
+		}),
 		alpinejs(),
 		icon(),
 	],

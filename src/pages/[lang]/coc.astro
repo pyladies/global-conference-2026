@@ -7,12 +7,13 @@ import Layout from "@layouts/Layout.astro";
 import { getLocaleStaticPaths } from "../../i18n/locales";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
+import LocalizedMarkdown from "@components/LocalizedMarkdown.astro";
 import {Content as InappropriateBehavior} from '../../content/coc/coc-inappropiate-behavior.md';
-import {Content as Consequences} from '../../content/coc/coc-consequences.md';
+import * as consequences from '../../content/coc/coc-consequences.md';
 import {Content as Scope} from '../../content/coc/coc-scope.md';
 
 import {Content as ReportingAnIncident} from '../../content/coc/coc-reporting-an-incident.md';
-import {Content as ProcedureHandlingIncidents} from '../../content/coc/coc-procedure-handling-incidents.md';
+import * as procedureHandlingIncidents from '../../content/coc/coc-procedure-handling-incidents.md';
 import {Content as License} from '../../content/coc/coc-license.md';
 import {Content as Attribution} from '../../content/coc/coc-attribution.md';
 
@@ -146,7 +147,7 @@ const t = useTranslations(lang);
                 <dl class="mt-3 space-y-1 text-sm leading-6 text-ink">
                   <div>
                     <Prose>
-                      <Consequences/>
+                      <LocalizedMarkdown entry={consequences} lang={lang} />
                     </Prose>
                   </div>
                 </dl>
@@ -194,7 +195,7 @@ const t = useTranslations(lang);
                     <dl class="mt-3 space-y-1 text-sm leading-6 text-ink">
                       <div>
                         <Prose>
-                          <ProcedureHandlingIncidents/>
+                          <LocalizedMarkdown entry={procedureHandlingIncidents} lang={lang} />
                         </Prose>
                       </div>
                     </dl>
