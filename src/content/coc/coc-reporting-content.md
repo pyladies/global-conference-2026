@@ -9,7 +9,7 @@ decide to take no action for the sake of creating a safer space.
 The best way to contact the Code of Conduct team is by email at
 [conference_conduct@pyladies.com](mailto:conference_conduct@pyladies.com)
 which is monitored by the Code of Conduct team
-(Cecilia, Debbie, Jessica, and Maaya).
+(Vicky Twomey-Lee, Cecilia Tivir, Debbie, Maaya, Monica Iyabo and Nathan Bransby).
 
 In case of a conflict of interest, you can individually contact:
 
