@@ -40,6 +40,11 @@ export default defineConfig({
 			],
 		}),
 	},
+	// The old donation page now lives at /support. Keep the old URLs alive.
+	redirects: {
+		"/donate": `/${defaultLang}/support`,
+		"/[lang]/donate": "/[lang]/support",
+	},
 	i18n: {
 		locales: getSupportedLocales(),
 		defaultLocale: defaultLang,
