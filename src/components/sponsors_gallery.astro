@@ -4,6 +4,7 @@ import SectionTitle from "@components/brand/sectiontitle.astro";
 import Link from "@components/ui/link.astro";
 import { Image } from "astro:assets";
 import sixFeetUp from "../assets/sponsors/six_feet_up.png";
+import psf from "../assets/sponsors/psf.png";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -19,6 +20,8 @@ interface Sponsor {
 	name: string;
 	logo: ImageMetadata;
 	url: string;
+	/** Tile background, for logos that do not read on the default Near White. */
+	bg?: string;
 }
 
 const { showLink = true } = Astro.props;
@@ -41,7 +44,13 @@ const tiers = [
     ] as Sponsor[],
   },
   { name: t("Supporters"), width: "max-w-[283px]", sponsors: [] as Sponsor[] },
-  { name: t("Connectors"), width: "max-w-[178px]", sponsors: [] as Sponsor[] },
+  {
+    name: t("Connectors"),
+    width: "max-w-[178px]",
+    sponsors: [
+      { name: "Python Software Foundation (PSF)", logo: psf, url: "https://www.python.org/psf-landing/", bg: "bg-midnight" },
+    ] as Sponsor[],
+  },
 ];
 
 const activeTiers = tiers.filter((tier) => tier.sponsors.length > 0);
@@ -70,7 +79,7 @@ const activeTiers = tiers.filter((tier) => tier.sponsors.length > 0);
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.name}
-                    class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid bg-nearwhite p-6 transition-opacity hover:opacity-80", tier.width]}>
+                    class:list={["flex aspect-[2/1] w-full items-center justify-center rounded-lg border-2 border-orchid p-6 transition-opacity hover:opacity-80", s.bg ?? "bg-nearwhite", tier.width]}>
                     <Image src={s.logo} alt={s.name} width={400} class="max-h-full max-w-full object-contain" />
                   </a>
                 ))}
