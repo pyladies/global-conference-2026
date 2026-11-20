@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyLadiesCon 2026\n"
 "Report-Msgid-Bugs-To: Open a PR 🤗\n"
-"POT-Creation-Date: 2026-11-19T23:08:33.590Z\n"
+"POT-Creation-Date: 2026-11-20T06:39:42.549Z\n"
 "PO-Revision-Date: 2025-11-21T08:09:32.027Z\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -299,7 +299,11 @@ msgid "5–7 December 2026 · Online · Multi-language · Multi-timezone"
 msgstr ""
 "5–7 décembre 2026 · En ligne · Multilingue · Plusieurs fuseaux horaires"
 
-#: src/components/hero.astro:83
+#: src/components/hero.astro:68 src/components/navbar/navbar.astro:150
+msgid "Register"
+msgstr "S'inscrire"
+
+#: src/components/hero.astro:89
 msgid "The online conference of the PyLadies communities around the globe."
 msgstr ""
 "La conférence en ligne des communautés PyLadies à travers le monde entier."
@@ -510,35 +514,35 @@ msgstr "Populaire"
 msgid "Get Started"
 msgstr "Commencer"
 
-#: src/components/sponsors_gallery.astro:35
+#: src/components/sponsors_gallery.astro:38
 msgid "Champion"
 msgstr "Champion"
 
-#: src/components/sponsors_gallery.astro:37
+#: src/components/sponsors_gallery.astro:40
 msgid "Partner"
 msgstr "Partenaire"
 
-#: src/components/sponsors_gallery.astro:43
+#: src/components/sponsors_gallery.astro:46
 msgid "Supporters"
 msgstr "Supporters"
 
-#: src/components/sponsors_gallery.astro:44
+#: src/components/sponsors_gallery.astro:48
 msgid "Connectors"
 msgstr "Connectors"
 
-#: src/components/sponsors_gallery.astro:54
+#: src/components/sponsors_gallery.astro:63
 msgid "Meet the sponsors of our conference."
 msgstr "Decouvrez les sponsors de notre conférence"
 
-#: src/components/sponsors_gallery.astro:55 src/data/menuItems.ts:11
+#: src/components/sponsors_gallery.astro:64 src/data/menuItems.ts:11
 msgid "Our Sponsors"
 msgstr "Nos Sponsors"
 
-#: src/components/sponsors_gallery.astro:84
+#: src/components/sponsors_gallery.astro:93
 msgid "Our sponsors coming soon"
 msgstr "Nos parrains bientôt annoncés"
 
-#: src/components/sponsors_gallery.astro:85
+#: src/components/sponsors_gallery.astro:94
 msgid ""
 "Sponsorship for this edition is still open, so there is nobody to thank here "
 "just yet. Take a look at the sponsorship page to find out how your "
@@ -548,21 +552,24 @@ msgstr ""
 "remercier ici pour le moment. Consultez la page de parrainage pour découvrir "
 "comment votre organisation peut soutenir la conférence."
 
-#: src/components/sponsors_gallery.astro:93
-#: src/components/sponsors_gallery.astro:115
+#: src/components/sponsors_gallery.astro:102
+#: src/components/sponsors_gallery.astro:124
 msgid "See sponsorship options"
 msgstr "Voir les options de parrainage"
 
-#: src/components/sponsors_gallery.astro:105
+#: src/components/sponsors_gallery.astro:114
 msgid "Want to see your logo here?"
 msgstr "Envie de voir votre logo ici ?"
 
-#: src/components/sponsors_gallery.astro:108
 #
+#: src/components/sponsors_gallery.astro:117
 msgid ""
 "Sponsorship for this edition is still open. Take a look at the sponsorship "
 "page to find out how your organization can support the conference."
-msgstr "Le sponsoring de cette édition est toujours ouvert. Consultez la page de sponsoring pour découvrir comment votre organisation peut soutenir la conférence."
+msgstr ""
+"Le sponsoring de cette édition est toujours ouvert. Consultez la page de "
+"sponsoring pour découvrir comment votre organisation peut soutenir la "
+"conférence."
 
 #: src/components/sponsorship_faq.astro:10
 msgid "What is the «Keynote Intro»?"
@@ -716,9 +723,9 @@ msgstr "Rapport de processus"
 msgid "Enforcement process"
 msgstr "Precessus applicable"
 
+#
 #: src/data/menuItems.ts:48 src/pages/[lang]/support.astro:58
 #: src/pages/[lang]/support.astro:149
-#
 msgid "Support"
 msgstr "Soutenir"
 
@@ -1805,19 +1812,25 @@ msgstr ""
 msgid ""
 "A community for Black developers in the Python ecosystem, creating space for "
 "connection, mentorship and growth."
-msgstr "Une communauté pour les développeurs noirs de l'écosystème Python, qui crée un espace de rencontre, de mentorat et de progression."
+msgstr ""
+"Une communauté pour les développeurs noirs de l'écosystème Python, qui crée "
+"un espace de rencontre, de mentorat et de progression."
 
 #: src/pages/[lang]/support.astro:35
 msgid ""
 "Growing and connecting Python communities across Asia through conferences "
 "and local events."
-msgstr "Développer et relier les communautés Python à travers l'Asie grâce à des conférences et des événements locaux."
+msgstr ""
+"Développer et relier les communautés Python à travers l'Asie grâce à des "
+"conférences et des événements locaux."
 
 #: src/pages/[lang]/support.astro:41
 msgid ""
 "Free workshops that introduce women to programming and web development with "
 "Python and Django."
-msgstr "Des ateliers gratuits qui initient les femmes à la programmation et au développement web avec Python et Django."
+msgstr ""
+"Des ateliers gratuits qui initient les femmes à la programmation et au "
+"développement web avec Python et Django."
 
 #: src/pages/[lang]/support.astro:48
 msgid "Become a sponsor - contact us at"
@@ -1841,20 +1854,27 @@ msgstr "Rejoindre ou créer un chapitre de PyLadies"
 msgid "Support PyLadiesCon"
 msgstr "Soutenir PyLadiesCon"
 
-#: src/pages/[lang]/support.astro:62
 #
+#: src/pages/[lang]/support.astro:62
 msgid "Make a Difference"
 msgstr "Faites la différence"
 
-#: src/pages/[lang]/support.astro:64
 #
+#: src/pages/[lang]/support.astro:64
 msgid ""
 "PyLadiesCon is an exciting online event dedicated to empowerment, learning, "
 "and diversity within the Python community. Organized by PyLadies, a global "
 "mentorship group helping more women and other minority groups in tech become "
 "active participants and leaders in the Python open source community, your "
 "support will help improve the diversity of the software industry as a whole."
-msgstr "PyLadiesCon est un événement en ligne enthousiasmant consacré à l'autonomisation, à l'apprentissage et à la diversité au sein de la communauté Python. Organisé par PyLadies, un groupe de mentorat mondial qui aide davantage de femmes et d'autres groupes minoritaires de la tech à devenir des acteurs et des leaders actifs de la communauté open source Python, votre soutien contribuera à améliorer la diversité de l'industrie du logiciel dans son ensemble."
+msgstr ""
+"PyLadiesCon est un événement en ligne enthousiasmant consacré à "
+"l'autonomisation, à l'apprentissage et à la diversité au sein de la "
+"communauté Python. Organisé par PyLadies, un groupe de mentorat mondial qui "
+"aide davantage de femmes et d'autres groupes minoritaires de la tech à "
+"devenir des acteurs et des leaders actifs de la communauté open source "
+"Python, votre soutien contribuera à améliorer la diversité de l'industrie du "
+"logiciel dans son ensemble."
 
 #: src/pages/[lang]/support.astro:72
 msgid "Global Reach"
@@ -1888,8 +1908,8 @@ msgstr ""
 msgid "Global PyLadies Organization"
 msgstr "Organisation mondiale PyLadies"
 
-#: src/pages/[lang]/support.astro:93
 #
+#: src/pages/[lang]/support.astro:93
 msgid "All support is managed by the Python Software Foundation."
 msgstr "Tout le soutien est géré par la Python Software Foundation."
 
@@ -1897,15 +1917,18 @@ msgstr "Tout le soutien est géré par la Python Software Foundation."
 msgid "Ready to Make a Difference?"
 msgstr "Prêt à faire la différence ?"
 
-#: src/pages/[lang]/support.astro:104
 #
+#: src/pages/[lang]/support.astro:104
 msgid ""
 "Click the button below to proceed to our support form. You'll be redirected "
 "to the Python Software Foundation's payment system."
-msgstr "Cliquez sur le bouton ci-dessous pour accéder à notre formulaire de soutien. Vous serez redirigé·e vers le système de paiement de la Python Software Foundation."
+msgstr ""
+"Cliquez sur le bouton ci-dessous pour accéder à notre formulaire de soutien. "
+"Vous serez redirigé·e vers le système de paiement de la Python Software "
+"Foundation."
 
-#: src/pages/[lang]/support.astro:112
 #
+#: src/pages/[lang]/support.astro:112
 msgid "Proceed to Support Form"
 msgstr "Accéder au formulaire de soutien"
 
@@ -1915,16 +1938,20 @@ msgstr ""
 "Le paiement est traité de manière sécurisée via PayPal ou par chèque papier "
 "(États-Unis uniquement)."
 
-#: src/pages/[lang]/support.astro:124
 #
+#: src/pages/[lang]/support.astro:124
 msgid "The Python Software Foundation is a 501(c)(3) non-profit organization."
-msgstr "La Python Software Foundation est une organisation à but non lucratif 501(c)(3)."
+msgstr ""
+"La Python Software Foundation est une organisation à but non lucratif 501(c)"
+"(3)."
 
 #: src/pages/[lang]/support.astro:157
 msgid ""
 "Consider also supporting the many other Python-related initiatives around "
 "the world."
-msgstr "Pensez aussi à soutenir les nombreuses autres initiatives liées à Python à travers le monde."
+msgstr ""
+"Pensez aussi à soutenir les nombreuses autres initiatives liées à Python à "
+"travers le monde."
 
 #: src/pages/[lang]/support.astro:161
 msgid "Other Ways to Support"
