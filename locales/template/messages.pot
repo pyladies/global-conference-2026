@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PyLadiesCon 2026\n"
 "Report-Msgid-Bugs-To: Open a PR 🤗\n"
-"POT-Creation-Date: 2026-11-19T23:08:33.590Z\n"
+"POT-Creation-Date: 2026-11-20T06:39:42.549Z\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,7 +239,12 @@ msgstr ""
 msgid "5–7 December 2026 · Online · Multi-language · Multi-timezone"
 msgstr ""
 
-#: src/components/hero.astro:83
+#: src/components/hero.astro:68
+#: src/components/navbar/navbar.astro:150
+msgid "Register"
+msgstr ""
+
+#: src/components/hero.astro:89
 msgid "The online conference of the PyLadies communities around the globe."
 msgstr ""
 
@@ -414,52 +419,52 @@ msgstr ""
 msgid "Get Started"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:35
+#: src/components/sponsors_gallery.astro:38
 msgid "Champion"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:37
+#: src/components/sponsors_gallery.astro:40
 msgid "Partner"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:43
+#: src/components/sponsors_gallery.astro:46
 msgid "Supporters"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:44
+#: src/components/sponsors_gallery.astro:48
 msgid "Connectors"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:54
+#: src/components/sponsors_gallery.astro:63
 msgid "Meet the sponsors of our conference."
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:55
+#: src/components/sponsors_gallery.astro:64
 #: src/data/menuItems.ts:11
 msgid "Our Sponsors"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:84
+#: src/components/sponsors_gallery.astro:93
 msgid "Our sponsors coming soon"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:85
+#: src/components/sponsors_gallery.astro:94
 msgid ""
 "Sponsorship for this edition is still open, so there is nobody to thank "
 "here just yet. Take a look at the sponsorship page to find out how your "
 "organization can support the conference."
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:93
-#: src/components/sponsors_gallery.astro:115
+#: src/components/sponsors_gallery.astro:102
+#: src/components/sponsors_gallery.astro:124
 msgid "See sponsorship options"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:105
+#: src/components/sponsors_gallery.astro:114
 msgid "Want to see your logo here?"
 msgstr ""
 
-#: src/components/sponsors_gallery.astro:108
+#: src/components/sponsors_gallery.astro:117
 msgid ""
 "Sponsorship for this edition is still open. Take a look at the sponsorship "
 "page to find out how your organization can support the conference."
