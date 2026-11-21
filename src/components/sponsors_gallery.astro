@@ -5,6 +5,7 @@ import Link from "@components/ui/link.astro";
 import { Image } from "astro:assets";
 import sixFeetUp from "../assets/sponsors/six_feet_up.png";
 import psf from "../assets/sponsors/psf.png";
+import ohf from "../assets/sponsors/OHF.png";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -35,7 +36,13 @@ const { showLink = true } = Astro.props;
  * Connectors 178px, all at a 2:1 ratio on a Near White tile.
  */
 const tiers = [
-  { name: t("Champion"), width: "max-w-[364px]", sponsors: [] as Sponsor[] },
+  {
+    name: t("Champion"),
+    width: "max-w-[364px]",
+    sponsors: [
+      { name: "Open Home Foundation", logo: ohf, url: "https://www.openhomefoundation.org", bg: "bg-midnight" },
+    ] as Sponsor[],
+  },
   {
     name: t("Partner"),
     width: "max-w-[320px]",
