@@ -57,11 +57,17 @@ const translatePath = useTranslatedPath(lang);
         {t("5–7 December 2026 · Online · Multi-language · Multi-timezone")}
       </p>
 
-      <!--
       <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:mt-10">
-        <Link href="/donate" style="primary" size="lg" class="uppercase tracking-wide">
-          {t("Get your ticket")}
+        <Link
+          href="https://pretix.eu/pyladiescon/2026/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="primary"
+          size="lg"
+          class="uppercase tracking-wide">
+          {t("Register")}
         </Link>
+        {/* Re-add once there is a 2026 programme:
         <Link
           href={translatePath("/schedule")}
           style="outline"
@@ -69,8 +75,8 @@ const translatePath = useTranslatedPath(lang);
           class="uppercase tracking-wide">
           {t("View schedule")}
         </Link>
+        */}
       </div>
-      -->
       <Ornament name="moon-phases" class="mt-10 h-6 w-auto md:hidden" />
     </div>
   </div>
