@@ -878,8 +878,8 @@ msgid "Update"
 msgstr "Aktualizace"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
-msgstr "Discord je přístupný!"
+msgid "The Discord server is still not open."
+msgstr "Discord server zatím není otevřený."
 
 #: src/pages/[lang]/attending.astro:118
 msgid ""

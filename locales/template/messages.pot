@@ -793,7 +793,7 @@ msgid "Update"
 msgstr ""
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
+msgid "The Discord server is still not open."
 msgstr ""
 
 #: src/pages/[lang]/attending.astro:118

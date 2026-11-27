@@ -886,8 +886,8 @@ msgid "Update"
 msgstr "Aktualizacja"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
-msgstr "Serwer Discorda jest dostępny!"
+msgid "The Discord server is still not open."
+msgstr "Serwer Discorda nie jest jeszcze otwarty."
 
 #: src/pages/[lang]/attending.astro:118
 msgid ""

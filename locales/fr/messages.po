@@ -914,8 +914,8 @@ msgid "Update"
 msgstr "Mise à jour"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
-msgstr "Le serveur Discord est disponible !"
+msgid "The Discord server is still not open."
+msgstr "Le serveur Discord n'est pas encore ouvert."
 
 #: src/pages/[lang]/attending.astro:118
 msgid ""

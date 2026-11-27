@@ -891,8 +891,8 @@ msgid "Update"
 msgstr "Duyuru"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
-msgstr "Discord sunucumuz kullanıma hazır!"
+msgid "The Discord server is still not open."
+msgstr "Discord sunucusu henüz açık değil."
 
 #: src/pages/[lang]/attending.astro:118
 msgid ""

@@ -904,8 +904,8 @@ msgid "Update"
 msgstr "Ενημέρωση"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "The discord server is available!"
-msgstr "Ο Discord server είναι διαθέσιμος!"
+msgid "The Discord server is still not open."
+msgstr "Ο Discord server δεν έχει ανοίξει ακόμα."
 
 #: src/pages/[lang]/attending.astro:118
 msgid ""
