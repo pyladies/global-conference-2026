@@ -874,8 +874,8 @@ msgid "Follow the next steps to enjoy the conference:"
 msgstr "Ještě pár kroků a můžete se k nám přidat:"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "Update"
-msgstr "Aktualizace"
+msgid "Note"
+msgstr "Poznámka"
 
 #: src/pages/[lang]/attending.astro:81
 msgid "The Discord server is still not open."

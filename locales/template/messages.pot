@@ -789,7 +789,7 @@ msgid "Follow the next steps to enjoy the conference:"
 msgstr ""
 
 #: src/pages/[lang]/attending.astro:81
-msgid "Update"
+msgid "Note"
 msgstr ""
 
 #: src/pages/[lang]/attending.astro:81

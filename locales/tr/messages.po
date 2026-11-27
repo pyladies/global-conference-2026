@@ -887,8 +887,8 @@ msgid "Follow the next steps to enjoy the conference:"
 msgstr "Konferansın tadını çıkarmak için aşağıdaki adımları izleyin:"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "Update"
-msgstr "Duyuru"
+msgid "Note"
+msgstr "Not"
 
 #: src/pages/[lang]/attending.astro:81
 msgid "The Discord server is still not open."

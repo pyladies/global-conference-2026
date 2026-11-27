@@ -900,8 +900,8 @@ msgid "Follow the next steps to enjoy the conference:"
 msgstr "Ακολουθήστε τα παρακάτω βήματα για να απολαύσετε το συνέδριο:"
 
 #: src/pages/[lang]/attending.astro:81
-msgid "Update"
-msgstr "Ενημέρωση"
+msgid "Note"
+msgstr "Σημείωση"
 
 #: src/pages/[lang]/attending.astro:81
 msgid "The Discord server is still not open."
