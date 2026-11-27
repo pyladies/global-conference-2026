@@ -35,20 +35,20 @@ const { showLink = true } = Astro.props;
  * While no tier has any sponsor, a ComingSoon panel is shown instead.
  *
  * Tile widths follow the comp, except Champion, which is enlarged from the
- * comp's 364px to 460px: Champion 460px, Supporters 320px, Connectors 283px,
+ * comp's 364px to 520px: Champion 520px, Supporters 360px, Connectors 283px,
  * Partner 178px, all at a 2:1 ratio on a Near White tile.
  */
 const tiers = [
   {
     name: t("Champion"),
-    width: "max-w-[460px]",
+    width: "max-w-[520px]",
     sponsors: [
       { name: "Open Home Foundation", logo: ohf, url: "https://www.openhomefoundation.org", bg: "bg-midnight" },
     ] as Sponsor[],
   },
   {
     name: t("Supporters"),
-    width: "max-w-[320px]",
+    width: "max-w-[360px]",
     sponsors: [
       { name: "Meta", logo: meta, url: "https://www.meta.com/" },
     ] as Sponsor[],
