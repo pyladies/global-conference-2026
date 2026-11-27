@@ -35,8 +35,8 @@ const { showLink = true } = Astro.props;
  * While no tier has any sponsor, a ComingSoon panel is shown instead.
  *
  * Tile widths follow the comp, except Champion, which is enlarged from the
- * comp's 364px to 460px: Champion 460px, Partner 320px, Supporters 283px,
- * Connectors 178px, all at a 2:1 ratio on a Near White tile.
+ * comp's 364px to 460px: Champion 460px, Supporters 320px, Connectors 283px,
+ * Partner 178px, all at a 2:1 ratio on a Near White tile.
  */
 const tiers = [
   {
@@ -47,25 +47,25 @@ const tiers = [
     ] as Sponsor[],
   },
   {
-    name: t("Partner"),
-    width: "max-w-[320px]",
-    sponsors: [
-      { name: "Six Feet Up", logo: sixFeetUp, url: "https://sixfeetup.com" },
-      { name: "Quansight, PBC", logo: quansight, url: "https://www.quansight.com/" },
-    ] as Sponsor[],
-  },
-  {
     name: t("Supporters"),
-    width: "max-w-[283px]",
+    width: "max-w-[320px]",
     sponsors: [
       { name: "Meta", logo: meta, url: "https://www.meta.com/" },
     ] as Sponsor[],
   },
   {
     name: t("Connectors"),
-    width: "max-w-[178px]",
+    width: "max-w-[283px]",
     sponsors: [
       { name: "Python Software Foundation (PSF)", logo: psf, url: "https://www.python.org/psf-landing/", bg: "bg-midnight" },
+    ] as Sponsor[],
+  },
+  {
+    name: t("Partner"),
+    width: "max-w-[178px]",
+    sponsors: [
+      { name: "Six Feet Up", logo: sixFeetUp, url: "https://sixfeetup.com" },
+      { name: "Quansight, PBC", logo: quansight, url: "https://www.quansight.com/" },
     ] as Sponsor[],
   },
 ];
